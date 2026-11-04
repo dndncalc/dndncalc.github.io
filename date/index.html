@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>날짜 계산기 - 디데이·며칠 후·백일 계산 | 든든 생활계산기</title>
+<meta name="description" content="두 날짜 사이가 며칠인지, 오늘부터 100일 뒤가 언제인지 바로 계산해요. 백일·기념일처럼 첫날을 1일로 세는 방식도 함께 보여 드려요.">
+<link rel="canonical" href="https://dndncalc.github.io/date/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="날짜 계산기 - 디데이·며칠 후·백일 계산 | 든든 생활계산기">
+<meta property="og:description" content="두 날짜 사이가 며칠인지, 오늘부터 100일 뒤가 언제인지 바로 계산해요. 백일·기념일처럼 첫날을 1일로 세는 방식도 함께 보여 드려요.">
+<meta property="og:url" content="https://dndncalc.github.io/date/">
+<link rel="stylesheet" href="/style.css">
+<!-- 애드센스 승인 후 여기에 광고 코드 넣기 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"백일은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"태어난 날을 1일로 세서 100번째 되는 날이에요. 태어난 날에 99일을 더하면 돼요. 이 계산기의 ②에 100을 넣으면 백일 날짜가 함께 나와요."}},{"@type":"Question","name":"디데이 계산에서 하루가 차이 나는 이유는?","acceptedAnswer":{"@type":"Answer","text":"두 날짜를 빼기만 하는 방식과 첫날을 1일로 세는 방식이 있어서예요. 기념일은 보통 첫날을 1일로 세요."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">든든 <span>생활계산기</span></a>
+<nav class="menu"><a href="/">전체 도구</a><a href="/guide/">생활 안내</a><a href="/about/">소개</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="/">홈</a> › 나이·날짜</div>
+<h1>날짜 계산기 (디데이·며칠 후)</h1>
+<p class="lead">두 날짜 사이 날 수와, 며칠 뒤가 무슨 요일인지 바로 알려 드려요.</p>
+
+<div class="card tool">
+<h3 style="margin-top:0">① 두 날짜 사이 며칠?</h3>
+<div class="row"><div><label for="a1">시작 날짜</label><input id="a1" type="date"></div><div><label for="a2">끝 날짜</label><input id="a2" type="date"></div></div>
+<button class="go" onclick="diff()">며칠인지 계산</button>
+<div class="result" id="r1"></div>
+</div>
+<div class="card tool">
+<h3 style="margin-top:0">② 오늘부터 며칠 뒤는 언제?</h3>
+<div class="row"><div><label for="b1">기준 날짜</label><input id="b1" type="date"></div><div><label for="b2">더할 날 수 (빼려면 앞에 -)</label><input id="b2" type="number" inputmode="numeric" placeholder="예: 100"></div></div>
+<button class="go" onclick="addd()">날짜 계산</button>
+<div class="result" id="r2"></div>
+</div>
+<h2>디데이와 '며칠째'는 하루 차이가 나요</h2>
+<p>두 날짜 사이 날 수는 끝 날짜에서 시작 날짜를 뺀 값이에요. 그런데 아기 백일이나 사귄 날처럼 <b>첫날을 1일로 세는 경우</b>에는 하루를 더해야 해요. 예를 들어 1월 1일에 태어난 아기의 백일은 99일 뒤인 4월 10일이에요(평년 기준). 그래서 이 계산기는 두 가지 값을 함께 보여 드려요.</p>
+<script>
+function ymd(d){var w='일월화수목금토'[d.getDay()];return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일 ('+w+')';}
+function iso(d){return d.toISOString().slice(0,10);}
+(function(){var t=new Date();var s=new Date(t.getTime()-t.getTimezoneOffset()*60000).toISOString().slice(0,10);['a1','b1'].forEach(function(i){document.getElementById(i).value=s;});})();
+function P(v){return new Date(v+'T00:00:00');}
+function diff(){var a=document.getElementById('a1').value,b=document.getElementById('a2').value;if(!a||!b){alert('두 날짜를 모두 넣어 주세요');return;}
+var n=Math.round((Date.UTC.apply(null,b.split('-').map(function(x,i){return i===1?x-1:+x;}))-Date.UTC.apply(null,a.split('-').map(function(x,i){return i===1?x-1:+x;})))/86400000);
+var h='<div class="big">'+Math.abs(n).toLocaleString('ko-KR')+'일 '+(n<0?'전':'차이')+'</div><p>첫날을 1일로 세면 <b>'+(Math.abs(n)+1).toLocaleString('ko-KR')+'일째</b>예요. 약 '+(Math.round(Math.abs(n)/7*10)/10)+'주, '+(Math.round(Math.abs(n)/30.44*10)/10)+'개월이에요.</p>';
+var el=document.getElementById('r1');el.innerHTML=h;el.classList.add('show');}
+function addd(){var a=document.getElementById('b1').value,n=parseInt(document.getElementById('b2').value,10);if(!a||isNaN(n)){alert('날짜와 날 수를 넣어 주세요');return;}
+var d=P(a);d.setDate(d.getDate()+n);var d2=P(a);d2.setDate(d2.getDate()+n-1);
+var h='<div class="big">'+ymd(d)+'</div><p>첫날을 1일로 세는 방식(백일, 기념일)이라면 <b>'+ymd(d2)+'</b>이에요.</p>';
+var el=document.getElementById('r2');el.innerHTML=h;el.classList.add('show');}
+</script>
+<h2>자주 묻는 질문</h2><dl class="faq"><dt>백일은 어떻게 계산하나요?</dt><dd>태어난 날을 1일로 세서 100번째 되는 날이에요. 태어난 날에 99일을 더하면 돼요. 이 계산기의 ②에 100을 넣으면 백일 날짜가 함께 나와요.</dd><dt>디데이 계산에서 하루가 차이 나는 이유는?</dt><dd>두 날짜를 빼기만 하는 방식과 첫날을 1일로 세는 방식이 있어서예요. 기념일은 보통 첫날을 1일로 세요.</dd></dl>
+<p class="src">최종 수정일: 2026-11-04</p>
+</div></main>
+<footer><div class="wrap">
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a></div>
+<p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
+<p>© 2026 든든 생활계산기</p>
+</div></footer>
+</body>
+</html>
