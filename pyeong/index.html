@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>평수 계산기 - 평 ㎡ 제곱미터 변환 | 든든 생활계산기</title>
+<meta name="description" content="평을 제곱미터로, 제곱미터를 평으로 바로 바꿔 드려요. 1평은 약 3.3058㎡. 아파트 전용면적·공급면적 차이도 쉽게 설명해요.">
+<link rel="canonical" href="https://dndncalc.github.io/pyeong/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="평수 계산기 - 평 ㎡ 제곱미터 변환 | 든든 생활계산기">
+<meta property="og:description" content="평을 제곱미터로, 제곱미터를 평으로 바로 바꿔 드려요. 1평은 약 3.3058㎡. 아파트 전용면적·공급면적 차이도 쉽게 설명해요.">
+<meta property="og:url" content="https://dndncalc.github.io/pyeong/">
+<link rel="stylesheet" href="/style.css">
+<!-- 애드센스 승인 후 여기에 광고 코드 넣기 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"84㎡는 몇 평인가요?","acceptedAnswer":{"@type":"Answer","text":"전용면적 84㎡는 약 25.4평이에요. 흔히 34평형이라고 부르는 건 공용 부분을 더한 공급면적 기준이에요."}},{"@type":"Question","name":"1평은 정확히 몇 제곱미터인가요?","acceptedAnswer":{"@type":"Answer","text":"1평은 400÷121㎡, 약 3.3058㎡예요."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">든든 <span>생활계산기</span></a>
+<nav class="menu"><a href="/">전체 도구</a><a href="/guide/">생활 안내</a><a href="/about/">소개</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="/">홈</a> › 생활 단위</div>
+<h1>평수 계산기 (평 ↔ ㎡)</h1>
+<p class="lead">평이나 제곱미터 중 하나만 넣으면 바로 바꿔 드려요.</p>
+
+<div class="card tool">
+<div class="row">
+<div><label for="py">평</label><input id="py" type="number" inputmode="decimal" placeholder="예: 32" oninput="fromPy()"></div>
+<div><label for="m2">제곱미터(㎡)</label><input id="m2" type="number" inputmode="decimal" placeholder="예: 84" oninput="fromM2()"></div>
+</div>
+<div class="result show" id="res">평이나 제곱미터 중 아는 쪽에 숫자를 넣으면 바로 바뀌어요.</div>
+</div>
+<h2>평수 계산법</h2>
+<p><b>1평은 약 3.3058㎡</b>예요(정확히는 400÷121㎡). 그래서 제곱미터를 평으로 바꿀 때는 3.3058로 나누고, 평을 제곱미터로 바꿀 때는 3.3058을 곱하면 돼요. 간단히 <b>㎡ × 0.3025 = 평</b>으로 계산해도 거의 같아요.</p>
+<h2>자주 보는 아파트 면적</h2>
+<table>
+<tr><th>전용면적</th><th>전용 평수</th><th>흔히 부르는 공급 평형</th></tr>
+<tr><td>59㎡</td><td>약 17.8평</td><td>24~25평형</td></tr>
+<tr><td>74㎡</td><td>약 22.4평</td><td>29~30평형</td></tr>
+<tr><td>84㎡</td><td>약 25.4평</td><td>32~34평형</td></tr>
+<tr><td>114㎡</td><td>약 34.5평</td><td>43~45평형</td></tr>
+</table>
+<div class="note">'34평 아파트'라고 할 때는 보통 계단·복도 같은 공용 부분까지 더한 공급면적이에요. 실제로 집 안에서 쓰는 넓이는 전용면적이라 더 작아요. 공급 평형은 단지마다 달라요.</div>
+<script>
+var K=400/121;function f(n){return (Math.round(n*100)/100).toLocaleString('ko-KR');}
+function show(p,m){document.getElementById('res').innerHTML='<div class="big">'+f(p)+'평 = '+f(m)+'㎡</div>';}
+function fromPy(){var p=parseFloat(document.getElementById('py').value);if(isNaN(p)){return;}var m=p*K;document.getElementById('m2').value=Math.round(m*100)/100;show(p,m);}
+function fromM2(){var m=parseFloat(document.getElementById('m2').value);if(isNaN(m)){return;}var p=m/K;document.getElementById('py').value=Math.round(p*100)/100;show(p,m);}
+</script>
+<h2>자주 묻는 질문</h2><dl class="faq"><dt>84㎡는 몇 평인가요?</dt><dd>전용면적 84㎡는 약 25.4평이에요. 흔히 34평형이라고 부르는 건 공용 부분을 더한 공급면적 기준이에요.</dd><dt>1평은 정확히 몇 제곱미터인가요?</dt><dd>1평은 400÷121㎡, 약 3.3058㎡예요.</dd></dl>
+<p class="src">최종 수정일: 2026-11-04</p>
+</div></main>
+<footer><div class="wrap">
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a></div>
+<p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
+<p>© 2026 든든 생활계산기</p>
+</div></footer>
+</body>
+</html>
