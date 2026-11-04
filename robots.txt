@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dndncalc.github.io/sitemap.xml
