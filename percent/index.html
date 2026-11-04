@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>할인 계산기 - 할인율·할인 가격·퍼센트 계산 | 든든 생활계산기</title>
+<meta name="description" content="원래 가격과 할인율만 넣으면 할인된 가격을 바로 알려 드려요. 몇 퍼센트 싸졌는지, 두 번 할인은 얼마인지도 쉽게 계산해요.">
+<link rel="canonical" href="https://dndncalc.github.io/percent/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="할인 계산기 - 할인율·할인 가격·퍼센트 계산 | 든든 생활계산기">
+<meta property="og:description" content="원래 가격과 할인율만 넣으면 할인된 가격을 바로 알려 드려요. 몇 퍼센트 싸졌는지, 두 번 할인은 얼마인지도 쉽게 계산해요.">
+<meta property="og:url" content="https://dndncalc.github.io/percent/">
+<link rel="stylesheet" href="/style.css">
+<!-- 애드센스 승인 후 여기에 광고 코드 넣기 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"20% 할인 후 10% 추가 할인은 몇 % 할인인가요?","acceptedAnswer":{"@type":"Answer","text":"28% 할인이에요. 0.8 × 0.9 = 0.72라서 원래 가격의 72%를 내요."}},{"@type":"Question","name":"원가에서 몇 % 올랐는지는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"(바뀐 값 − 원래 값) ÷ 원래 값 × 100으로 계산해요. 이 계산기의 ②에 넣으면 바로 나와요."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">든든 <span>생활계산기</span></a>
+<nav class="menu"><a href="/">전체 도구</a><a href="/guide/">생활 안내</a><a href="/about/">소개</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="/">홈</a> › 돈 계산</div>
+<h1>할인·퍼센트 계산기</h1>
+<p class="lead">원래 가격과 할인율을 넣으면 내야 할 금액을, 두 값을 넣으면 몇 퍼센트 바뀌었는지 알려 드려요.</p>
+
+<div class="card tool">
+<h3 style="margin-top:0">① 할인하면 얼마?</h3>
+<div class="row"><div><label for="c1">원래 가격 (원)</label><input id="c1" type="number" inputmode="numeric" placeholder="예: 39000"></div><div><label for="c2">할인율 (%)</label><input id="c2" type="number" inputmode="decimal" placeholder="예: 30"></div></div>
+<button class="go" onclick="dc()">할인 가격 계산</button>
+<div class="result" id="r1"></div>
+</div>
+<div class="card tool">
+<h3 style="margin-top:0">② 몇 퍼센트 싸졌나? (몇 퍼센트 올랐나?)</h3>
+<div class="row"><div><label for="e1">원래 값</label><input id="e1" type="number" inputmode="decimal" placeholder="예: 50000"></div><div><label for="e2">바뀐 값</label><input id="e2" type="number" inputmode="decimal" placeholder="예: 35000"></div></div>
+<button class="go" onclick="rate()">비율 계산</button>
+<div class="result" id="r2"></div>
+</div>
+<h2>할인 가격 쉽게 계산하는 법</h2>
+<p>30% 할인이면 원래 가격의 70%를 내는 거예요. 그래서 <b>원래 가격 × (100 − 할인율) ÷ 100</b>으로 계산하면 돼요. 39,000원에서 30% 할인이면 39,000 × 0.7 = 27,300원이에요.</p>
+<h3>'20% 할인 후 추가 10%'는 30% 할인이 아니에요</h3>
+<p>두 번 할인은 먼저 깎인 가격에서 또 깎는 거라 실제로는 28% 할인이에요. 10만 원짜리라면 20% 할인으로 8만 원, 거기서 10% 더 깎으면 7만 2천 원이에요.</p>
+<script>
+function w(n){return Math.round(n).toLocaleString('ko-KR');}
+function dc(){var a=parseFloat(document.getElementById('c1').value),r=parseFloat(document.getElementById('c2').value);if(isNaN(a)||isNaN(r)){alert('가격과 할인율을 넣어 주세요');return;}
+var s=a*r/100;var el=document.getElementById('r1');el.innerHTML='<div class="big">'+w(a-s)+'원</div><p>할인 금액은 '+w(s)+'원이에요.</p>';el.classList.add('show');}
+function rate(){var a=parseFloat(document.getElementById('e1').value),b=parseFloat(document.getElementById('e2').value);if(isNaN(a)||isNaN(b)||a===0){alert('두 값을 넣어 주세요');return;}
+var p=(b-a)/a*100;var t=p<0?'싸졌어요(줄었어요)':'올랐어요(늘었어요)';var el=document.getElementById('r2');el.innerHTML='<div class="big">'+(Math.round(Math.abs(p)*10)/10)+'% '+t+'</div><p>차이는 '+w(Math.abs(b-a))+'이에요.</p>';el.classList.add('show');}
+</script>
+<h2>자주 묻는 질문</h2><dl class="faq"><dt>20% 할인 후 10% 추가 할인은 몇 % 할인인가요?</dt><dd>28% 할인이에요. 0.8 × 0.9 = 0.72라서 원래 가격의 72%를 내요.</dd><dt>원가에서 몇 % 올랐는지는 어떻게 계산하나요?</dt><dd>(바뀐 값 − 원래 값) ÷ 원래 값 × 100으로 계산해요. 이 계산기의 ②에 넣으면 바로 나와요.</dd></dl>
+<p class="src">최종 수정일: 2026-11-04</p>
+</div></main>
+<footer><div class="wrap">
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a></div>
+<p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
+<p>© 2026 든든 생활계산기</p>
+</div></footer>
+</body>
+</html>
