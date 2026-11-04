@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>만 나이 계산기 - 생년월일로 만 나이·다음 생일·만 65세 날짜 계산 | 든든 생활계산기</title>
+<meta name="description" content="생년월일만 넣으면 만 나이, 연 나이, 다음 생일까지 남은 날, 만 65세가 되는 날을 바로 알려 드려요.">
+<link rel="canonical" href="https://dndncalc.github.io/age/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="만 나이 계산기 - 생년월일로 만 나이·다음 생일·만 65세 날짜 계산 | 든든 생활계산기">
+<meta property="og:description" content="생년월일만 넣으면 만 나이, 연 나이, 다음 생일까지 남은 날, 만 65세가 되는 날을 바로 알려 드려요.">
+<meta property="og:url" content="https://dndncalc.github.io/age/">
+<link rel="stylesheet" href="/style.css">
+<!-- 애드센스 승인 후 여기에 광고 코드 넣기 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"만 나이는 언제부터 쓰게 됐나요?","acceptedAnswer":{"@type":"Answer","text":"2023년 6월 28일부터 법령·계약·공문서의 나이는 특별한 규정이 없으면 만 나이로 세요."}},{"@type":"Question","name":"2월 29일생은 생일을 어떻게 세나요?","acceptedAnswer":{"@type":"Answer","text":"평년에는 2월 29일이 없어서 이 계산기에서는 3월 1일에 한 살이 더해지는 것으로 계산해요."}},{"@type":"Question","name":"기초연금은 만 65세 생일 전에 신청할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네, 만 65세 생일이 있는 달의 한 달 전부터 신청할 수 있어요."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">든든 <span>생활계산기</span></a>
+<nav class="menu"><a href="/">전체 도구</a><a href="/guide/">생활 안내</a><a href="/about/">소개</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="/">홈</a> › 나이·날짜</div>
+<h1>만 나이 계산기</h1>
+<p class="lead">생년월일을 넣으면 오늘 기준 만 나이와 다음 생일까지 남은 날, 만 65세가 되는 날을 알려 드려요.</p>
+
+<div class="card tool">
+<label for="bd">생년월일</label><input id="bd" type="date" value="1965-05-15">
+<label for="td">기준 날짜 (비워 두면 오늘)</label><input id="td" type="date">
+<button class="go" onclick="calc()">만 나이 계산하기</button>
+<div class="result" id="res"></div>
+</div>
+<h2>만 나이 세는 법</h2>
+<p>만 나이는 태어난 날을 0살로 보고, <b>생일이 지날 때마다 한 살씩</b> 더하는 방식이에요. 그래서 올해 생일이 아직 안 지났으면 '올해 연도 − 태어난 해 − 1', 지났으면 '올해 연도 − 태어난 해'가 돼요.</p>
+<p>2023년 6월 28일부터 법령과 계약, 공문서의 나이는 특별한 규정이 없으면 모두 만 나이로 세요. 다만 술·담배 구매 나이나 병역처럼 '연 나이(올해 연도 − 태어난 해)'를 쓰는 예외도 있어요.</p>
+<h2>만 65세가 되면 달라지는 것</h2>
+<table>
+<tr><th>항목</th><th>내용</th></tr>
+<tr><td>기초연금</td><td>만 65세 이상이고 소득·재산 기준 이하이면 신청할 수 있어요. 생일이 있는 달의 한 달 전부터 신청 가능해요.</td></tr>
+<tr><td>지하철 무임승차</td><td>만 65세 이상은 도시철도(지하철)를 무료로 이용할 수 있어요. 지역마다 우대용 교통카드 발급 방법이 달라요.</td></tr>
+<tr><td>국민연금</td><td>1969년생 이후는 만 65세부터 노령연금을 받아요. 출생연도별 나이는 <a href="/pension-age/">국민연금 받는 나이 계산기</a>에서 확인하세요.</td></tr>
+</table>
+<script>
+function ymd(d){return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일';}
+function addYears(b,n){var d=new Date(b.getFullYear()+n,b.getMonth(),b.getDate());if(d.getMonth()!==b.getMonth())d=new Date(b.getFullYear()+n,b.getMonth()+1,1);return d;}
+function calc(){var bv=document.getElementById('bd').value;if(!bv){alert('생년월일을 넣어 주세요');return;}
+var b=new Date(bv+'T00:00:00');var tv=document.getElementById('td').value;var t=tv?new Date(tv+'T00:00:00'):new Date();t=new Date(t.getFullYear(),t.getMonth(),t.getDate());
+if(t<b){alert('기준 날짜가 생년월일보다 앞이에요');return;}
+var age=t.getFullYear()-b.getFullYear();if(addYears(b,age)>t)age--;
+var next=addYears(b,age+1);var dd=Math.round((next-t)/86400000);
+var yeon=t.getFullYear()-b.getFullYear();var d65=addYears(b,65);
+var h='<div>기준 날짜 '+ymd(t)+'에</div><div class="big">만 '+age+'세</div>';
+h+='<p>연 나이(올해 연도 − 태어난 해)는 '+yeon+'세, 예전 방식의 세는 나이는 '+(yeon+1)+'세예요.</p>';
+h+='<p>다음 생일('+ymd(next)+')까지 <b>'+dd+'일</b> 남았어요.</p>';
+h+= d65>t ? '<p>만 65세가 되는 날은 <b>'+ymd(d65)+'</b>이에요. 앞으로 '+Math.round((d65-t)/86400000).toLocaleString('ko-KR')+'일 남았어요.</p>' : '<p>'+ymd(d65)+'에 이미 만 65세가 되셨어요.</p>';
+var el=document.getElementById('res');el.innerHTML=h;el.classList.add('show');}
+</script>
+<h2>자주 묻는 질문</h2><dl class="faq"><dt>만 나이는 언제부터 쓰게 됐나요?</dt><dd>2023년 6월 28일부터 법령·계약·공문서의 나이는 특별한 규정이 없으면 만 나이로 세요.</dd><dt>2월 29일생은 생일을 어떻게 세나요?</dt><dd>평년에는 2월 29일이 없어서 이 계산기에서는 3월 1일에 한 살이 더해지는 것으로 계산해요.</dd><dt>기초연금은 만 65세 생일 전에 신청할 수 있나요?</dt><dd>네, 만 65세 생일이 있는 달의 한 달 전부터 신청할 수 있어요.</dd></dl>
+<p class="src">최종 수정일: 2026-11-04</p>
+</div></main>
+<footer><div class="wrap">
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a></div>
+<p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
+<p>© 2026 든든 생활계산기</p>
+</div></footer>
+</body>
+</html>
