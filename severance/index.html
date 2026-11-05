@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>퇴직금 계산기 - 입사일·퇴직일·3개월 월급으로 예상 퇴직금 계산 | 든든 생활계산기</title>
+<meta name="description" content="입사일, 퇴직일, 최근 3개월 월급만 넣으면 법정 퇴직금을 바로 계산해요. 평균임금 구하는 법, 상여금 넣는 법, 받을 수 있는 조건까지 쉽게 정리했어요.">
+<link rel="canonical" href="https://dndncalc.com/severance/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="퇴직금 계산기 - 입사일·퇴직일·3개월 월급으로 예상 퇴직금 계산 | 든든 생활계산기">
+<meta property="og:description" content="입사일, 퇴직일, 최근 3개월 월급만 넣으면 법정 퇴직금을 바로 계산해요. 평균임금 구하는 법, 상여금 넣는 법, 받을 수 있는 조건까지 쉽게 정리했어요.">
+<meta property="og:url" content="https://dndncalc.com/severance/">
+<link rel="stylesheet" href="/style.css">
+<!-- 애드센스 승인 후 여기에 광고 코드 넣기 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"1년을 못 채우고 그만두면 퇴직금이 없나요?","acceptedAnswer":{"@type":"Answer","text":"법으로 정한 퇴직금은 1년 이상 계속 일한 경우에 받아요. 1년이 안 되면 법정 퇴직금 대상이 아니지만, 회사 규정에 따로 정해 두었다면 받을 수 있으니 회사에 확인해 보세요."}},{"@type":"Question","name":"퇴직일은 마지막으로 일한 날인가요?","acceptedAnswer":{"@type":"Answer","text":"보통 마지막으로 일한 날의 다음 날을 퇴직일로 봐요. 예를 들어 11월 24일까지 일했다면 퇴직일은 11월 25일이고, 평균임금은 그 전날인 11월 24일부터 거꾸로 3개월을 계산해요."}},{"@type":"Question","name":"퇴직금은 언제까지 받아야 하나요?","acceptedAnswer":{"@type":"Answer","text":"회사는 퇴직한 날부터 14일 안에 퇴직금을 줘야 해요. 특별한 사정이 있으면 서로 합의해서 날짜를 미룰 수 있어요."}},{"@type":"Question","name":"계산기 결과와 실제 퇴직금이 다를 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 연차수당, 수습 기간, 휴직 기간, 회사 규정 등에 따라 달라질 수 있어요. 이 계산기는 법에 정한 기본 공식으로 계산한 참고 금액이에요."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">든든 <span>생활계산기</span></a>
+<nav class="menu"><a href="/">전체 도구</a><a href="/guide/">생활 안내</a><a href="/about/">소개</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="/">홈</a> › 일·월급</div>
+<h1>퇴직금 계산기</h1>
+<p class="lead">입사일과 퇴직일, 최근 3개월 동안 받은 월급만 넣으면 법으로 정한 퇴직금을 계산해 드려요. 상여금이 있으면 함께 넣어 주세요.</p>
+
+<div class="card tool">
+<div class="row">
+<div><label for="d1">입사일</label><input id="d1" type="date" value="2021-01-04"></div>
+<div><label for="d2">퇴직일 (마지막 근무일 다음 날)</label><input id="d2" type="date" value="2026-11-25"></div>
+</div>
+<div class="row">
+<div><label for="w3">최근 3개월 월급 합계 (세금 떼기 전, 원)</label><input id="w3" type="number" inputmode="numeric" placeholder="예: 9000000" min="0"></div>
+<div><label for="bo">최근 1년 상여금 합계 (선택, 원)</label><input id="bo" type="number" inputmode="numeric" placeholder="예: 3600000" min="0"></div>
+</div>
+<button class="go" onclick="calc()">계산하기</button>
+<div class="result" id="res"></div>
+</div>
+<p class="src">월급은 기본급에 매달 받는 각종 수당을 더한, 세금과 4대 보험을 떼기 전 금액으로 넣어 주세요.</p>
+
+<h2>퇴직금은 이렇게 계산해요</h2>
+<p>법에서는 <b>계속 일한 기간 1년마다 30일분 이상의 평균임금</b>을 퇴직금으로 주도록 정하고 있어요. 고용노동부가 안내하는 공식은 다음과 같아요.</p>
+<div class="card">
+<p><b>퇴직금 = 1일 평균임금 × 30일 × (재직일수 ÷ 365)</b></p>
+<p><b>1일 평균임금 = 퇴직 전 3개월 동안 받은 임금 총액 ÷ 그 3개월의 날짜 수</b></p>
+</div>
+<ul>
+<li><b>3개월의 날짜 수</b>는 일한 날만 세는 게 아니라 휴일까지 모두 포함한 달력 날짜예요. 퇴직일 당일은 빼고 그 전날부터 거꾸로 3개월을 세서 보통 89일에서 92일이 돼요.</li>
+<li><b>정기 상여금</b>은 퇴직 전 3개월 안에 받았는지와 상관없이, 퇴직 전 12개월 동안 받은 금액을 12로 나눠 3개월분을 더해요.</li>
+<li>이렇게 구한 평균임금이 <b>통상임금보다 적으면 통상임금</b>을 평균임금으로 써요.</li>
+</ul>
+
+<h2>예시로 직접 계산해 볼게요</h2>
+<p>2021년 1월 4일에 입사해서 2026년 11월 24일까지 일하고 그만둔 분이에요. 월급은 매달 300만 원, 1년 상여금은 360만 원이라고 해 볼게요.</p>
+<table>
+<tr><th>단계</th><th>계산</th></tr>
+<tr><td>퇴직일</td><td>2026년 11월 25일 (마지막 근무 다음 날)</td></tr>
+<tr><td>3개월 기간</td><td>8월 25일 ~ 11월 24일, 92일</td></tr>
+<tr><td>3개월 임금</td><td>300만 원 × 3 = 900만 원</td></tr>
+<tr><td>상여금 3개월분</td><td>360만 원 × 3 ÷ 12 = 90만 원</td></tr>
+<tr><td>1일 평균임금</td><td>990만 원 ÷ 92일 = 약 107,609원</td></tr>
+<tr><td>재직일수</td><td>2,151일</td></tr>
+<tr><td>퇴직금</td><td>107,609원 × 30 × 2,151 ÷ 365 = <b>약 1,902만 5천 원</b></td></tr>
+</table>
+
+<h2>퇴직금을 받을 수 있는 조건</h2>
+<ul>
+<li><b>1년 이상</b> 계속 일했어야 해요.</li>
+<li>4주 동안을 평균해서 <b>일주일에 15시간 이상</b> 일하기로 한 경우여야 해요.</li>
+<li>회사는 퇴직한 날부터 <b>14일 안에</b> 퇴직금을 줘야 해요. 특별한 사정이 있으면 서로 합의해 날짜를 미룰 수 있어요.</li>
+</ul>
+<div class="note">회사가 퇴직연금(DB형, DC형)에 가입되어 있다면 받는 방식과 금액이 다를 수 있어요. 수습 기간, 휴직 기간, 연차수당 처리 등 더 자세한 계산은 고용노동부 누리집의 퇴직금 계산기나 고객상담센터(국번 없이 1350)에서 확인해 보세요.</div>
+<p class="src">근거: 「근로자퇴직급여 보장법」 제4조·제8조·제9조, 「근로기준법」 제2조 제1항 제6호·제2항 (국가법령정보센터), 고용노동부 자주 하는 질문 「퇴직금 및 평균임금 산정공식」, 고용노동부 고객상담센터 1350 답변 (2026-11-05 확인)</p>
+
+<script>
+function pd(s){var p=s.split('-');return new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));}
+function minus3m(d){var y=d.getUTCFullYear(),m=d.getUTCMonth()-3,day=d.getUTCDate();if(m<0){m+=12;y-=1;}var last=new Date(Date.UTC(y,m+1,0)).getUTCDate();return new Date(Date.UTC(y,m,Math.min(day,last)));}
+function fmt(d){return d.getUTCFullYear()+'년 '+(d.getUTCMonth()+1)+'월 '+d.getUTCDate()+'일';}
+function won(n){return Math.round(n).toLocaleString('ko-KR')+'원';}
+function sev(s1,s2,w3,bo){var a=pd(s1),b=pd(s2);var days=Math.round((b-a)/86400000);var st=minus3m(b);var pdays=Math.round((b-st)/86400000);var tot=w3+(bo||0)*3/12;var avg=tot/pdays;return {days:days,start:st,end:new Date(b.getTime()-86400000),pdays:pdays,total:tot,avg:avg,pay:avg*30*days/365};}
+function calc(){var s1=document.getElementById('d1').value,s2=document.getElementById('d2').value;var w3=parseFloat(document.getElementById('w3').value);var bo=parseFloat(document.getElementById('bo').value)||0;var el=document.getElementById('res');var h='';
+if(!s1||!s2){h='입사일과 퇴직일을 넣어 주세요.';}
+else if(!(w3>0)){h='최근 3개월 월급 합계를 넣어 주세요.';}
+else{var r=sev(s1,s2,w3,bo);
+if(r.days<=0){h='퇴직일이 입사일보다 뒤여야 해요.';}
+else{h='<div>예상 퇴직금 (세금 떼기 전)</div><div class="big">'+won(r.pay)+'</div>';
+h+='<table><tr><th>항목</th><th>값</th></tr><tr><td>재직일수</td><td>'+r.days.toLocaleString('ko-KR')+'일 (약 '+(Math.round(r.days/365*10)/10)+'년)</td></tr>';
+h+='<tr><td>평균임금 기간</td><td>'+fmt(r.start)+' ~ '+fmt(r.end)+' ('+r.pdays+'일)</td></tr>';
+h+='<tr><td>3개월 임금 총액</td><td>'+won(r.total)+(bo>0?' (상여금 '+won(bo*3/12)+' 포함)':'')+'</td></tr>';
+h+='<tr><td>1일 평균임금</td><td>'+won(r.avg)+'</td></tr></table>';
+if(r.days<365)h+='<p><b>재직 기간이 1년이 안 돼요.</b> 법으로 정한 퇴직금은 1년 이상 일했을 때 받을 수 있어요. 위 금액은 참고용이에요.</p>';
+h+='<p class="src">퇴직소득세를 떼기 전 금액이에요. 평균임금이 통상임금보다 적으면 통상임금으로 다시 계산해야 해요.</p>';}}
+el.innerHTML=h;el.classList.add('show');}
+</script>
+<h2>자주 묻는 질문</h2><dl class="faq"><dt>1년을 못 채우고 그만두면 퇴직금이 없나요?</dt><dd>법으로 정한 퇴직금은 1년 이상 계속 일한 경우에 받아요. 1년이 안 되면 법정 퇴직금 대상이 아니지만, 회사 규정에 따로 정해 두었다면 받을 수 있으니 회사에 확인해 보세요.</dd><dt>퇴직일은 마지막으로 일한 날인가요?</dt><dd>보통 마지막으로 일한 날의 다음 날을 퇴직일로 봐요. 예를 들어 11월 24일까지 일했다면 퇴직일은 11월 25일이고, 평균임금은 그 전날인 11월 24일부터 거꾸로 3개월을 계산해요.</dd><dt>퇴직금은 언제까지 받아야 하나요?</dt><dd>회사는 퇴직한 날부터 14일 안에 퇴직금을 줘야 해요. 특별한 사정이 있으면 서로 합의해서 날짜를 미룰 수 있어요.</dd><dt>계산기 결과와 실제 퇴직금이 다를 수 있나요?</dt><dd>네. 연차수당, 수습 기간, 휴직 기간, 회사 규정 등에 따라 달라질 수 있어요. 이 계산기는 법에 정한 기본 공식으로 계산한 참고 금액이에요.</dd></dl>
+<p>퇴직 뒤 연금을 언제부터 받는지는 <a href="/pension-age/">국민연금 받는 나이 계산기</a>로, 날짜 차이는 <a href="/date/">날짜 계산기</a>로 확인할 수 있어요.</p>
+<p class="src">최종 수정일: 2026-11-05</p>
+</div></main>
+<footer><div class="wrap">
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a></div>
+<p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
+<p>© 2026 든든 생활계산기</p>
+</div></footer>
+</body>
+</html>
