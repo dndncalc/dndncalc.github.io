@@ -1,46 +1,123 @@
+/* Design pass based on unslop by Damir Sokolovsky (CC BY 4.0) https://github.com/heydamir/unslop */
+/* 방향: 통장·영수증·가계부 종이 같은 따뜻한 바탕, 통장 잉크 같은 진초록 하나. 색은 계산 결과 상자에 모으고, 결과 위 점선(영수증 절취선)이 이 사이트만의 표시. 한글은 얇게 하지 않는다. */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 *{box-sizing:border-box}
-:root{--bg:#fbfaf7;--card:#fff;--ink:#1f2328;--sub:#555d66;--line:#e3e0d8;--main:#0b6e4f;--main2:#e8f4ef;--warn:#9a3412;--warnbg:#fff4ea}
-html{font-size:19px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.75;word-break:keep-all}
-a{color:var(--main)}
-.wrap{max-width:860px;margin:0 auto;padding:0 18px}
-header.top{background:#fff;border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
-.logo{font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--ink)}
+:root{
+  --bg:#f8f6f1;--card:#fff;--raised:#f3efe7;
+  --ink:#1f1b16;--sub:#544c42;--muted:#6f675c;
+  --line:rgba(31,27,22,.12);--line2:rgba(31,27,22,.20);--field:#9a9285;
+  --main:#0b6e4f;--main-d:#085a40;--main2:#eaf3ee;--ring:rgba(11,110,79,.22);
+  --warn:#8a3510;--warnbg:#fbf0e4;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+html{font-size:19px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard Variable","Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-weight:450;line-height:1.75;word-break:keep-all;overflow-wrap:break-word}
+b,strong{font-weight:700}
+a{color:var(--main);text-underline-offset:3px;transition:color .15s var(--ease)}
+a:hover{color:var(--main-d)}
+:focus-visible{outline:3px solid var(--ring);outline-offset:2px}
+
+/* 머리 */
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+header.top{background:var(--card);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:4px 16px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.25rem;line-height:1.3;text-decoration:none;color:var(--ink);letter-spacing:-.01em}
 .logo span{color:var(--main)}
-nav.menu a{margin-left:14px;text-decoration:none;color:var(--sub);font-size:.95rem}
-nav.menu a:hover{color:var(--main)}
-main{padding:22px 0 40px}
-h1{font-size:1.65rem;line-height:1.4;margin:.3em 0 .4em}
-h2{font-size:1.3rem;margin:1.8em 0 .5em;padding-top:.3em;border-top:2px solid var(--line)}
-h3{font-size:1.1rem;margin:1.3em 0 .4em}
-.lead{color:var(--sub);margin-top:0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:16px 0}
-.tool label{display:block;font-weight:700;margin:12px 0 6px}
-.tool input,.tool select{font-size:1.15rem;padding:12px 14px;border:2px solid #c9c4b8;border-radius:10px;width:100%;max-width:340px;background:#fff}
-.tool input:focus,.tool select:focus{outline:none;border-color:var(--main)}
-.row{display:flex;gap:14px;flex-wrap:wrap}
-.row > div{flex:1 1 200px}
-button.go{font-size:1.15rem;font-weight:800;background:var(--main);color:#fff;border:0;border-radius:12px;padding:14px 26px;margin-top:16px;cursor:pointer;min-width:200px}
-button.go:hover{filter:brightness(1.1)}
-.result{margin-top:18px;background:var(--main2);border-radius:12px;padding:16px 18px;display:none}
-.result.show{display:block}
-.big{font-size:1.6rem;font-weight:800;color:var(--main)}
-table{border-collapse:collapse;width:100%;margin:10px 0;background:#fff}
-th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;font-size:.95rem}
-th{background:#f3f1ea}
-.note{background:var(--warnbg);color:var(--warn);border-radius:10px;padding:12px 14px;font-size:.92rem}
-.src{font-size:.85rem;color:var(--sub)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
-.grid a.item{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink)}
-.grid a.item:hover{border-color:var(--main)}
-.grid a.item b{display:block;font-size:1.08rem;color:var(--main)}
-.grid a.item small{color:var(--sub);font-size:.88rem}
-.crumb{font-size:.85rem;color:var(--sub)}
-.crumb a{color:var(--sub)}
-.faq dt{font-weight:800;margin-top:12px}
-.faq dd{margin:4px 0 0 0;color:#333}
-footer{border-top:1px solid var(--line);background:#fff;padding:22px 0;font-size:.85rem;color:var(--sub)}
-footer a{color:var(--sub);margin-right:12px}
-.ad-slot{margin:22px 0}
-@media (max-width:600px){html{font-size:18px}h1{font-size:1.4rem}nav.menu a{margin-left:0;margin-right:12px}button.go{width:100%}}
+nav.menu{display:flex;gap:4px}
+nav.menu a{display:inline-block;padding:4px 8px;border-radius:8px;text-decoration:none;color:var(--sub);font-size:.95rem;font-weight:500;transition:color .15s var(--ease),background-color .15s var(--ease)}
+nav.menu a:hover{color:var(--main);background:var(--main2)}
+
+/* 글 */
+main{padding:32px 0 64px}
+h1{font-size:1.75rem;line-height:1.35;font-weight:700;letter-spacing:-.015em;margin:8px 0 12px}
+h2{font-size:1.35rem;line-height:1.4;font-weight:700;letter-spacing:-.01em;margin:48px 0 12px;padding-top:24px;border-top:1px solid var(--line)}
+h2[style*="border-top:0"]{padding-top:0}
+h3{font-size:1.12rem;line-height:1.45;font-weight:700;margin:32px 0 8px}
+p{margin:0 0 16px}
+ul,ol{padding-left:24px;margin:0 0 16px}
+li{margin:4px 0}
+.lead{color:var(--sub);font-size:1.05rem;margin-top:0;margin-bottom:24px;max-width:40em}
+.crumb{font-size:.85rem;color:var(--muted);margin-bottom:4px}
+.crumb a{color:var(--muted)}
+.src{font-size:.85rem;color:var(--muted);line-height:1.7}
+
+/* 상자 */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin:16px 0;box-shadow:0 1px 2px rgba(31,27,22,.04)}
+.card > :last-child{margin-bottom:0}
+
+/* 계산기 입력 */
+.tool label{display:block;font-weight:700;font-size:1rem;line-height:1.5;margin:16px 0 8px}
+.tool > label:first-child,.tool .row:first-child label{margin-top:0}
+.tool input,.tool select{font:inherit;font-size:1.15rem;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums;height:56px;padding:0 16px;border:1px solid var(--field);border-radius:10px;width:100%;max-width:360px;background:#fff;box-shadow:inset 0 1px 2px rgba(31,27,22,.06);transition:border-color .15s var(--ease),box-shadow .15s var(--ease)}
+.tool input::placeholder{color:#8c8478;font-weight:450}
+.tool input:hover,.tool select:hover{border-color:#6f675c}
+.tool input:focus,.tool select:focus{outline:none;border-color:var(--main);box-shadow:0 0 0 3px var(--ring)}
+.row{display:flex;gap:0 24px;flex-wrap:wrap}
+.row > div{flex:1 1 220px;min-width:0}
+.row input,.row select{max-width:none}
+button.go{font:inherit;font-size:1.15rem;font-weight:700;line-height:1.3;background:var(--main);color:#fff;border:0;border-radius:10px;padding:16px 32px;margin-top:24px;cursor:pointer;min-width:200px;transition:background-color .15s var(--ease),transform .12s var(--ease)}
+button.go:hover{background:var(--main-d)}
+button.go:active{transform:scale(.98)}
+button.go:focus-visible{outline:3px solid var(--ring);outline-offset:3px}
+
+/* 계산 결과: 이 화면의 주인공. 위쪽 점선이 영수증 절취선 */
+.result{position:relative;margin-top:24px;background:var(--main2);border-radius:10px;padding:24px;border-top:2px dashed rgba(11,110,79,.45);display:none;font-variant-numeric:tabular-nums}
+.result.show{display:block;animation:rise .32s var(--ease)}
+.result > :last-child{margin-bottom:0}
+.result p{margin:12px 0}
+.big{font-size:1.75rem;line-height:1.3;font-weight:700;color:var(--main);letter-spacing:-.01em;font-variant-numeric:tabular-nums;margin:4px 0 8px}
+.result table{background:#fff;margin:16px 0}
+.result td+td,.result th+th{text-align:right}
+details{margin:16px 0}
+details summary{cursor:pointer;font-weight:700;color:var(--ink);padding:4px 0}
+details summary:hover{color:var(--main)}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* 표: 가계부처럼 가로줄만 */
+table{border-collapse:collapse;width:100%;margin:16px 0;background:var(--card);font-variant-numeric:tabular-nums;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+th,td{border:0;border-bottom:1px solid var(--line);padding:12px;text-align:left;vertical-align:top;font-size:.95rem;line-height:1.6}
+th{background:var(--raised);font-weight:700;border-bottom:1px solid var(--line2)}
+tr:last-child td{border-bottom:0}
+
+/* 알림 */
+.note{background:var(--warnbg);color:var(--warn);border-radius:10px;padding:16px 20px;font-size:.95rem;line-height:1.7;margin:16px 0}
+
+/* 목록 카드 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:16px 0}
+.grid a.item{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;color:var(--ink);transition:border-color .15s var(--ease),background-color .15s var(--ease)}
+.grid a.item:hover{border-color:var(--main);background:#fcfdfb}
+.grid a.item b{display:block;font-size:1.08rem;line-height:1.45;font-weight:700;color:var(--ink);margin-bottom:4px;transition:color .15s var(--ease)}
+.grid a.item:hover b{color:var(--main)}
+.grid a.item small{display:block;color:var(--sub);font-size:.9rem;line-height:1.6}
+
+/* 자주 묻는 질문 */
+.faq dt{font-weight:700;margin-top:24px;line-height:1.6}
+.faq dd{margin:8px 0 0 0;color:var(--sub)}
+
+/* 바닥 */
+footer{border-top:1px solid var(--line);background:var(--card);padding:32px 0;font-size:.85rem;color:var(--muted);line-height:1.7}
+footer a{color:var(--sub);margin-right:16px}
+footer p{margin:12px 0 0}
+.ad-slot{margin:24px 0}
+
+@media (max-width:600px){
+  html{font-size:18px}
+  .wrap{padding:0 20px}
+  header.top .wrap{padding-top:12px;padding-bottom:12px;gap:0 8px}
+  .logo{font-size:1.1rem}
+  nav.menu{gap:0;margin-right:-8px}
+  nav.menu a{font-size:.9rem;padding:4px 6px}
+  main{padding:24px 0 48px}
+  h1{font-size:1.5rem}
+  h2{font-size:1.25rem;margin-top:40px;padding-top:20px}
+  .card{padding:20px}
+  .result{padding:20px 16px}
+  .big{font-size:1.6rem}
+  button.go{width:100%}
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table > tbody{display:table;width:100%}
+  th,td{padding:10px 8px;font-size:.9rem}
+  .grid{gap:8px}
+  .grid a.item{padding:16px 20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
