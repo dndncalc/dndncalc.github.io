@@ -30,10 +30,32 @@
 <button class="go" onclick="calc()">만 나이 계산하기</button>
 <div class="result" id="res"></div>
 </div>
-<h2>만 나이 세는 법</h2>
+<section class="answer" aria-label="먼저 보는 답">
+<p class="answer-k">먼저 보는 답</p>
+<ul>
+<li>결과의 큰 글씨가 기준 날짜의 <b>만 나이</b>예요. 생일이 지났으면 '올해 연도 − 태어난 해', 안 지났으면 거기서 1을 더 빼요.</li>
+<li>연 나이와 예전 방식의 세는 나이, 다음 생일까지 남은 날, 만 65세가 되는 날도 함께 보여 드려요.</li>
+<li>2023년 6월 28일부터 법령·계약·공문서의 나이는 특별한 규정이 없으면 만 나이로 세요.</li>
+</ul>
+<div class="btns"><a class="btn-out" href="https://www.law.go.kr/법령/민법/제158조" target="_blank" rel="noopener">국가법령정보센터 「민법」 제158조 ↗</a></div>
+<p class="answer-date">자료 확인 2026-11-04 · 정부 기관 누리집은 새 창으로 열려요</p>
+</section>
+
+<nav class="toc" aria-label="이 글의 차례">
+<p class="toc-k">이 글의 차례</p>
+<ol>
+<li><a href="#s1">만 나이 세는 법</a></li>
+<li><a href="#s2">만 65세가 되면 달라지는 것</a></li>
+<li><a href="#check">한 번 더 확인하세요</a></li>
+<li><a href="#faq">자주 묻는 질문</a></li>
+<li><a href="#refs">참고한 공식 자료</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">만 나이 세는 법</h2>
 <p>만 나이는 태어난 날을 0살로 보고, <b>생일이 지날 때마다 한 살씩</b> 더하는 방식이에요. 그래서 올해 생일이 아직 안 지났으면 '올해 연도 − 태어난 해 − 1', 지났으면 '올해 연도 − 태어난 해'가 돼요.</p>
 <p>2023년 6월 28일부터 법령과 계약, 공문서의 나이는 특별한 규정이 없으면 모두 만 나이로 세요. 다만 술·담배 구매 나이나 병역처럼 '연 나이(올해 연도 − 태어난 해)'를 쓰는 예외도 있어요.</p>
-<h2>만 65세가 되면 달라지는 것</h2>
+<h2 id="s2">만 65세가 되면 달라지는 것</h2>
 <table>
 <tr><th>항목</th><th>내용</th></tr>
 <tr><td>기초연금</td><td>만 65세 이상이고 소득·재산 기준 이하이면 신청할 수 있어요. 생일이 있는 달의 한 달 전부터 신청 가능해요.</td></tr>
@@ -55,13 +77,42 @@ h+='<p>다음 생일('+ymd(next)+')까지 <b>'+dd+'일</b> 남았어요.</p>';
 h+= d65>t ? '<p>만 65세가 되는 날은 <b>'+ymd(d65)+'</b>이에요. 앞으로 '+Math.round((d65-t)/86400000).toLocaleString('ko-KR')+'일 남았어요.</p>' : '<p>'+ymd(d65)+'에 이미 만 65세가 되셨어요.</p>';
 var el=document.getElementById('res');el.innerHTML=h;el.classList.add('show');}
 </script>
-<h2>자주 묻는 질문</h2><dl class="faq"><dt>만 나이는 언제부터 쓰게 됐나요?</dt><dd>2023년 6월 28일부터 법령·계약·공문서의 나이는 특별한 규정이 없으면 만 나이로 세요.</dd><dt>2월 29일생은 생일을 어떻게 세나요?</dt><dd>평년에는 2월 29일이 없어서 이 계산기에서는 3월 1일에 한 살이 더해지는 것으로 계산해요.</dd><dt>기초연금은 만 65세 생일 전에 신청할 수 있나요?</dt><dd>네, 만 65세 생일이 있는 달의 한 달 전부터 신청할 수 있어요.</dd></dl>
-<p class="src">최종 수정일: 2026-11-04</p>
+<h2 id="check">한 번 더 확인하세요</h2>
+<div class="checklist" data-check>
+<p class="check-help">눌러서 하나씩 체크해 보세요. 체크한 내용은 어디에도 저장되지 않고, 화면을 닫으면 지워져요.</p>
+<label class="ck"><input type="checkbox"><span>기준 날짜를 비워 두면 오늘 날짜로 계산해요. 다른 날을 기준으로 보려면 날짜를 넣었나요?</span></label>
+<label class="ck"><input type="checkbox"><span>술·담배 구매 나이나 병역처럼 연 나이(올해 연도 − 태어난 해)를 쓰는 예외가 있다는 점을 알고 계신가요?</span></label>
+<label class="ck"><input type="checkbox"><span>2월 29일생은 평년에 3월 1일에 한 살이 더해지는 것으로 계산해요.</span></label>
+<label class="ck"><input type="checkbox"><span>기초연금은 만 65세 생일이 있는 달의 한 달 전부터 신청할 수 있어요. 신청 시기를 확인했나요? (<a href="/guide/basic-pension-2026/">기초연금 기준</a>)</span></label>
+<p class="check-count" aria-live="polite"></p>
+</div>
+
+<h2 id="faq">자주 묻는 질문</h2><dl class="faq"><dt>만 나이는 언제부터 쓰게 됐나요?</dt><dd>2023년 6월 28일부터 법령·계약·공문서의 나이는 특별한 규정이 없으면 만 나이로 세요.</dd><dt>2월 29일생은 생일을 어떻게 세나요?</dt><dd>평년에는 2월 29일이 없어서 이 계산기에서는 3월 1일에 한 살이 더해지는 것으로 계산해요.</dd><dt>기초연금은 만 65세 생일 전에 신청할 수 있나요?</dt><dd>네, 만 65세 생일이 있는 달의 한 달 전부터 신청할 수 있어요.</dd></dl>
+<h2 id="refs">참고한 공식 자료</h2>
+<ol class="refs">
+<li><a href="https://www.law.go.kr/법령/민법/제158조" target="_blank" rel="noopener">「민법」 제158조(나이의 계산과 표시), 국가법령정보센터</a> <small>(2026-11-12 확인)</small></li>
+<li><a href="https://www.law.go.kr/법령/행정기본법/제7조의2" target="_blank" rel="noopener">「행정기본법」 제7조의2(행정에 관한 나이의 계산 및 표시), 국가법령정보센터</a> <small>(2026-11-12 확인)</small></li>
+</ol>
+
+<div class="edit-info">
+<p class="edit-k">작성·수정 안내</p>
+<ul>
+<li>처음 쓴 날 2026-11-04 · 마지막 수정 2026-11-12 (읽기 쉽게 먼저 보는 답·차례·체크리스트를 더함, 본문 내용과 숫자는 그대로)</li>
+<li>자료 확인 2026-11-04: 위 공식 자료를 보고 숫자와 기준을 확인했어요.</li>
+<li>공식 자료를 참고해 쉬운 말로 직접 다시 정리했어요. 글을 쓰고 다듬을 때 AI 작성 보조 도구를 사용했고, 숫자와 기준은 공식 자료와 하나씩 대조했어요.</li>
+<li>내 상황(소득, 가입 기간, 가족 구성 등)에 따라 실제 결과는 다를 수 있어요. 중요한 결정은 해당 기관에 꼭 확인하세요.</li>
+<li>든든 생활계산기는 정부 기관과 관계없는 독립 사이트예요. <a href="/editorial/">편집 원칙 보기</a></li>
+</ul>
+</div>
+<div class="report"><b>내용이 바뀌었거나 오류가 있나요?</b>
+<p>제도가 바뀌었거나 틀린 곳을 보셨다면 알려 주세요. 확인한 뒤 고치고 수정한 날짜를 적어 둘게요.</p>
+<a class="btn-out" href="/contact/">오류·변경 알리기</a></div>
 </div></main>
 <footer><div class="wrap">
-<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a></div>
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a><a href="/editorial/">편집 원칙</a></div>
 <p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
 <p>© 2026 든든 생활계산기</p>
 </div></footer>
+<script src="/site.js" defer></script>
 </body>
 </html>
