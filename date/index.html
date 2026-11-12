@@ -36,7 +36,28 @@
 <button class="go" onclick="addd()">날짜 계산</button>
 <div class="result" id="r2"></div>
 </div>
-<h2>디데이와 '며칠째'는 하루 차이가 나요</h2>
+<section class="answer" aria-label="먼저 보는 답">
+<p class="answer-k">먼저 보는 답</p>
+<ul>
+<li>①의 큰 글씨는 끝 날짜에서 시작 날짜를 뺀 <b>날 수</b>(디데이 방식)예요. 아래 '며칠째'는 첫날을 1일로 센 값이라 하루가 더 많아요.</li>
+<li>②의 큰 글씨는 기준 날짜에 날 수를 더한 날짜예요. 백일·기념일처럼 첫날을 1일로 세는 경우는 아래에 나오는 날짜를 보세요.</li>
+<li>예를 들어 1월 1일에 태어난 아기의 백일은 4월 10일이에요(평년 기준).</li>
+</ul>
+<div class="btns"><a class="btn-out" href="https://astro.kasi.re.kr/" target="_blank" rel="noopener">한국천문연구원 천문우주지식정보 ↗</a></div>
+<p class="answer-date">자료 확인 2026-11-04 · 정부 기관 누리집은 새 창으로 열려요</p>
+</section>
+
+<nav class="toc" aria-label="이 글의 차례">
+<p class="toc-k">이 글의 차례</p>
+<ol>
+<li><a href="#s1">디데이와 '며칠째'는 하루 차이가 나요</a></li>
+<li><a href="#check">한 번 더 확인하세요</a></li>
+<li><a href="#faq">자주 묻는 질문</a></li>
+<li><a href="#refs">참고한 공식 자료</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">디데이와 '며칠째'는 하루 차이가 나요</h2>
 <p>두 날짜 사이 날 수는 끝 날짜에서 시작 날짜를 뺀 값이에요. 그런데 아기 백일이나 사귄 날처럼 <b>첫날을 1일로 세는 경우</b>에는 하루를 더해야 해요. 예를 들어 1월 1일에 태어난 아기의 백일은 99일 뒤인 4월 10일이에요(평년 기준). 그래서 이 계산기는 두 가지 값을 함께 보여 드려요.</p>
 <script>
 function ymd(d){var w='일월화수목금토'[d.getDay()];return d.getFullYear()+'년 '+(d.getMonth()+1)+'월 '+d.getDate()+'일 ('+w+')';}
@@ -52,13 +73,42 @@ var d=P(a);d.setDate(d.getDate()+n);var d2=P(a);d2.setDate(d2.getDate()+n-1);
 var h='<div class="big">'+ymd(d)+'</div><p>첫날을 1일로 세는 방식(백일, 기념일)이라면 <b>'+ymd(d2)+'</b>이에요.</p>';
 var el=document.getElementById('r2');el.innerHTML=h;el.classList.add('show');}
 </script>
-<h2>자주 묻는 질문</h2><dl class="faq"><dt>백일은 어떻게 계산하나요?</dt><dd>태어난 날을 1일로 세서 100번째 되는 날이에요. 태어난 날에 99일을 더하면 돼요. 이 계산기의 ②에 100을 넣으면 백일 날짜가 함께 나와요.</dd><dt>디데이 계산에서 하루가 차이 나는 이유는?</dt><dd>두 날짜를 빼기만 하는 방식과 첫날을 1일로 세는 방식이 있어서예요. 기념일은 보통 첫날을 1일로 세요.</dd></dl>
-<p class="src">최종 수정일: 2026-11-04</p>
+<h2 id="check">한 번 더 확인하세요</h2>
+<div class="checklist" data-check>
+<p class="check-help">눌러서 하나씩 체크해 보세요. 체크한 내용은 어디에도 저장되지 않고, 화면을 닫으면 지워져요.</p>
+<label class="ck"><input type="checkbox"><span>①에서 끝 날짜가 시작 날짜보다 앞이면 결과에 '전'으로 나와요. 날짜 순서를 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>날짜를 거꾸로 세려면 ②의 날 수 앞에 -를 붙여요.</span></label>
+<label class="ck"><input type="checkbox"><span>백일·기념일은 첫날을 1일로 센 값을 봤나요?</span></label>
+<label class="ck"><input type="checkbox"><span>계약서나 안내문에 기간 세는 방법이 따로 적혀 있으면 그 방법을 따르세요. 법에서 날짜로 정한 기간은 보통 첫날을 빼고 세요.</span></label>
+<p class="check-count" aria-live="polite"></p>
+</div>
+
+<h2 id="faq">자주 묻는 질문</h2><dl class="faq"><dt>백일은 어떻게 계산하나요?</dt><dd>태어난 날을 1일로 세서 100번째 되는 날이에요. 태어난 날에 99일을 더하면 돼요. 이 계산기의 ②에 100을 넣으면 백일 날짜가 함께 나와요.</dd><dt>디데이 계산에서 하루가 차이 나는 이유는?</dt><dd>두 날짜를 빼기만 하는 방식과 첫날을 1일로 세는 방식이 있어서예요. 기념일은 보통 첫날을 1일로 세요.</dd></dl>
+<h2 id="refs">참고한 공식 자료</h2>
+<ol class="refs">
+<li><a href="https://www.law.go.kr/법령/민법/제157조" target="_blank" rel="noopener">「민법」 제157조(기간의 기산점), 국가법령정보센터</a> <small>(2026-11-12 확인)</small></li>
+</ol>
+<p class="src">두 날짜 사이 날 수는 달력 날짜를 세는 계산이에요. 법에서 기간을 셀 때 첫날을 빼는 원칙은 위 조문에서 확인했어요.</p>
+
+<div class="edit-info">
+<p class="edit-k">작성·수정 안내</p>
+<ul>
+<li>처음 쓴 날 2026-11-04 · 마지막 수정 2026-11-12 (읽기 쉽게 먼저 보는 답·차례·체크리스트를 더함, 본문 내용과 숫자는 그대로)</li>
+<li>자료 확인 2026-11-04: 위 공식 자료를 보고 숫자와 기준을 확인했어요.</li>
+<li>공식 자료를 참고해 쉬운 말로 직접 다시 정리했어요. 글을 쓰고 다듬을 때 AI 작성 보조 도구를 사용했고, 숫자와 기준은 공식 자료와 하나씩 대조했어요.</li>
+<li>내 상황(소득, 가입 기간, 가족 구성 등)에 따라 실제 결과는 다를 수 있어요. 중요한 결정은 해당 기관에 꼭 확인하세요.</li>
+<li>든든 생활계산기는 정부 기관과 관계없는 독립 사이트예요. <a href="/editorial/">편집 원칙 보기</a></li>
+</ul>
+</div>
+<div class="report"><b>내용이 바뀌었거나 오류가 있나요?</b>
+<p>제도가 바뀌었거나 틀린 곳을 보셨다면 알려 주세요. 확인한 뒤 고치고 수정한 날짜를 적어 둘게요.</p>
+<a class="btn-out" href="/contact/">오류·변경 알리기</a></div>
 </div></main>
 <footer><div class="wrap">
-<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a></div>
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a><a href="/editorial/">편집 원칙</a></div>
 <p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
 <p>© 2026 든든 생활계산기</p>
 </div></footer>
+<script src="/site.js" defer></script>
 </body>
 </html>
