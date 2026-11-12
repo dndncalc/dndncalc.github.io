@@ -42,7 +42,30 @@
 </div>
 <p class="src">이자율은 우대금리까지 더한 최종 연 이자율을 넣어 주세요. 정해진 날에 빠짐없이 넣고 만기에 찾는다고 보고 계산해요.</p>
 
-<h2>이자는 이렇게 계산해요</h2>
+<section class="answer" aria-label="먼저 보는 답">
+<p class="answer-k">먼저 보는 답</p>
+<ul>
+<li>결과의 큰 글씨는 <b>세금을 뗀 뒤 만기에 받는 돈</b>(원금 + 이자 − 세금)이에요. 아래 표에 넣은 원금, 세금 떼기 전 이자, 세금이 나와요.</li>
+<li>일반과세는 이자의 15.4%(이자소득세 14% + 지방소득세 1.4%)를 떼요.</li>
+<li>적금은 넣은 달마다 이자가 붙는 기간이 달라서, 연 3.5%라도 1년 이자가 원금의 약 1.9%예요.</li>
+</ul>
+<div class="btns"><a class="btn-out" href="https://finlife.fss.or.kr/" target="_blank" rel="noopener">금융감독원 금융상품한눈에 ↗</a><a class="btn-out" href="https://www.kdic.or.kr/" target="_blank" rel="noopener">예금보험공사 ↗</a></div>
+<p class="answer-date">자료 확인 2026-11-09 · 정부 기관 누리집은 새 창으로 열려요</p>
+</section>
+
+<nav class="toc" aria-label="이 글의 차례">
+<p class="toc-k">이 글의 차례</p>
+<ol>
+<li><a href="#s1">이자는 이렇게 계산해요</a></li>
+<li><a href="#s2">예시로 직접 계산해 볼게요</a></li>
+<li><a href="#s3">이자에 붙는 세금</a></li>
+<li><a href="#check">한 번 더 확인하세요</a></li>
+<li><a href="#faq">자주 묻는 질문</a></li>
+<li><a href="#refs">참고한 공식 자료</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">이자는 이렇게 계산해요</h2>
 <div class="card">
 <p><b>예금 (단리) 이자 = 맡긴 돈 × 연 이자율 × 개월 수 ÷ 12</b></p>
 <p><b>적금 (단리) 이자 = 매달 넣는 돈 × 연 이자율 ÷ 12 × 개월 수 × (개월 수 + 1) ÷ 2</b></p>
@@ -53,7 +76,7 @@
 <li>은행에 따라 날짜 수(365일 기준)로 이자를 계산하기도 해서, 실제 금액은 몇십 원에서 몇백 원쯤 다를 수 있어요.</li>
 </ul>
 
-<h2>예시로 직접 계산해 볼게요</h2>
+<h2 id="s2">예시로 직접 계산해 볼게요</h2>
 <table>
 <tr><th>예시</th><th>세금 떼기 전 이자</th><th>세금 15.4%</th><th>만기에 받는 돈</th></tr>
 <tr><td>적금 월 50만 원, 12개월, 연 3.5%, 단리</td><td>500,000 × 0.035 ÷ 12 × 78 = 113,750원</td><td>17,517원</td><td><b>6,096,233원</b></td></tr>
@@ -63,7 +86,7 @@
 </table>
 <p>같은 연 3.5%라도 적금 600만 원의 이자(113,750원)는 원금의 약 1.9%예요. 목돈이 이미 있다면 적금보다 예금이 이자를 더 많이 받아요.</p>
 
-<h2>이자에 붙는 세금</h2>
+<h2 id="s3">이자에 붙는 세금</h2>
 <ul>
 <li><b>일반과세 15.4%</b>: 이자소득세 14%와 지방소득세 1.4%(이자소득세의 10%)를 합친 세율이에요. 은행이 이자를 줄 때 미리 떼고 줘요.</li>
 <li><b>비과세종합저축</b>: 만 65세 이상 기초연금 수급자, 등록 장애인, 국민기초생활보장 수급자, 독립유공자와 그 유족 등은 모든 금융회사를 합쳐 원금 5천만 원까지 이자에 세금을 내지 않아요. <b>2028년 12월 31일까지</b> 가입할 수 있고, 은행 창구에서 비과세종합저축으로 가입하겠다고 말하면 돼요. 최근 3년 중 한 번이라도 금융소득 종합과세 대상이었던 분은 가입할 수 없어요.</li>
@@ -96,14 +119,50 @@ if(kd==='s')h+='<p class="src">같은 돈을 처음부터 한 번에 예금했�
 h+='<p class="src">은행마다 날짜 수 계산과 원 단위 끝수 처리가 달라 실제 금액과 조금 다를 수 있어요.</p>';}
 el.innerHTML=h;el.classList.add('show');}
 </script>
-<h2>자주 묻는 질문</h2><dl class="faq"><dt>연 3.5% 적금인데 이자가 왜 생각보다 적나요?</dt><dd>적금은 매달 넣은 돈마다 이자가 붙는 기간이 달라서 그래요. 첫 달에 넣은 돈은 12개월치 이자를 받지만 마지막 달에 넣은 돈은 1개월치만 받아요. 그래서 월 50만 원을 1년 동안 연 3.5%로 넣으면 세금 떼기 전 이자는 113,750원으로, 원금 600만 원의 약 1.9%예요.</dd><dt>이자에서 떼는 세금 15.4%는 어떻게 나오나요?</dt><dd>이자소득세 14%에, 그 세금의 10%인 지방소득세 1.4%가 더해져서 모두 15.4%예요. 은행이 이자를 줄 때 미리 떼고 줘요.</dd><dt>단리와 월복리는 무엇이 다른가요?</dt><dd>단리는 처음 넣은 원금에만 이자가 붙어요. 월복리는 매달 생긴 이자를 원금에 더해서 그다음 달 이자를 계산해요. 이자율과 기간이 같다면 월복리 이자가 조금 더 많아요.</dd><dt>이자에 세금을 안 내는 방법이 있나요?</dt><dd>만 65세 이상 기초연금 수급자, 등록 장애인, 국민기초생활보장 수급자 등은 비과세종합저축으로 가입하면 모든 금융회사를 합쳐 원금 5천만 원까지 이자에 세금을 내지 않아요. 2028년 12월 31일까지 가입할 수 있어요.</dd></dl>
+<h2 id="check">한 번 더 확인하세요</h2>
+<div class="checklist" data-check>
+<p class="check-help">눌러서 하나씩 체크해 보세요. 체크한 내용은 어디에도 저장되지 않고, 화면을 닫으면 지워져요.</p>
+<label class="ck"><input type="checkbox"><span>우대금리까지 더한 최종 연 이자율을 넣었나요?</span></label>
+<label class="ck"><input type="checkbox"><span>상품설명서에서 단리인지 월복리인지 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>만 65세 이상 기초연금 수급자 등은 비과세종합저축(원금 5천만 원까지)으로 가입할 수 있어요. 해당되는지 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>한 금융회사에 맡긴 돈이 원금과 이자를 합쳐 1억 원(예금자보호 한도)을 넘지 않나요?</span></label>
+<label class="ck"><input type="checkbox"><span>1년 이자·배당을 합쳐 2천만 원이 넘으면 다음 해 5월 종합소득세 대상이라는 점을 알고 계신가요?</span></label>
+<p class="check-count" aria-live="polite"></p>
+</div>
+
+<h2 id="faq">자주 묻는 질문</h2><dl class="faq"><dt>연 3.5% 적금인데 이자가 왜 생각보다 적나요?</dt><dd>적금은 매달 넣은 돈마다 이자가 붙는 기간이 달라서 그래요. 첫 달에 넣은 돈은 12개월치 이자를 받지만 마지막 달에 넣은 돈은 1개월치만 받아요. 그래서 월 50만 원을 1년 동안 연 3.5%로 넣으면 세금 떼기 전 이자는 113,750원으로, 원금 600만 원의 약 1.9%예요.</dd><dt>이자에서 떼는 세금 15.4%는 어떻게 나오나요?</dt><dd>이자소득세 14%에, 그 세금의 10%인 지방소득세 1.4%가 더해져서 모두 15.4%예요. 은행이 이자를 줄 때 미리 떼고 줘요.</dd><dt>단리와 월복리는 무엇이 다른가요?</dt><dd>단리는 처음 넣은 원금에만 이자가 붙어요. 월복리는 매달 생긴 이자를 원금에 더해서 그다음 달 이자를 계산해요. 이자율과 기간이 같다면 월복리 이자가 조금 더 많아요.</dd><dt>이자에 세금을 안 내는 방법이 있나요?</dt><dd>만 65세 이상 기초연금 수급자, 등록 장애인, 국민기초생활보장 수급자 등은 비과세종합저축으로 가입하면 모든 금융회사를 합쳐 원금 5천만 원까지 이자에 세금을 내지 않아요. 2028년 12월 31일까지 가입할 수 있어요.</dd></dl>
 <p>퇴직금을 목돈으로 맡길 계획이라면 <a href="/severance/">퇴직금 계산기</a>로 먼저 금액을 확인해 보세요. 만기일까지 며칠 남았는지는 <a href="/date/">날짜 계산기</a>로 셀 수 있어요.</p>
-<p class="src">최종 수정일: 2026-11-09</p>
+<h2 id="refs">참고한 공식 자료</h2>
+<ol class="refs">
+<li><a href="https://www.law.go.kr/법령/소득세법" target="_blank" rel="noopener">「소득세법」 제14조 제3항 제6호·제129조 제1항 제1호, 국가법령정보센터</a> <small>(2026-11-09 확인)</small></li>
+<li><a href="https://www.law.go.kr/법령/지방세법" target="_blank" rel="noopener">「지방세법」 제103조의13, 국가법령정보센터</a> <small>(2026-11-09 확인)</small></li>
+<li><a href="https://www.law.go.kr/법령/조세특례제한법" target="_blank" rel="noopener">「조세특례제한법」 제88조의2·제89조의3, 국가법령정보센터</a> <small>(2026-11-09 확인)</small></li>
+<li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7703&mi=2415" target="_blank" rel="noopener">국세청 원천징수 세율 안내</a> <small>(2026-11-09 확인)</small></li>
+<li><a href="https://finlife.fss.or.kr/finlife/svings/fdrmEnty/list.do?menuNo=700003" target="_blank" rel="noopener">금융감독원 금융상품한눈에 적금 비교공시 안내</a> <small>(2026-11-09 확인)</small></li>
+<li><a href="https://biz.kebhana.com/cont/pdf/terms/m_saving_installment.pdf" target="_blank" rel="noopener">하나은행 정기적금 상품설명서 이자계산방법(적금 이자 공식 확인용)</a> <small>(2026-11-09 확인)</small></li>
+<li><a href="https://www.fsc.go.kr/no010101/84974" target="_blank" rel="noopener">금융위원회 보도자료 「25.9.1일부터 예금을 1억원까지 보호합니다」</a> <small>(2026-11-09 확인)</small></li>
+<li><a href="https://www.kdic.or.kr/sp/dpstrprot/ProtSystFaq/selectScrn.do" target="_blank" rel="noopener">예금보험공사 예금자보호제도 자주 묻는 질문</a> <small>(2026-11-09 확인)</small></li>
+</ol>
+
+<div class="edit-info">
+<p class="edit-k">작성·수정 안내</p>
+<ul>
+<li>처음 쓴 날 2026-11-09 · 마지막 수정 2026-11-12 (읽기 쉽게 먼저 보는 답·차례·체크리스트를 더함, 본문 내용과 숫자는 그대로)</li>
+<li>자료 확인 2026-11-09: 위 공식 자료를 보고 숫자와 기준을 확인했어요.</li>
+<li>공식 자료를 참고해 쉬운 말로 직접 다시 정리했어요. 글을 쓰고 다듬을 때 AI 작성 보조 도구를 사용했고, 숫자와 기준은 공식 자료와 하나씩 대조했어요.</li>
+<li>내 상황(소득, 가입 기간, 가족 구성 등)에 따라 실제 결과는 다를 수 있어요. 중요한 결정은 해당 기관에 꼭 확인하세요.</li>
+<li>든든 생활계산기는 정부 기관과 관계없는 독립 사이트예요. <a href="/editorial/">편집 원칙 보기</a></li>
+</ul>
+</div>
+<div class="report"><b>내용이 바뀌었거나 오류가 있나요?</b>
+<p>제도가 바뀌었거나 틀린 곳을 보셨다면 알려 주세요. 확인한 뒤 고치고 수정한 날짜를 적어 둘게요.</p>
+<a class="btn-out" href="/contact/">오류·변경 알리기</a></div>
 </div></main>
 <footer><div class="wrap">
-<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a></div>
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a><a href="/editorial/">편집 원칙</a></div>
 <p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
 <p>© 2026 든든 생활계산기</p>
 </div></footer>
+<script src="/site.js" defer></script>
 </body>
 </html>
