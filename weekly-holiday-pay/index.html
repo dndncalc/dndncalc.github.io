@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>주휴수당 계산기 - 2026·2027 최저임금 반영, 알바 주급·월급 환산 | 든든 생활계산기</title>
+<meta name="description" content="시급과 일주일 근무 시간만 넣으면 주휴수당, 주급, 주휴수당을 넣은 월급을 바로 계산해요. 2026년 10,320원·2027년 10,700원 최저임금과 비교하고, 주 15시간·개근 조건도 쉽게 정리했어요.">
+<link rel="canonical" href="https://dndncalc.com/weekly-holiday-pay/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="주휴수당 계산기 - 2026·2027 최저임금 반영, 알바 주급·월급 환산 | 든든 생활계산기">
+<meta property="og:description" content="시급과 일주일 근무 시간만 넣으면 주휴수당, 주급, 주휴수당을 넣은 월급을 바로 계산해요. 2026년 10,320원·2027년 10,700원 최저임금과 비교하고, 주 15시간·개근 조건도 쉽게 정리했어요.">
+<meta property="og:url" content="https://dndncalc.com/weekly-holiday-pay/">
+<link rel="stylesheet" href="/style.css">
+<!-- 애드센스 승인 후 여기에 광고 코드 넣기 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"일주일에 15시간이 안 되면 주휴수당이 없나요?","acceptedAnswer":{"@type":"Answer","text":"네. 4주 동안을 평균해 1주에 일하기로 정한 시간(소정근로시간)이 15시간 미만이면 주휴일 규정이 적용되지 않아 주휴수당이 생기지 않아요(근로기준법 제18조 제3항). 바쁠 때 더 일한 시간이 아니라 근로계약으로 정한 시간으로 따져요."}},{"@type":"Question","name":"직원이 5명이 안 되는 가게 아르바이트도 주휴수당을 받나요?","acceptedAnswer":{"@type":"Answer","text":"네. 고용노동부는 주휴일을 정한 근로기준법 제55조 제1항이 상시 근로자 5명 미만 사업장에도 적용된다고 안내해요. 주 15시간 이상, 그 주 정해진 날 개근이라는 조건만 맞으면 받을 수 있어요."}},{"@type":"Question","name":"그만두는 마지막 주에도 주휴수당이 나오나요?","acceptedAnswer":{"@type":"Answer","text":"고용노동부는 2021년 8월 4일 해석을 바꿔, 1주(7일) 동안 근로관계가 이어지고 그 주 정해진 날을 개근했다면 다음 주에 일할 예정이 없어도 주휴수당이 생긴다고 안내해요. 다만 월~금 일하고 토요일에 퇴직하면 7일을 채우지 못해 생기지 않고, 일요일까지 재직하면 생겨요."}},{"@type":"Question","name":"2027년 최저임금으로 주휴수당은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"2027년 1월 1일부터 최저임금은 시간당 10,700원이에요. 주 40시간 일하면 주휴수당은 8시간분인 85,600원이고, 주휴수당을 넣은 월급은 209시간 기준 2,236,300원이에요. 2026년(10,320원)에는 각각 82,560원, 2,156,880원이에요."}},{"@type":"Question","name":"지각이나 조퇴를 하면 개근이 아닌가요?","acceptedAnswer":{"@type":"Answer","text":"아니에요. 고용노동부는 정해진 근무일에 지각·조퇴를 하거나 휴가·휴업으로 쉰 날은 결근으로 처리할 수 없다고 안내해요. 개근이 깨지는 것은 정해진 근무일에 마음대로 나오지 않은 결근이에요."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">든든 <span>생활계산기</span></a>
+<nav class="menu"><a href="/">전체 도구</a><a href="/guide/">생활 안내</a><a href="/about/">소개</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="/">홈</a> › 일·월급</div>
+<h1>주휴수당 계산기</h1>
+<p class="lead">시급과 일주일에 일하기로 한 시간만 넣으면 주휴수당과 한 주 받을 돈, 주휴수당까지 넣은 한 달 월급을 바로 알려 드려요. 2026년과 2027년 최저임금과도 비교해 드려요.</p>
+
+<div class="card tool">
+<div class="row">
+<div><label for="wg">시급 (원)</label><input id="wg" type="number" inputmode="numeric" value="10320" min="0"></div>
+<div><label for="at">그 주 정해진 날에 모두 나왔나요?</label><select id="at"><option value="1">네, 모두 나왔어요 (개근)</option><option value="0">아니요, 쉰 날이 있어요 (결근)</option></select></div>
+</div>
+<div class="btns"><a class="btn-out" href="#wg" role="button" onclick="setWage(10320);return false;">2026년 최저임금 10,320원 넣기</a><a class="btn-out" href="#wg" role="button" onclick="setWage(10700);return false;">2027년 최저임금 10,700원 넣기</a></div>
+<div class="row">
+<div><label for="dy">일주일에 일하는 날 (일)</label><input id="dy" type="number" inputmode="numeric" value="5" min="1" max="7"></div>
+<div><label for="hr">하루 일하는 시간 (시간)</label><input id="hr" type="number" inputmode="decimal" step="0.5" value="8" min="0" max="24"></div>
+</div>
+<div class="row">
+<div><label for="wk">날마다 시간이 다르면: 일주일 총 시간 (시간, 넣으면 이 값으로 계산)</label><input id="wk" type="number" inputmode="decimal" step="0.5" placeholder="예: 18" min="0" max="80"></div>
+<div></div>
+</div>
+<button class="go" onclick="calc()">계산하기</button>
+<div class="result" id="res"></div>
+</div>
+<p class="src">근로계약서에 적힌 시간(소정근로시간)을 넣어 주세요. 쉬는 시간은 빼고, 바쁠 때 더 일한 연장근로 시간도 넣지 않아요. 원 미만은 반올림해요.</p>
+
+<section class="answer" aria-label="먼저 보는 답">
+<p class="answer-k">먼저 보는 답</p>
+<ul>
+<li>결과의 큰 글씨는 <b>한 주의 주휴수당</b>이에요. 아래 표에서 한 주에 받을 돈(일한 시간분 + 주휴수당)과 주휴수당을 넣은 한 달 월급을 볼 수 있어요.</li>
+<li>주휴수당은 <b>1주 정해진 시간 15시간 이상</b>이고 <b>그 주 정해진 날을 개근</b>하면 생겨요. 금액은 (1주 시간 ÷ 40) × 8 × 시급이고, 40시간이 넘어도 8시간분까지예요.</li>
+<li>최저임금은 2026년 10,320원, 2027년 1월 1일부터 10,700원이에요. 주 40시간이면 주휴수당은 82,560원에서 85,600원으로 올라요.</li>
+</ul>
+<div class="btns"><a class="btn-out" href="https://www.moel.go.kr/miniWageMain.do" target="_blank" rel="noopener">고용노동부 최저임금 모의계산기 ↗</a><a class="btn-out" href="https://www.minimumwage.go.kr/" target="_blank" rel="noopener">최저임금위원회 ↗</a></div>
+<p class="answer-date">자료 확인 2026-11-13 · 정부 기관 누리집은 새 창으로 열려요</p>
+</section>
+
+<nav class="toc" aria-label="이 글의 차례">
+<p class="toc-k">이 글의 차례</p>
+<ol>
+<li><a href="#s1">주휴수당을 받는 조건</a></li>
+<li><a href="#s2">이렇게 계산해요</a></li>
+<li><a href="#s3">예시로 직접 계산해 볼게요</a></li>
+<li><a href="#s4">2026년·2027년 최저임금 한눈에</a></li>
+<li><a href="#s5">헷갈리기 쉬운 경우</a></li>
+<li><a href="#check">한 번 더 확인하세요</a></li>
+<li><a href="#faq">자주 묻는 질문</a></li>
+<li><a href="#refs">참고한 공식 자료</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">주휴수당을 받는 조건</h2>
+<p>근로기준법 제55조는 일하는 사람에게 <b>1주에 평균 1번 이상 돈을 받고 쉬는 날(유급휴일)</b>을 주도록 정하고 있어요. 이 쉬는 날에 받는 하루치 임금이 주휴수당이에요. 고용노동부는 아래 세 가지를 모두 갖추면 생긴다고 안내해요.</p>
+<ol>
+<li><b>근로자일 것</b>: 사장의 지시를 받고 일하며 임금을 받는 사람이에요. 아르바이트, 계약직도 포함돼요.</li>
+<li><b>1주 정해진 시간이 15시간 이상</b>: 4주 동안(4주가 안 되면 그 기간)을 평균해 1주에 일하기로 정한 시간이 15시간 이상이어야 해요(근로기준법 제18조 제3항).</li>
+<li><b>그 주 정해진 날을 개근</b>: 그 주에 일하기로 한 날에 모두 나와야 해요(근로기준법 시행령 제30조 제1항).</li>
+</ol>
+<p>상시 근로자가 5명이 안 되는 가게도 똑같이 적용돼요.</p>
+
+<h2 id="s2">이렇게 계산해요</h2>
+<div class="card">
+<p><b>주휴 시간 = (1주 정해진 시간 ÷ 40) × 8시간</b> (40시간이 넘으면 8시간)</p>
+<p><b>주휴수당 = 주휴 시간 × 시급</b></p>
+<p><b>한 주에 받을 돈 = 1주 정해진 시간 × 시급 + 주휴수당</b></p>
+<p><b>한 달 월급 = 시급 × (1주 정해진 시간 + 주휴 시간) × 365 ÷ 7 ÷ 12</b></p>
+</div>
+<ul>
+<li>주휴 시간 식은 근로기준법 시행령 별표 2의 방법(4주 동안 정해진 시간 ÷ 같은 기간 통상 근로자의 정해진 근무일 수)을 주 5일·주 40시간 기준으로 줄인 거예요. 고용노동부 상담 예시도 하루 6시간, 주 3일이면 (3일 × 6시간 × 4주) ÷ 20일 = 3.6시간으로 계산해요.</li>
+<li>한 달 시간은 1년 평균 주 수(365 ÷ 7)를 12달로 나눠 구해요(최저임금법 시행령 제5조 제1항 제3호). 주 40시간이면 (40 + 8) × 365 ÷ 7 ÷ 12 = 208.57시간이고, 고용노동부와 같이 반올림해 <b>209시간</b>으로 봐요.</li>
+</ul>
+
+<h2 id="s3">예시로 직접 계산해 볼게요</h2>
+<table>
+<tr><th>일하는 방식</th><th>시급</th><th>주휴수당</th><th>한 주에 받을 돈</th><th>한 달 월급(주휴 포함)</th></tr>
+<tr><td>주 5일 × 8시간 = 40시간</td><td>10,320원 (2026년)</td><td><b>82,560원</b><br>(8시간분)</td><td>495,360원</td><td>2,156,880원<br>(209시간)</td></tr>
+<tr><td>주 5일 × 8시간 = 40시간</td><td>10,700원 (2027년)</td><td><b>85,600원</b><br>(8시간분)</td><td>513,600원</td><td>2,236,300원<br>(209시간)</td></tr>
+<tr><td>주 5일 × 4시간 = 20시간</td><td>10,700원 (2027년)</td><td><b>42,800원</b><br>(4시간분)</td><td>256,800원</td><td>1,112,800원<br>(104시간)</td></tr>
+<tr><td>주 3일 × 6시간 = 18시간</td><td>10,700원 (2027년)</td><td><b>38,520원</b><br>(3.6시간분)</td><td>231,120원</td><td>1,005,800원<br>(94시간)</td></tr>
+<tr><td>주 2일 × 7시간 = 14시간</td><td>10,700원 (2027년)</td><td><b>0원</b><br>(15시간 미만)</td><td>149,800원</td><td>652,700원<br>(61시간)</td></tr>
+</table>
+<ul>
+<li>주 18시간이면 주휴 시간은 18 ÷ 40 × 8 = 3.6시간, 주휴수당은 3.6 × 10,700원 = 38,520원이에요. 한 달 시간은 (18 + 3.6) × 365 ÷ 7 ÷ 12 = 93.86시간이라 반올림해 94시간으로 계산했어요.</li>
+<li>주 40시간이면 주휴수당을 넣은 시급은 시급의 1.2배와 같아요. 2026년 12,384원, 2027년 12,840원이에요.</li>
+</ul>
+
+<h2 id="s4">2026년·2027년 최저임금 한눈에</h2>
+<table>
+<tr><th>적용 기간</th><th>시간당</th><th>하루 8시간</th><th>한 달(209시간)</th><th>주 40시간 주휴수당</th></tr>
+<tr><td>2026년 1월 1일 ~ 12월 31일</td><td><b>10,320원</b></td><td>82,560원</td><td>2,156,880원</td><td>82,560원</td></tr>
+<tr><td>2027년 1월 1일 ~ 12월 31일</td><td><b>10,700원</b></td><td>85,600원</td><td>2,236,300원</td><td>85,600원</td></tr>
+</table>
+<p>2027년 최저임금은 2026년보다 380원(3.7%) 올랐고, 고용노동부가 2026년 8월 5일 고시(제2026-60호)했어요. 업종과 사업장 크기에 관계없이 똑같이 적용돼요. 월급에는 주휴수당이 이미 들어 있으니, 월급이 209시간 기준 금액보다 적은지로 최저임금 위반을 따져 보면 돼요.</p>
+
+<h2 id="s5">헷갈리기 쉬운 경우</h2>
+<ul>
+<li><b>그만두는 마지막 주</b>: 고용노동부는 2021년 8월 4일 해석을 바꿔, 1주(7일) 동안 근로관계가 이어지고 그 주 정해진 날을 개근했다면 그다음 주에 일할 예정이 없어도 주휴수당이 생긴다고 안내해요. 월~금 일하는 사람이 토요일에 퇴직하면 생기지 않고, 일요일까지 재직하면(그다음 월요일 퇴직) 생겨요.</li>
+<li><b>지각·조퇴·휴가</b>: 정해진 근무일에 지각·조퇴를 하거나 휴가·휴업으로 쉰 날은 결근이 아니라서 개근이 깨지지 않아요.</li>
+<li><b>주 중간에 들어온 경우</b>: 고용노동부는 들어온 날부터 7일을 1주로 보고, 그 기간에 개근하면 주휴수당을 주도록 안내해요.</li>
+<li><b>시간이 매주 다른 경우</b>: 4주 동안 일하기로 한 시간을 평균해 1주 시간을 구해요. 계산기의 '일주일 총 시간' 칸에 그 평균을 넣어 보세요.</li>
+<li><b>15시간 미만</b>: 4주 평균 1주 15시간이 안 되면 주휴수당뿐 아니라 연차휴가 규정(근로기준법 제60조)도 적용되지 않아요.</li>
+</ul>
+<div class="note">주휴수당을 받지 못했다면 받지 못한 임금(임금 체불)이에요. 먼저 근로계약서와 근무 기록(출퇴근 기록, 급여 명세서, 문자)을 챙겨 두고, 고용노동부 고객상담센터(☎ 1350)에 상담해 보세요.</div>
+
+<script>
+function won(n){return Math.round(n).toLocaleString('ko-KR')+'원';}
+function hrs(n){return (Math.round(n*100)/100).toLocaleString('ko-KR')+'시간';}
+function juhyu(wage,W,attended){var Wc=Math.min(W,40),ok=(W>=15)&&attended,h=ok?Wc/40*8:0;var pay=Math.round(h*wage),base=Math.round(Wc*wage);var mh=Math.round((Wc+h)*365/7/12);return {W:W,Wc:Wc,ok:ok,h:h,pay:pay,base:base,week:base+pay,mh:mh,month:Math.round(wage*mh)};}
+function setWage(v){document.getElementById('wg').value=v;calc();}
+function calc(){var wage=parseFloat(document.getElementById('wg').value),dy=parseFloat(document.getElementById('dy').value),hr=parseFloat(document.getElementById('hr').value),wk=parseFloat(document.getElementById('wk').value),at=document.getElementById('at').value==='1';var el=document.getElementById('res'),h='';
+var W=(wk>0)?wk:dy*hr;
+if(!(wage>0)){h='시급을 넣어 주세요.';}
+else if(!(W>0)){h='일주일에 일하는 날과 하루 시간을 넣어 주세요.';}
+else{var r=juhyu(wage,W,at);
+h='<div>한 주 주휴수당</div><div class="big">'+won(r.pay)+'</div>';
+if(!at)h+='<p>그 주 정해진 날에 결근이 있으면 그 주 주휴수당은 생기지 않아요. 아래 금액은 일한 시간분만 계산했어요.</p>';
+else if(W<15)h+='<p>1주 정해진 시간이 15시간 미만이라 주휴수당이 생기지 않아요(근로기준법 제18조 제3항).</p>';
+h+='<table><tr><th>항목</th><th>금액</th></tr>';
+h+='<tr><td>1주 정해진 시간</td><td>'+hrs(r.Wc)+(W>40?' (40시간까지만 계산)':'')+'</td></tr>';
+h+='<tr><td>주휴 시간</td><td>'+hrs(r.h)+'</td></tr>';
+h+='<tr><td>일한 시간분 (1주)</td><td>'+won(r.base)+'</td></tr>';
+h+='<tr><td>주휴수당 (1주)</td><td>'+won(r.pay)+'</td></tr>';
+h+='<tr><td><b>한 주에 받을 돈</b></td><td><b>'+won(r.week)+'</b></td></tr>';
+h+='<tr><td>한 달 기준 시간</td><td>'+r.mh+'시간</td></tr>';
+h+='<tr><td><b>한 달 월급 (주휴 포함)</b></td><td><b>'+won(r.month)+'</b></td></tr>';
+h+='</table>';
+if(W>40)h+='<p class="src">1주 40시간을 넘는 시간은 연장근로라서 주휴수당과 이 표에 넣지 않았어요. 연장근로 수당은 따로 계산해요.</p>';
+if(wage<10320)h+='<p><b>시급이 2026년 최저임금 10,320원보다 낮아요.</b> 수습 등 예외가 아니라면 최저임금법 위반일 수 있어요.</p>';
+else if(wage<10700)h+='<p>2026년 최저임금은 넘지만, <b>2027년 1월 1일부터는 최저임금 10,700원보다 낮아져요.</b> 1월부터 시급이 올라야 해요.</p>';
+h+='<p class="src">한 달 시간은 (1주 시간 + 주휴 시간) × 365 ÷ 7 ÷ 12를 반올림했어요. 실제 급여는 회사의 급여 계산 방법, 세금·4대보험에 따라 달라요.</p>';}
+el.innerHTML=h;el.classList.add('show');}
+</script>
+<h2 id="check">한 번 더 확인하세요</h2>
+<div class="checklist" data-check>
+<p class="check-help">눌러서 하나씩 체크해 보세요. 체크한 내용은 어디에도 저장되지 않고, 화면을 닫으면 지워져요.</p>
+<label class="ck"><input type="checkbox"><span>근로계약서에 적힌 1주 근무 시간(쉬는 시간 뺀 시간)을 넣었나요?</span></label>
+<label class="ck"><input type="checkbox"><span>4주를 평균해 1주 15시간 이상인지 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>그 주 일하기로 한 날에 결근이 없었나요? (지각·조퇴는 결근이 아니에요)</span></label>
+<label class="ck"><input type="checkbox"><span>2027년 1월 1일부터 시급이 10,700원 이상으로 바뀌는지 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>그만둘 때는 퇴직일이 언제인지(마지막 주 7일을 채우는지) 확인했나요?</span></label>
+<p class="check-count" aria-live="polite"></p>
+</div>
+
+<h2 id="faq">자주 묻는 질문</h2><dl class="faq"><dt>일주일에 15시간이 안 되면 주휴수당이 없나요?</dt><dd>네. 4주 동안을 평균해 1주에 일하기로 정한 시간(소정근로시간)이 15시간 미만이면 주휴일 규정이 적용되지 않아 주휴수당이 생기지 않아요(근로기준법 제18조 제3항). 바쁠 때 더 일한 시간이 아니라 근로계약으로 정한 시간으로 따져요.</dd><dt>직원이 5명이 안 되는 가게 아르바이트도 주휴수당을 받나요?</dt><dd>네. 고용노동부는 주휴일을 정한 근로기준법 제55조 제1항이 상시 근로자 5명 미만 사업장에도 적용된다고 안내해요. 주 15시간 이상, 그 주 정해진 날 개근이라는 조건만 맞으면 받을 수 있어요.</dd><dt>그만두는 마지막 주에도 주휴수당이 나오나요?</dt><dd>고용노동부는 2021년 8월 4일 해석을 바꿔, 1주(7일) 동안 근로관계가 이어지고 그 주 정해진 날을 개근했다면 다음 주에 일할 예정이 없어도 주휴수당이 생긴다고 안내해요. 다만 월~금 일하고 토요일에 퇴직하면 7일을 채우지 못해 생기지 않고, 일요일까지 재직하면 생겨요.</dd><dt>2027년 최저임금으로 주휴수당은 얼마인가요?</dt><dd>2027년 1월 1일부터 최저임금은 시간당 10,700원이에요. 주 40시간 일하면 주휴수당은 8시간분인 85,600원이고, 주휴수당을 넣은 월급은 209시간 기준 2,236,300원이에요. 2026년(10,320원)에는 각각 82,560원, 2,156,880원이에요.</dd><dt>지각이나 조퇴를 하면 개근이 아닌가요?</dt><dd>아니에요. 고용노동부는 정해진 근무일에 지각·조퇴를 하거나 휴가·휴업으로 쉰 날은 결근으로 처리할 수 없다고 안내해요. 개근이 깨지는 것은 정해진 근무일에 마음대로 나오지 않은 결근이에요.</dd></dl>
+<p>오래 일하고 그만둘 때 받는 돈은 <a href="/severance/">퇴직금 계산기</a>로 계산해 볼 수 있어요. 연말에 세금을 돌려받는 방법은 <a href="/guide/year-end-preview/">2026 연말정산 미리보기 하는 법</a>을 읽어 보세요.</p>
+<h2 id="refs">참고한 공식 자료</h2>
+<ol class="refs">
+<li><a href="https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B7%BC%EB%A1%9C%EA%B8%B0%EC%A4%80%EB%B2%95&joNo=005500&mode=11" target="_blank" rel="noopener">「근로기준법」 제55조 제1항 (법률 제21533호, 2026-10-08 시행), 국가법령정보센터</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B7%BC%EB%A1%9C%EA%B8%B0%EC%A4%80%EB%B2%95&joNo=001800&mode=11" target="_blank" rel="noopener">「근로기준법」 제18조 제3항 (15시간 미만 근로자), 국가법령정보센터</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B7%BC%EB%A1%9C%EA%B8%B0%EC%A4%80%EB%B2%95+%EC%8B%9C%ED%96%89%EB%A0%B9&joNo=003000&mode=11" target="_blank" rel="noopener">「근로기준법 시행령」 제30조 제1항 (대통령령 제35436호), 국가법령정보센터</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%B5%9C%EC%A0%80%EC%9E%84%EA%B8%88%EB%B2%95+%EC%8B%9C%ED%96%89%EB%A0%B9&joNo=000500&mode=11" target="_blank" rel="noopener">「최저임금법 시행령」 제5조 제1항 (월 단위 임금의 시간 환산), 국가법령정보센터</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19744" target="_blank" rel="noopener">고용노동부 보도자료 「2027년도 적용 최저임금 시간급 10,700원」(2026-08-05, 고시 제2026-60호)</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://www.minimumwage.go.kr/minWage/policy/decisionMain.do" target="_blank" rel="noopener">최저임금위원회 「연도별 최저임금 결정현황」</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202302011542216101000" target="_blank" rel="noopener">고용노동부 빠른인터넷상담 「주휴수당 발생 요건과 주 중간 입사자」</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202403221010432241000" target="_blank" rel="noopener">고용노동부 빠른인터넷상담 「주휴수당 계산방법」(개근·지각·조퇴, 주 40시간 비례)</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://1350.moel.go.kr/rtmview.do?id=1000074928" target="_blank" rel="noopener">고용노동부 1350 상담 「단시간 근로자 주휴수당 산정례」(하루 6시간·주 3일 = 3.6시간)</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://1350.moel.go.kr/rtmview.do?id=1000299736" target="_blank" rel="noopener">고용노동부 1350 상담 「퇴직하는 주의 주휴수당」(2021-08-04 행정해석)</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://1350.moel.go.kr/rtmview.do?id=1000318702" target="_blank" rel="noopener">고용노동부 1350 상담 「주휴수당 요건(5인 미만 적용)」</a> <small>(2026-11-13 확인)</small></li>
+<li><a href="https://www.moel.go.kr/miniWageMain.do" target="_blank" rel="noopener">고용노동부 「최저임금 모의계산기」</a> <small>(2026-11-13 확인)</small></li>
+</ol>
+
+<div class="edit-info">
+<p class="edit-k">작성·수정 안내</p>
+<ul>
+<li>처음 쓴 날 2026-11-13 · 마지막 수정 2026-11-13</li>
+<li>자료 확인 2026-11-13: 위 공식 자료를 보고 숫자와 기준을 확인했어요.</li>
+<li>공식 자료를 참고해 쉬운 말로 직접 다시 정리했어요. 글을 쓰고 다듬을 때 AI 작성 보조 도구를 사용했고, 숫자와 기준은 공식 자료와 하나씩 대조했어요.</li>
+<li>내 상황(근로계약, 근무 형태, 회사 급여 규정 등)에 따라 실제 결과는 다를 수 있어요. 중요한 결정은 해당 기관에 꼭 확인하세요.</li>
+<li>든든 생활계산기는 정부 기관과 관계없는 독립 사이트예요. <a href="/editorial/">편집 원칙 보기</a></li>
+</ul>
+</div>
+<div class="report"><b>내용이 바뀌었거나 오류가 있나요?</b>
+<p>제도가 바뀌었거나 틀린 곳을 보셨다면 알려 주세요. 확인한 뒤 고치고 수정한 날짜를 적어 둘게요.</p>
+<a class="btn-out" href="/contact/">오류·변경 알리기</a></div>
+</div></main>
+<footer><div class="wrap">
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a><a href="/editorial/">편집 원칙</a></div>
+<p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
+<p>© 2026 든든 생활계산기</p>
+</div></footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
