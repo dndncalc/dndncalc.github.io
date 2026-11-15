@@ -182,3 +182,5 @@ a.cat small{color:var(--muted);font-size:.85rem}
   a.cat{padding:14px}
   .newlist li{flex-direction:column;gap:2px}
 }
+/* 입력 오류 표시 (2026-11-15, 브라우저 기본 :user-invalid) */
+.tool input:user-invalid,.tool select:user-invalid{border-color:var(--warn);box-shadow:0 0 0 3px rgba(138,53,16,.15)}
