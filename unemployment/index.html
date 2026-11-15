@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>실업급여 계산기 - 2026년 하루 금액·받는 날수·총액, 2027년 미리 보기 | 든든 생활계산기</title>
+<meta name="description" content="퇴사일, 퇴사 전 3개월 월급, 하루 근무시간, 나이, 고용보험 가입 기간만 넣으면 실업급여(구직급여) 하루 금액과 받는 날수, 모두 받으면 얼마인지 바로 계산해요. 2026년 상한 68,100원·하한 66,048원과 2027년 하한 68,480원을 반영했어요.">
+<link rel="canonical" href="https://dndncalc.com/unemployment/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="실업급여 계산기 - 2026년 하루 금액·받는 날수·총액, 2027년 미리 보기 | 든든 생활계산기">
+<meta property="og:description" content="퇴사일, 퇴사 전 3개월 월급, 하루 근무시간, 나이, 고용보험 가입 기간만 넣으면 실업급여(구직급여) 하루 금액과 받는 날수, 모두 받으면 얼마인지 바로 계산해요. 2026년 상한 68,100원·하한 66,048원과 2027년 하한 68,480원을 반영했어요.">
+<meta property="og:url" content="https://dndncalc.com/unemployment/">
+<link rel="stylesheet" href="/style.css">
+<!-- 애드센스 승인 후 여기에 광고 코드 넣기 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"월급이 많으면 실업급여도 많이 받나요?","acceptedAnswer":{"@type":"Answer","text":"어느 정도까지만 그래요. 2026년에 퇴사했다면 하루 평균임금이 113,500원을 넘는 분은 모두 하루 68,100원으로 같아요. 하루 8시간 일한 분은 하루 평균임금이 110,080원 이하이면 모두 하한액 66,048원을 받아요. 그래서 2026년 퇴사자의 하루 금액은 대부분 66,048원에서 68,100원 사이예요."}},{"@type":"Question","name":"12월에 그만두고 1월에 신청하면 어느 해 기준인가요?","acceptedAnswer":{"@type":"Answer","text":"신청한 날이 아니라 퇴사한 날(이직일) 기준이에요. 하한액은 이직일 당시 최저임금으로 정하고(고용보험법 제45조 제4항), 2027년 상한액을 바꾸는 시행령 개정안도 시행 전에 퇴사한 사람에게는 예전 기준을 적용한다고 적고 있어요. 2026년 12월 31일까지 일하고 그만뒀다면 2026년 기준이에요."}},{"@type":"Question","name":"하루 근무시간이 짧으면 하한액이 낮아지나요?","acceptedAnswer":{"@type":"Answer","text":"네. 하한액은 최저임금의 80%에 퇴사 전 하루 소정근로시간을 곱해서 정해요. 2026년 퇴사자는 8시간 이상 66,048원, 7시간 57,792원, 6시간 49,536원, 5시간 41,280원, 4시간 이하 33,024원이에요. 다만 평균임금의 60%가 이보다 많으면 그 금액을 받아요."}},{"@type":"Question","name":"실업급여에도 세금을 떼나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 소득세법 제12조 제3호 마목은 고용보험법에 따라 받는 실업급여를 비과세 소득으로 정하고 있어요. 계산기가 보여 주는 금액에서 소득세를 따로 떼지 않아요."}},{"@type":"Question","name":"2027년에 그만두면 얼마를 받나요?","acceptedAnswer":{"@type":"Answer","text":"하한액은 2027년 최저임금 10,700원으로 하루 68,480원(8시간 기준)이 되는 것이 확정이에요. 상한액은 정부가 최저임금에 맞춰 바꾸는 시행령 개정안을 입법예고한 단계라 아직 확정되지 않았어요. 개정안대로면 하루 약 70,568원이고, 시행령이 그대로면 하루 8시간 일한 분은 모두 68,480원을 받게 돼요."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">든든 <span>생활계산기</span></a>
+<nav class="menu"><a href="/">전체 도구</a><a href="/guide/">생활 안내</a><a href="/about/">소개</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="/">홈</a> › 직장·퇴직</div>
+<h1>실업급여 계산기</h1>
+<p class="lead">퇴사한 날과 퇴사 전 3개월 동안 받은 월급, 하루 근무시간, 나이, 고용보험 가입 기간을 넣으면 실업급여(구직급여)를 하루에 얼마씩, 며칠 동안, 모두 얼마 받는지 알려 드려요. 2027년에 그만두는 분은 미리 보기로 계산해 드려요.</p>
+
+<div class="card tool">
+<div class="row">
+<div><label for="ld">마지막으로 일한 날 (퇴사일)</label><input id="ld" type="date" value="2026-11-30" min="2026-01-01" max="2027-12-31" required></div>
+<div><label for="hr">퇴사 전 하루 근무시간 (근로계약 기준)</label><select id="hr"><option value="8">8시간 이상 (주 40시간 등)</option><option value="7">7시간</option><option value="6">6시간</option><option value="5">5시간</option><option value="4">4시간 이하</option></select></div>
+</div>
+<div class="row">
+<div><label for="w3">퇴사 전 3개월 동안 받은 임금 합계 (세금 떼기 전, 원)</label><input id="w3" type="number" inputmode="numeric" placeholder="예: 9000000" min="1"></div>
+<div><label for="wm">월급이 매달 같으면 월급만 넣어도 돼요 (원)</label><input id="wm" type="number" inputmode="numeric" placeholder="예: 3000000" min="1"></div>
+</div>
+<div class="row">
+<div><label for="ag">퇴사할 때 나이</label><select id="ag"><option value="u">50세 미만</option><option value="o">50세 이상 또는 장애인</option></select></div>
+<div><label for="yr">고용보험 가입 기간 (모두 더해서)</label><select id="yr"><option value="0">1년 미만</option><option value="1">1년 이상 3년 미만</option><option value="2" selected>3년 이상 5년 미만</option><option value="3">5년 이상 10년 미만</option><option value="4">10년 이상</option></select></div>
+</div>
+<button class="go" onclick="calc()">계산하기</button>
+<div class="result" id="res"></div>
+</div>
+<p class="src">3개월 임금은 기본급에 매달 받은 수당을 더한, 세금과 4대보험을 떼기 전 금액이에요. 두 칸 모두 넣으면 3개월 합계 칸으로 계산해요. 원 미만은 버려요.</p>
+
+<section class="answer" aria-label="먼저 보는 답">
+<p class="answer-k">먼저 보는 답</p>
+<ul>
+<li>결과의 큰 글씨는 <b>하루에 받는 실업급여</b>예요. 아래 표에서 평균임금, 하한·상한 중 어느 것이 적용됐는지, 받는 날수, 30일치, 모두 받으면 얼마인지 볼 수 있어요.</li>
+<li>2026년에 그만두면 하루 <b>66,048원~68,100원</b>(하루 8시간 일한 경우)이고, 나이와 가입 기간에 따라 <b>120일~270일</b> 받아요. 예를 들어 하한액으로 180일이면 11,888,640원이에요.</li>
+<li>퇴사 전 18개월 동안 고용보험 가입 날이 180일 이상이고 원치 않게 그만둔 경우에 받을 수 있어요. 조건과 신청 순서는 <a href="/guide/unemployment-apply/">실업급여 조건과 신청 방법</a>에 정리했어요.</li>
+</ul>
+<div class="btns"><a class="btn-out" href="https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&amp;recordCountPerPage=10&amp;systClId=SC00000254&amp;systId=SI00000411&amp;upprSystClId=SC00000034" target="_blank" rel="noopener">고용24 실업급여 안내 ↗</a><a class="btn-out" href="https://1350.moel.go.kr/" target="_blank" rel="noopener">고용노동부 고객상담센터(1350) ↗</a></div>
+<p class="answer-date">자료 확인 2026-11-15 · 정부 기관 누리집은 새 창으로 열려요</p>
+</section>
+
+<nav class="toc" aria-label="이 글의 차례">
+<p class="toc-k">이 글의 차례</p>
+<ol>
+<li><a href="#s1">이렇게 계산해요</a></li>
+<li><a href="#s2">하루 근무시간별 하한액과 상한액</a></li>
+<li><a href="#s3">받는 날수 표</a></li>
+<li><a href="#s4">예시로 직접 계산해 볼게요</a></li>
+<li><a href="#s5">2027년에 그만두면</a></li>
+<li><a href="#s6">계산기가 다루지 않는 경우</a></li>
+<li><a href="#check">한 번 더 확인하세요</a></li>
+<li><a href="#faq">자주 묻는 질문</a></li>
+<li><a href="#refs">참고한 공식 자료</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">이렇게 계산해요</h2>
+<p>실업급여 중 다음 일자리를 찾는 동안 받는 돈의 정확한 이름은 '구직급여'예요. 고용보험법 제45조·제46조는 아래 순서로 하루 금액(구직급여일액)을 정해요.</p>
+<ol>
+<li><b>하루 평균임금</b> = 퇴사 전 3개월 동안 받은 임금 합계 ÷ 그 3개월의 달력 날수(보통 89일~92일). 이 금액을 '기초일액'이라고 불러요.</li>
+<li><b>위쪽 한도</b>: 기초일액이 113,500원을 넘으면 113,500원으로 봐요(시행령 제68조). 그래서 하루 금액은 113,500원의 60%인 <b>68,100원</b>을 넘지 않아요.</li>
+<li><b>60% 곱하기</b>: 기초일액 × 60%가 하루 금액이에요.</li>
+<li><b>아래쪽 한도</b>: 이 금액이 '퇴사일 당시 최저임금 × 하루 소정근로시간 × 80%'보다 적으면 그 금액(하한액)을 받아요.</li>
+<li><b>모두 받으면</b> = 하루 금액 × 받는 날수(소정급여일수)</li>
+</ol>
+<div class="card">
+<p><b>하루 금액 = 큰 값 [ (하루 평균임금, 상한 113,500원) 중 작은 값 × 60%,  최저임금 × 하루 시간 × 80% ]</b></p>
+<p><b>모두 받으면 = 하루 금액 × 받는 날수</b></p>
+</div>
+<p>3개월 날수는 마지막으로 일한 날부터 거꾸로 3개월이에요. 11월 30일까지 일했다면 9월 1일부터 11월 30일까지 91일이에요.</p>
+
+<h2 id="s2">하루 근무시간별 하한액과 상한액</h2>
+<p>하한액은 근로계약으로 정한 하루 근무시간(소정근로시간)에 따라 달라요. 고용노동부 예규는 시간이 소수점으로 나오면 올려서 정수로 하고, 3시간 이하이면 4시간, 8시간 이상이면 8시간으로 본다고 정하고 있어요.</p>
+<table>
+<tr><th>퇴사 전 하루 근무시간</th><th>2026년 퇴사 하한액</th><th>2027년 퇴사 하한액</th></tr>
+<tr><td>8시간 이상</td><td><b>66,048원</b></td><td><b>68,480원</b></td></tr>
+<tr><td>7시간</td><td>57,792원</td><td>59,920원</td></tr>
+<tr><td>6시간</td><td>49,536원</td><td>51,360원</td></tr>
+<tr><td>5시간</td><td>41,280원</td><td>42,800원</td></tr>
+<tr><td>4시간 이하</td><td>33,024원</td><td>34,240원</td></tr>
+<tr><td><b>상한액 (시간과 관계없이)</b></td><td><b>68,100원</b></td><td>미확정 (아래 설명)</td></tr>
+</table>
+<p class="src">하한액 = 최저임금(2026년 10,320원, 2027년 10,700원) × 시간 × 80%. 예: 10,320원 × 8시간 × 80% = 66,048원.</p>
+<ul>
+<li>주 단위로 시간을 정했다면 (주 소정근로시간 + 유급휴일 시간) ÷ 48 × 8로 하루 시간을 구해요(고용보험법 시행규칙 제91조의2). 주 40시간에 주휴 8시간이면 48 ÷ 48 × 8 = 8시간, 주 20시간에 주휴 4시간이면 24 ÷ 48 × 8 = 4시간이에요.</li>
+<li>하루 8시간 일한 분은 하루 평균임금이 <b>110,080원 이하</b>이면 하한액을 받아요. 66,048원 ÷ 0.6 = 110,080원이기 때문이에요.</li>
+</ul>
+
+<h2 id="s3">받는 날수 표</h2>
+<p>받는 날수는 <b>퇴사할 때 나이</b>와 <b>고용보험에 가입한 기간</b>으로 정해요(고용보험법 별표 1). 장애인은 50세 이상과 같은 날수를 받아요.</p>
+<table>
+<tr><th>가입 기간</th><th>50세 미만</th><th>50세 이상·장애인</th></tr>
+<tr><td>1년 미만</td><td>120일</td><td>120일</td></tr>
+<tr><td>1년 이상 3년 미만</td><td>150일</td><td>180일</td></tr>
+<tr><td>3년 이상 5년 미만</td><td>180일</td><td>210일</td></tr>
+<tr><td>5년 이상 10년 미만</td><td>210일</td><td>240일</td></tr>
+<tr><td>10년 이상</td><td>240일</td><td>270일</td></tr>
+</table>
+<p>가입 기간은 여러 회사에서 고용보험에 든 기간을 더해서 세요. 예전에 실업급여를 받은 적이 있으면 그때까지의 기간은 빼요.</p>
+
+<h2 id="s4">예시로 직접 계산해 볼게요</h2>
+<table>
+<tr><th>상황</th><th>하루 평균임금</th><th>하루 금액</th><th>받는 날수</th><th>모두 받으면</th></tr>
+<tr><td>2026-11-30 퇴사, 3개월 900만 원(91일), 8시간, 45세, 가입 4년</td><td>98,901원<br>(60%는 59,340원)</td><td><b>66,048원</b><br>(하한액)</td><td>180일</td><td>11,888,640원</td></tr>
+<tr><td>2026-12-31 퇴사, 3개월 1,200만 원(92일), 8시간, 55세, 가입 12년</td><td>130,434원<br>(상한 113,500원)</td><td><b>68,100원</b><br>(상한액)</td><td>270일</td><td>18,387,000원</td></tr>
+<tr><td>2026-10-31 퇴사, 3개월 960만 원(92일), 하루 6시간, 35세, 가입 2년</td><td>104,347원</td><td><b>62,608원</b><br>(60%)</td><td>150일</td><td>9,391,200원</td></tr>
+<tr><td>2027-03-31 퇴사, 3개월 900만 원(90일), 8시간, 58세, 가입 2년</td><td>100,000원<br>(60%는 60,000원)</td><td><b>68,480원</b><br>(2027년 하한액)</td><td>180일</td><td>12,326,400원</td></tr>
+</table>
+<ul>
+<li>세 번째 예시는 하루 6시간 일했지만 시급이 높아서, 평균임금의 60%(62,608원)가 6시간 하한액(49,536원)보다 많아요. 이럴 때는 60% 금액을 받아요.</li>
+<li>30일치로 보면 하한액 66,048원은 1,981,440원, 상한액 68,100원은 2,043,000원이에요.</li>
+</ul>
+
+<h2 id="s5">2027년에 그만두면</h2>
+<ul>
+<li><b>하한액은 확정</b>: 2027년 최저임금이 시간당 10,700원으로 고시돼서, 2027년 1월 1일 이후 퇴사하면 하한액이 하루 68,480원(8시간 기준)이 돼요.</li>
+<li><b>상한액은 아직 정부안</b>: 고용노동부는 2026년 9월 22일 상한액을 '최저임금 × 8시간 × 1,000분의 1,374'로 바꾸는 시행령 개정안을 입법예고했어요(공고 제2026-446호, 2027년 1월 1일 시행 예정). 이대로면 기초일액 상한은 117,614원, 하루 상한액은 약 <b>70,568원</b>이에요. 이 페이지를 쓴 날까지 확정되지 않았어요.</li>
+<li><b>시행령이 그대로라면</b>: 상한액 68,100원이 하한액 68,480원보다 낮아져요. 법(제46조 제2항)은 하루 금액이 하한액보다 적으면 하한액을 주도록 정하고 있어서, 하루 8시간 일한 분은 월급과 관계없이 68,480원을 받게 돼요.</li>
+</ul>
+<p>그래서 계산기는 2027년 퇴사일을 넣으면 <b>정부안 기준 금액</b>을 큰 글씨로, <b>시행령이 그대로일 때 금액</b>을 표에 함께 보여 드려요. 정부가 발표한 '주 6일 기준 지급'안은 법을 고쳐야 하는 내용이고 총 금액과 날수는 그대로 둔다고 해서 계산에 넣지 않았어요. 확정되면 숫자를 고치고 날짜를 적어 둘게요.</p>
+
+<h2 id="s6">계산기가 다루지 않는 경우</h2>
+<ul>
+<li><b>통상임금이 더 큰 경우</b>: 무급 휴직이나 결근으로 3개월 평균임금이 통상임금보다 낮아졌다면 통상임금을 기초일액으로 써요(제45조 제2항). 이 계산기는 평균임금만으로 계산해요.</li>
+<li><b>3개월 안에 회사를 두 번 이상 옮긴 경우</b>: 여러 회사 임금을 합쳐서 계산해요(제45조 제1항 단서). 합친 금액을 3개월 합계 칸에 넣어 보세요.</li>
+<li><b>일용직·예술인·노무제공자·자영업자</b>: 계산 방법이 달라요. 고용센터에 확인하세요.</li>
+<li><b>2025년 이전에 퇴사한 경우, 2028년 이후 퇴사</b>: 상한액이 다르거나(2025년 이전) 계산 기준이 보수로 바뀌어서(2028년부터, 법률 제21473호) 이 계산기는 2026년 1월 1일 ~ 2027년 12월 31일 퇴사만 계산해요.</li>
+</ul>
+<div class="note">받는 기간은 <b>퇴사한 다음 날부터 12개월 안</b>이에요. 늦게 신청하면 날수가 남아 있어도 12개월이 지나는 날 끝나요. 신청한 날부터 처음 7일은 대기기간이라 돈이 나오지 않지만, 받는 날수는 그다음 날부터 세기 때문에 모두 받으면 총액은 같아요.</div>
+
+<script>
+var DAYS={u:[120,150,180,210,240],o:[120,180,210,240,270]};
+var RULE={2026:{mw:10320,cap:113500},2027:{mw:10700,cap:Math.floor(10700*8*1.374),capNow:113500}};
+function pd(s){var p=s.split('-');return new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));}
+function minus3m(d){var y=d.getUTCFullYear(),m=d.getUTCMonth()-3,day=d.getUTCDate();if(m<0){m+=12;y-=1;}var last=new Date(Date.UTC(y,m+1,0)).getUTCDate();return new Date(Date.UTC(y,m,Math.min(day,last)));}
+function fmt(d){return d.getUTCFullYear()+'년 '+(d.getUTCMonth()+1)+'월 '+d.getUTCDate()+'일';}
+function won(n){return Math.round(n).toLocaleString('ko-KR')+'원';}
+function dayAmt(avg,cap,low){var d60=Math.floor(Math.min(avg,cap)*0.6);var d=Math.max(d60,low);var why=(d60<=low)?'low':(avg>cap?'cap':'avg');return {d60:d60,d:d,why:why};}
+function ub(ld,total,h,ag,yr){var last=pd(ld);var y=last.getUTCFullYear();var R=RULE[y];if(!R)return {err:y};var nx=new Date(last.getTime()+86400000);var st=minus3m(nx);var pdays=Math.round((nx-st)/86400000);var avg=Math.floor(total/pdays);var low=Math.floor(R.mw*h*0.8);var a=dayAmt(avg,R.cap,low);var n=DAYS[ag][yr];var r={y:y,start:st,last:last,pdays:pdays,total:total,avg:avg,low:low,cap:R.cap,cap60:Math.floor(R.cap*0.6),d60:a.d60,d:a.d,why:a.why,n:n,sum:a.d*n,m30:a.d*30};if(R.capNow){var b=dayAmt(avg,R.capNow,low);r.dNow=b.d;r.sumNow=b.d*n;}return r;}
+function calc(){var ld=document.getElementById('ld').value,h=+document.getElementById('hr').value,ag=document.getElementById('ag').value,yr=+document.getElementById('yr').value;var w3=parseFloat(document.getElementById('w3').value),wm=parseFloat(document.getElementById('wm').value);var total=(w3>0)?w3:((wm>0)?wm*3:0);var el=document.getElementById('res'),s='';
+if(!ld){s='마지막으로 일한 날을 넣어 주세요.';}
+else if(!(total>0)){s='퇴사 전 3개월 임금 합계나 월급을 넣어 주세요.';}
+else{var r=ub(ld,total,h,ag,yr);
+if(r.err){s=(r.err<2026)?'이 계산기는 2026년 1월 1일 이후 퇴사만 계산해요. 2025년 이전 퇴사는 상한액이 달라서 고용센터(☎ 1350)에 확인해 주세요.':'2028년 1월 1일부터는 하루 금액을 고용보험에 신고된 보수로 계산하도록 법이 바뀌어서, 이 계산기는 2027년 12월 31일 퇴사까지만 계산해요.';}
+else{var why={low:'하한액 적용',cap:'상한액 적용',avg:'평균임금의 60%'};
+s='<div>하루에 받는 실업급여'+(r.y===2027?' (2027년 정부안 기준 미리 보기)':'')+'</div><div class="big">'+won(r.d)+'</div>';
+s+='<p>'+r.n+'일 동안 모두 받으면 <b>'+won(r.sum)+'</b>이에요.</p>';
+s+='<table><tr><th>항목</th><th>값</th></tr>';
+s+='<tr><td>평균임금 기간</td><td>'+fmt(r.start)+' ~ '+fmt(r.last)+' ('+r.pdays+'일)</td></tr>';
+s+='<tr><td>3개월 임금 합계</td><td>'+won(r.total)+'</td></tr>';
+s+='<tr><td>하루 평균임금</td><td>'+won(r.avg)+'</td></tr>';
+s+='<tr><td>평균임금(상한 '+won(r.cap)+'까지)의 60%</td><td>'+won(r.d60)+'</td></tr>';
+s+='<tr><td>하한액 ('+(h===8?'8시간 이상':(h===4?'4시간 이하':h+'시간'))+', '+r.y+'년 최저임금)</td><td>'+won(r.low)+'</td></tr>';
+s+='<tr><td>상한액'+(r.y===2027?' (정부안)':'')+'</td><td>'+won(r.cap60)+'</td></tr>';
+s+='<tr><td><b>하루 금액</b></td><td><b>'+won(r.d)+'</b> ('+why[r.why]+')</td></tr>';
+s+='<tr><td>받는 날수</td><td>'+r.n+'일</td></tr>';
+s+='<tr><td>30일치</td><td>'+won(r.m30)+'</td></tr>';
+s+='<tr><td><b>모두 받으면</b></td><td><b>'+won(r.sum)+'</b></td></tr>';
+if(r.y===2027){s+='<tr><td>시행령이 그대로일 때 하루 금액</td><td>'+won(r.dNow)+'</td></tr><tr><td>시행령이 그대로일 때 모두 받으면</td><td>'+won(r.sumNow)+'</td></tr>';}
+s+='</table>';
+if(r.y===2027)s+='<p class="src">2027년 하한액(최저임금 10,700원 기준)은 확정이고, 상한액은 2026년 9월 22일 입법예고된 시행령 개정안 기준이라 바뀔 수 있어요.</p>';
+s+='<p class="src">실업급여는 소득세를 떼지 않아요. 고용보험 가입 날 180일 이상, 원치 않은 퇴사 같은 조건을 갖춰야 받을 수 있고, 금액은 고용센터가 최종으로 정해요.</p>';}}
+el.innerHTML=s;el.classList.add('show');}
+</script>
+<h2 id="check">한 번 더 확인하세요</h2>
+<div class="checklist" data-check>
+<p class="check-help">눌러서 하나씩 체크해 보세요. 체크한 내용은 어디에도 저장되지 않고, 화면을 닫으면 지워져요.</p>
+<label class="ck"><input type="checkbox"><span>급여명세서로 퇴사 전 3개월 동안 받은 임금(세금 떼기 전)을 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>근로계약서에서 하루 근무시간(쉬는 시간 뺀 시간)을 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>퇴사 전 18개월 동안 고용보험 가입 날이 180일 이상인지 고용24에서 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>회사가 이직확인서를 냈는지, 퇴사 이유가 맞게 적혔는지 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>퇴사한 다음 날부터 12개월 안에 다 받을 수 있도록 신청 날짜를 정했나요?</span></label>
+<p class="check-count" aria-live="polite"></p>
+</div>
+
+<h2 id="faq">자주 묻는 질문</h2><dl class="faq"><dt>월급이 많으면 실업급여도 많이 받나요?</dt><dd>어느 정도까지만 그래요. 2026년에 퇴사했다면 하루 평균임금이 113,500원을 넘는 분은 모두 하루 68,100원으로 같아요. 하루 8시간 일한 분은 하루 평균임금이 110,080원 이하이면 모두 하한액 66,048원을 받아요. 그래서 2026년 퇴사자의 하루 금액은 대부분 66,048원에서 68,100원 사이예요.</dd><dt>12월에 그만두고 1월에 신청하면 어느 해 기준인가요?</dt><dd>신청한 날이 아니라 퇴사한 날(이직일) 기준이에요. 하한액은 이직일 당시 최저임금으로 정하고(고용보험법 제45조 제4항), 2027년 상한액을 바꾸는 시행령 개정안도 시행 전에 퇴사한 사람에게는 예전 기준을 적용한다고 적고 있어요. 2026년 12월 31일까지 일하고 그만뒀다면 2026년 기준이에요.</dd><dt>하루 근무시간이 짧으면 하한액이 낮아지나요?</dt><dd>네. 하한액은 최저임금의 80%에 퇴사 전 하루 소정근로시간을 곱해서 정해요. 2026년 퇴사자는 8시간 이상 66,048원, 7시간 57,792원, 6시간 49,536원, 5시간 41,280원, 4시간 이하 33,024원이에요. 다만 평균임금의 60%가 이보다 많으면 그 금액을 받아요.</dd><dt>실업급여에도 세금을 떼나요?</dt><dd>아니요. 소득세법 제12조 제3호 마목은 고용보험법에 따라 받는 실업급여를 비과세 소득으로 정하고 있어요. 계산기가 보여 주는 금액에서 소득세를 따로 떼지 않아요.</dd><dt>2027년에 그만두면 얼마를 받나요?</dt><dd>하한액은 2027년 최저임금 10,700원으로 하루 68,480원(8시간 기준)이 되는 것이 확정이에요. 상한액은 정부가 최저임금에 맞춰 바꾸는 시행령 개정안을 입법예고한 단계라 아직 확정되지 않았어요. 개정안대로면 하루 약 70,568원이고, 시행령이 그대로면 하루 8시간 일한 분은 모두 68,480원을 받게 돼요.</dd></dl>
+<p>받을 수 있는 조건과 고용24·고용센터 신청 순서는 <a href="/guide/unemployment-apply/">실업급여 조건과 신청 방법</a>에서 읽어 보세요. 퇴사할 때 받는 퇴직금은 <a href="/severance/">퇴직금 계산기</a>로, 퇴사일 기준 만 50세가 되는지는 <a href="/age/">만 나이 계산기</a>로 확인할 수 있어요.</p>
+<h2 id="refs">참고한 공식 자료</h2>
+<ol class="refs">
+<li><a href="https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=722&amp;ccfNo=2&amp;cciNo=3&amp;cnpClsNo=2" target="_blank" rel="noopener">찾기쉬운 생활법령정보 「구직급여 수급액」 (기초일액 산정, 상한 113,500원·68,100원, 하한, 2026-10-15 기준)</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=722&amp;ccfNo=2&amp;cciNo=3&amp;cnpClsNo=1" target="_blank" rel="noopener">찾기쉬운 생활법령정보 「구직급여 수급일수」 (수급기간 12개월·대기기간 7일)</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B3%A0%EC%9A%A9%EB%B3%B4%ED%97%98%EB%B2%95&amp;joNo=004500&amp;mode=11" target="_blank" rel="noopener">「고용보험법」 제45조(급여의 기초가 되는 임금일액)·제46조(구직급여일액), 국가법령정보센터</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.law.go.kr/lsBylInfoPLinkR.do?bylCls=BE&amp;lsNm=%EA%B3%A0%EC%9A%A9%EB%B3%B4%ED%97%98%EB%B2%95&amp;bylNo=0001&amp;bylBrNo=00" target="_blank" rel="noopener">「고용보험법」 [별표 1] 구직급여의 소정급여일수, 국가법령정보센터</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lspttninfSeq=106145" target="_blank" rel="noopener">「고용보험법 시행규칙」 제91조의2(이직 전 1일 소정근로시간의 산정) (고용노동부령 제479호, 2026-09-18 시행)</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/eiacInfoP.do?cmtClsCd=460107&amp;decsnDocDatSeq=11647&amp;mode=6" target="_blank" rel="noopener">고용보험심사위원회 결정 (급여기초임금일액 산정규정 제3조: 시간 올림, 3시간 이하 4시간·8시간 이상 8시간)</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://1350.moel.go.kr/rtmview.do?id=1000329198&amp;page=1&amp;type=ALL" target="_blank" rel="noopener">고용노동부 1350 상담 답변 「구직급여 상한액·하한액」(2026-09-16)</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.moel.go.kr/common/downloadFile.do?bbs_id=18&amp;bbs_seq=20260900700&amp;file_ext=pdf&amp;file_seq=20260901393" target="_blank" rel="noopener">고용노동부 공고 제2026-446호 「고용보험법 시행령 일부개정령안」(2026-09-22 입법예고, 제68조 1,000분의 1,374·부칙 제4조)</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19744" target="_blank" rel="noopener">고용노동부 보도자료 「2027년도 적용 최저임금 시간급 10,700원」(2026-08-05)</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19866" target="_blank" rel="noopener">고용노동부 보도자료 「고용보험 제도개편 방안」(2026-09-01, 주 6일 지급 정부안)</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/lsRvsRsnListP.do?chrClsCd=010102&amp;lsId=001761" target="_blank" rel="noopener">국가법령정보센터 고용보험법 제정·개정이유 (법률 제21473호, 2028-01-01부터 보수 기준 산정)</a> <small>(2026-11-15 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%86%8C%EB%93%9D%EC%84%B8%EB%B2%95&amp;joNo=001200&amp;mode=11" target="_blank" rel="noopener">「소득세법」 제12조 제3호 마목 (실업급여 비과세), 국가법령정보센터</a> <small>(2026-11-15 확인)</small></li>
+</ol>
+
+<div class="edit-info">
+<p class="edit-k">작성·수정 안내</p>
+<ul>
+<li>처음 쓴 날 2026-11-15 · 마지막 수정 2026-11-15 (처음 작성)</li>
+<li>자료 확인 2026-11-15: 위 공식 자료를 보고 숫자와 기준을 확인했어요. 예시 4개는 손으로 계산한 값과 계산기 결과를 맞춰 봤어요.</li>
+<li>공식 자료를 참고해 쉬운 말로 직접 다시 정리했어요. 글을 쓰고 다듬을 때 AI 작성 보조 도구를 사용했고, 숫자와 기준은 공식 자료와 하나씩 대조했어요.</li>
+<li>내 상황(임금 구성, 근무시간, 가입 기간, 퇴사 이유 등)에 따라 실제 결과는 다를 수 있어요. 받을 수 있는지와 금액은 고용센터가 최종 판단하니 꼭 확인하세요.</li>
+<li>든든 생활계산기는 정부 기관과 관계없는 독립 사이트예요. <a href="/editorial/">편집 원칙 보기</a></li>
+</ul>
+</div>
+<div class="report"><b>내용이 바뀌었거나 오류가 있나요?</b>
+<p>제도가 바뀌었거나 틀린 곳을 보셨다면 알려 주세요. 확인한 뒤 고치고 수정한 날짜를 적어 둘게요.</p>
+<a class="btn-out" href="/contact/">오류·변경 알리기</a></div>
+</div></main>
+<footer><div class="wrap">
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a><a href="/editorial/">편집 원칙</a></div>
+<p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
+<p>© 2026 든든 생활계산기</p>
+</div></footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
