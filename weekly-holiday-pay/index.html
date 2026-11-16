@@ -26,7 +26,7 @@
 
 <div class="card tool">
 <div class="row">
-<div><label for="wg">시급 (원)</label><input id="wg" type="number" inputmode="numeric" value="10320" min="0"></div>
+<div><label for="wg">시급 (원)</label><input id="wg" data-won type="number" inputmode="numeric" value="10320" min="0"></div>
 <div><label for="at">그 주 정해진 날에 모두 나왔나요?</label><select id="at"><option value="1">네, 모두 나왔어요 (개근)</option><option value="0">아니요, 쉰 날이 있어요 (결근)</option></select></div>
 </div>
 <div class="btns"><a class="btn-out" href="#wg" role="button" onclick="setWage(10320);return false;">2026년 최저임금 10,320원 넣기</a><a class="btn-out" href="#wg" role="button" onclick="setWage(10700);return false;">2027년 최저임금 10,700원 넣기</a></div>
@@ -39,7 +39,7 @@
 <div></div>
 </div>
 <button class="go" onclick="calc()">계산하기</button>
-<div class="result" id="res"></div>
+<div class="result" id="res" data-autoscroll></div>
 </div>
 <p class="src">근로계약서에 적힌 시간(소정근로시간)을 넣어 주세요. 쉬는 시간은 빼고, 바쁠 때 더 일한 연장근로 시간도 넣지 않아요. 원 미만은 반올림해요.</p>
 
