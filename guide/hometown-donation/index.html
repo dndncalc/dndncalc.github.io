@@ -105,10 +105,10 @@
 <div class="card tool">
 <p style="margin-top:0"><b>내 기부액 넣어 보기</b></p>
 <div class="row">
-<div><label for="amt">올해 낸 (낼) 기부금 합계 (원)</label><input id="amt" type="number" inputmode="numeric" value="200000" min="1000" max="20000000" step="1000" required></div>
+<div><label for="amt">올해 낸 (낼) 기부금 합계 (원)</label><input id="amt" data-won type="number" inputmode="numeric" value="200000" min="1000" max="20000000" step="1000" required></div>
 <div><label for="kind">기부한 곳</label><select id="kind"><option value="n">일반 지자체</option><option value="d">특별재난지역 (선포일부터 3개월 안)</option></select></div>
 </div>
-<div class="result show" id="hres" aria-live="polite"></div>
+<div class="result show" id="hres" aria-live="polite" data-autoscroll="live"></div>
 <figure style="margin:16px 0 0">
 <svg id="hfig" viewBox="0 0 320 92" width="100%" role="img" aria-label="" style="display:block;max-width:560px"></svg>
 <figcaption id="hcap" class="src" style="margin-top:8px"></figcaption>
