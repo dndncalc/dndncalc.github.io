@@ -27,7 +27,7 @@
 <div class="card tool">
 <div class="row">
 <div><label for="kd">상품 종류</label><select id="kd" onchange="lab()"><option value="s">적금 (매달 같은 돈 넣기)</option><option value="d">예금 (목돈 한 번에 맡기기)</option></select></div>
-<div><label for="am" id="aml">매달 넣는 돈 (원)</label><input id="am" type="number" inputmode="numeric" placeholder="예: 500000" min="0"></div>
+<div><label for="am" id="aml">매달 넣는 돈 (원)</label><input id="am" data-won type="number" inputmode="numeric" placeholder="예: 500000" min="0"></div>
 </div>
 <div class="row">
 <div><label for="rt">연 이자율 (%, 세금 떼기 전)</label><input id="rt" type="number" inputmode="decimal" step="0.01" placeholder="예: 3.5" min="0"></div>
@@ -38,7 +38,7 @@
 <div><label for="tx">세금</label><select id="tx"><option value="15.4">일반과세 15.4%</option><option value="0">비과세 0% (비과세종합저축 등)</option><option value="5">조합 예탁금 5% (2026년 가입)</option></select></div>
 </div>
 <button class="go" onclick="calc()">계산하기</button>
-<div class="result" id="res"></div>
+<div class="result" id="res" data-autoscroll></div>
 </div>
 <p class="src">이자율은 우대금리까지 더한 최종 연 이자율을 넣어 주세요. 정해진 날에 빠짐없이 넣고 만기에 찾는다고 보고 계산해요.</p>
 
