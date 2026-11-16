@@ -184,3 +184,5 @@ a.cat small{color:var(--muted);font-size:.85rem}
 }
 /* 입력 오류 표시 (2026-11-15, 브라우저 기본 :user-invalid) */
 .tool input:user-invalid,.tool select:user-invalid{border-color:var(--warn);box-shadow:0 0 0 3px rgba(138,53,16,.15)}
+/* 2026-11-17 원 단위 금액 읽어 주기 줄 (site.js가 data-won 칸 아래에 붙임). 자리를 미리 잡아 입력할 때 화면이 들썩이지 않게 */
+.won-read{display:block;min-height:1.5em;margin-top:6px;font-size:.95rem;line-height:1.5;font-weight:600;color:var(--main);font-variant-numeric:tabular-nums}
