@@ -26,7 +26,7 @@
 
 <div class="card tool">
 <div class="row">
-<div><label for="pa">대출 금액 (원)</label><input id="pa" type="number" inputmode="numeric" placeholder="예: 100000000" min="0"></div>
+<div><label for="pa">대출 금액 (원)</label><input id="pa" data-won type="number" inputmode="numeric" placeholder="예: 100000000" min="0"></div>
 <div><label for="rt">연 이자율 (%)</label><input id="rt" type="number" inputmode="decimal" step="0.01" placeholder="예: 3" min="0" max="20"></div>
 </div>
 <div class="row">
@@ -38,7 +38,7 @@
 <div></div>
 </div>
 <button class="go" onclick="calc()">계산하기</button>
-<div class="result" id="res"></div>
+<div class="result" id="res" data-autoscroll></div>
 </div>
 <p class="src">기간은 개월로 넣어 주세요. 1년은 12개월, 5년은 60개월, 10년은 120개월, 30년은 360개월이에요. 이자율이 그대로라고 보고 매달 한 번씩 갚는 것으로 계산해요.</p>
 
