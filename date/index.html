@@ -28,13 +28,13 @@
 <h3 style="margin-top:0">① 두 날짜 사이 며칠?</h3>
 <div class="row"><div><label for="a1">시작 날짜</label><input id="a1" type="date"></div><div><label for="a2">끝 날짜</label><input id="a2" type="date"></div></div>
 <button class="go" onclick="diff()">며칠인지 계산</button>
-<div class="result" id="r1"></div>
+<div class="result" id="r1" data-autoscroll></div>
 </div>
 <div class="card tool">
 <h3 style="margin-top:0">② 오늘부터 며칠 뒤는 언제?</h3>
 <div class="row"><div><label for="b1">기준 날짜</label><input id="b1" type="date"></div><div><label for="b2">더할 날 수 (빼려면 앞에 -)</label><input id="b2" type="number" inputmode="numeric" placeholder="예: 100"></div></div>
 <button class="go" onclick="addd()">날짜 계산</button>
-<div class="result" id="r2"></div>
+<div class="result" id="r2" data-autoscroll></div>
 </div>
 <section class="answer" aria-label="먼저 보는 답">
 <p class="answer-k">먼저 보는 답</p>
