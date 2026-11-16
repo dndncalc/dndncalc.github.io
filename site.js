@@ -10,3 +10,23 @@
     if(sec){var n=sec.querySelectorAll('a.item').length;el.textContent=n+'편';}
   });
 })();
+
+/* 2026-11-17 이탈 점검: 계산 결과가 화면 아래에 숨으면 결과 위치로 자동으로 내려 줌. 결과 상자에 data-autoscroll 이 있는 페이지만. 계산식은 건드리지 않음. */
+(function(){
+  var boxes=document.querySelectorAll('[data-autoscroll]');if(!boxes.length||!window.MutationObserver)return;
+  var lastAct=0;function act(){lastAct=Date.now();}
+  document.addEventListener('click',act,true);document.addEventListener('keydown',act,true);
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  boxes.forEach(function(box){
+    var t=null;
+    new MutationObserver(function(){
+      if(Date.now()-lastAct>1500)return;
+      clearTimeout(t);t=setTimeout(function(){
+        if(!box.classList.contains('show')||!box.textContent.trim())return;
+        var r=box.getBoundingClientRect(),vh=window.innerHeight||document.documentElement.clientHeight;
+        if(r.top>=0&&r.top<=vh*0.55)return;
+        window.scrollTo({top:window.pageYOffset+r.top-16,behavior:reduce?'auto':'smooth'});
+      },60);
+    }).observe(box,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
+  });
+})();
