@@ -25,9 +25,9 @@
 <p class="lead">양력 생년월일을 넣으면 띠와 육십갑자, 올해 나이를 알려 드려요. 1월이나 2월 초에 태어나 띠가 헷갈리는 분은 그해 설날 날짜와 함께 확인해 드려요.</p>
 
 <div class="card tool">
-<label for="bd">양력 생년월일</label><input id="bd" type="date" value="1965-01-20" min="1920-01-01" max="2050-12-31">
+<label for="bd">양력 생년월일 (예시 날짜예요. 눌러서 내 생일로 바꿔 주세요)</label><input id="bd" type="date" value="1965-01-20" min="1920-01-01" max="2050-12-31">
 <button class="go" onclick="calc()">띠 확인하기</button>
-<div class="result" id="res"></div>
+<div class="result" id="res" data-autoscroll></div>
 </div>
 <p class="src">음력 생일만 알고 계시면 한국천문연구원 음양력 변환(astro.kasi.re.kr)에서 양력 날짜로 바꾼 뒤 넣어 주세요.</p>
 
