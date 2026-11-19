@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>부가세 계산기 - 공급가액·부가세 10%·합계 나누기, 간이과세자 납부세액 | 든든 생활계산기</title>
+<meta name="description" content="부가세 포함 금액을 넣으면 공급가액과 부가세 10%를 바로 나눠 드려요. 일반과세자와 간이과세자가 이번 신고에 낼 부가세도 미리 계산해요. 2026년 2기 확정신고와 간이과세자 신고는 2027년 1월 25일까지예요.">
+<link rel="canonical" href="https://dndncalc.com/vat/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="부가세 계산기 - 공급가액·부가세 10%·합계 나누기, 간이과세자 납부세액 | 든든 생활계산기">
+<meta property="og:description" content="부가세 포함 금액을 넣으면 공급가액과 부가세 10%를 바로 나눠 드려요. 일반과세자와 간이과세자가 이번 신고에 낼 부가세도 미리 계산해요. 2026년 2기 확정신고와 간이과세자 신고는 2027년 1월 25일까지예요.">
+<meta property="og:url" content="https://dndncalc.com/vat/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="든든 생활계산기">
+<meta property="og:image" content="https://dndncalc.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="든든 생활계산기 - 큰 글씨로 쉽게 계산하세요">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<!-- 애드센스 승인 후 여기에 광고 코드 넣기 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"부가세 포함 금액에서 부가세는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"합계를 1.1로 나누면 공급가액이고, 합계에서 공급가액을 빼면 부가세예요. 부가세는 합계를 11로 나눈 값과 거의 같아요. 예를 들어 55만 원이면 공급가액 50만 원, 부가세 5만 원이에요."}},{"@type":"Question","name":"공급가액과 공급대가는 무엇이 다른가요?","acceptedAnswer":{"@type":"Answer","text":"공급가액은 부가세를 뺀 물건값이고, 공급대가는 부가세까지 더한 금액이에요. 일반과세자는 공급가액에 10%를 곱해 부가세를 매기고, 간이과세자는 공급대가에 업종별 부가가치율과 10%를 곱해 계산해요."}},{"@type":"Question","name":"2026년 2기 부가세 확정신고 기간은 언제인가요?","acceptedAnswer":{"@type":"Answer","text":"2026년 7월 1일부터 12월 31일까지의 실적을 2027년 1월 1일부터 1월 25일(월)까지 신고하고 내요. 간이과세자의 2026년 1년분도 같은 기간에 신고해요."}},{"@type":"Question","name":"간이과세자 기준 금액은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"직전 연도 1월부터 12월까지 부가세를 포함한 매출(공급대가)이 1억 400만 원 미만인 개인사업자예요. 부동산임대업과 과세유흥장소는 4,800만 원 미만이어야 하고, 금액과 관계없이 간이과세를 받지 못하는 업종도 있어요."}},{"@type":"Question","name":"간이과세자는 매출이 얼마보다 적으면 부가세를 안 내나요?","acceptedAnswer":{"@type":"Answer","text":"1년(1~12월) 공급대가가 4,800만 원 미만이면 부가세 납부가 면제돼요. 신고는 해야 해요. 올해 새로 시작했다면 사업한 기간의 매출을 12개월로 늘려서 4,800만 원과 비교해요."}},{"@type":"Question","name":"음식점 간이과세자가 1년 매출 8,000만 원이면 부가세는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"8,000만 원 × 15% × 10% = 120만 원에서 시작해요. 세금계산서를 받은 매입이 3,000만 원이면 0.5%인 15만 원을 빼서 105만 원이고, 카드 매출 공제와 전자신고 공제가 있으면 더 줄어요."}},{"@type":"Question","name":"카드 매출 세액공제는 얼마나 받나요?","acceptedAnswer":{"@type":"Answer","text":"2026년 12월 31일까지 공급한 분은 카드·현금영수증 매출의 1.3%를 1년에 1,000만 원까지 빼 줘요. 법인과 직전 연도 공급가액이 10억 원을 넘는 개인사업자는 받지 못해요. 2027년 공급분은 1.2%·500만 원으로 바꾸는 정부안이 국회에서 심의 중이에요."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">든든 <span>생활계산기</span></a>
+<nav class="menu"><a href="/">전체 도구</a><a href="/guide/">생활 안내</a><a href="/about/">소개</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="/">홈</a> › 세금·연말정산</div>
+<h1>부가세 계산기</h1>
+<p class="lead">금액 하나만 넣으면 공급가액과 부가세 10%, 합계를 바로 나눠 드려요. 가게나 사무실을 하는 분은 아래 두 번째 상자에서 이번 신고 때 낼 부가세를 일반과세자와 간이과세자로 나눠 미리 계산해 볼 수 있어요.</p>
+
+<div class="card tool">
+<p style="margin:0 0 8px"><b>① 부가세 10% 나누기·더하기</b></p>
+<div class="row">
+<div><label for="vm">넣는 금액은 어떤 금액인가요?</label><select id="vm"><option value="t">합계 (부가세 포함)</option><option value="s">공급가액 (부가세 빼고)</option></select></div>
+<div><label for="va">금액 (원)</label><input id="va" data-won type="number" inputmode="numeric" value="110000" min="1" max="1000000000000" step="1" required></div>
+</div>
+<div class="result show" id="r1" data-autoscroll="live" aria-live="polite"></div>
+</div>
+<p class="src">금액을 바꾸면 결과가 바로 바뀌어요. 공급가액에 10%를 곱한 부가세는 원 미만을 버리고, 합계를 1.1로 나눈 공급가액은 원 미만을 반올림했어요.</p>
+
+<div class="card tool">
+<p style="margin:0 0 8px"><b>② 이번 신고 때 낼 부가세 미리 보기</b></p>
+<div class="row">
+<div><label for="ty">사업자 종류</label><select id="ty"><option value="g">일반과세자</option><option value="k">간이과세자</option></select></div>
+<div id="kmonW" style="display:none"><label for="kmon">올해 사업한 달 수</label><select id="kmon"><option value="12">12달 (1월부터 했어요)</option><option value="11">11달</option><option value="10">10달</option><option value="9">9달</option><option value="8">8달</option><option value="7">7달</option><option value="6">6달</option><option value="5">5달</option><option value="4">4달</option><option value="3">3달</option><option value="2">2달</option><option value="1">1달</option></select></div>
+</div>
+<div id="kindW" style="display:none"><label for="kind">업종 (부가가치율, 자세한 업종은 아래 표)</label><select id="kind"><option value="0">소매·음식점 등 (15%)</option><option value="1">제조·농림어업 등 (20%)</option><option value="2">숙박업 (25%)</option><option value="3">건설·운수·정보통신 (30%)</option><option value="4">부동산임대·전문서비스 등 (40%)</option><option value="5">그 밖의 서비스업 (30%)</option></select></div>
+<div class="row">
+<div><label for="sa" id="lsa">이번 6개월 매출 (부가세 포함 합계, 원)</label><input id="sa" data-won type="number" inputmode="numeric" placeholder="예: 55000000 (5,500만 원)" min="0" step="1"></div>
+<div><label for="bu" id="lbu">세금계산서·카드영수증을 받은 매입 (부가세 포함, 원)</label><input id="bu" data-won type="number" inputmode="numeric" placeholder="예: 22000000" min="0" step="1"></div>
+</div>
+<div class="row">
+<div><label for="cd">매출 중 카드·현금영수증으로 받은 돈 (원)</label><input id="cd" data-won type="number" inputmode="numeric" placeholder="예: 44000000" min="0" step="1"></div>
+<div><label for="cok">카드 매출 공제 대상인가요? (소비자 상대 개인사업자, 직전 연도 공급가액 10억 원 이하)</label><select id="cok"><option value="y">네, 대상이에요</option><option value="n">아니요·잘 모르겠어요</option></select></div>
+</div>
+<div class="row">
+<div><label for="pre" id="lpre">예정고지로 미리 낸 세금 (4월·10월, 원)</label><input id="pre" data-won type="number" inputmode="numeric" placeholder="없으면 비워 두세요" min="0" step="1"></div>
+<div><label for="el">신고는 어떻게 하나요? (손택스 포함)</label><select id="el"><option value="y">홈택스로 직접 (5천 원 공제)</option><option value="n">세무사·종이 신고</option></select></div>
+</div>
+<button class="go" onclick="calc()">낼 부가세 계산하기</button>
+<div class="result" id="res" data-autoscroll></div>
+<figure id="vfigw" style="margin:16px 0 0" hidden>
+<svg id="vfig" viewBox="0 0 320 200" width="100%" role="img" aria-label="" style="display:block;max-width:560px"></svg>
+<figcaption id="vcap" class="src" style="margin-top:8px"></figcaption>
+</figure>
+</div>
+<p class="src">한 번 계산한 뒤에는 칸을 바꿀 때마다 결과와 그림이 바로 바뀌어요. 카드 매출 세액공제는 2026년 12월 31일까지 공급한 분에 쓰는 1.3%(연 1,000만 원 한도)로 계산해요. 가산세, 의제매입세액공제, 전자세금계산서 발급 세액공제처럼 사람마다 다른 항목은 넣지 않았어요.</p>
+
+<section class="answer" aria-label="먼저 보는 답">
+<p class="answer-k">먼저 보는 답</p>
+<ul>
+<li>① 상자의 큰 글씨는 넣은 금액에서 나눈 <b>공급가액</b>(또는 부가세를 더한 <b>합계</b>)이에요. 표에서 부가세가 얼마인지 함께 봐요. ② 상자의 큰 글씨는 <b>이번 신고 때 낼 부가세</b>(또는 돌려받을 돈)이고, 그림에서 매출에 붙은 부가세에서 무엇이 빠지는지 볼 수 있어요.</li>
+<li>부가세가 들어간 <b>11만 원은 공급가액 10만 원 + 부가세 1만 원</b>이에요. 합계에서 공급가액은 ÷ 1.1, 부가세는 ÷ 11로 구해요.</li>
+<li>2026년 7~12월분(일반과세자 2기)과 2026년 1년분(간이과세자)은 <b>2027년 1월 1일부터 1월 25일(월)까지</b> 신고하고 내요.</li>
+</ul>
+<div class="btns"><a class="btn-out" href="https://hometax.go.kr" target="_blank" rel="noopener">국세청 홈택스 ↗</a><a class="btn-out" href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7693&amp;mi=2273" target="_blank" rel="noopener">국세청 부가가치세 안내 ↗</a></div>
+<p class="answer-date">자료 확인 2026-11-19 · 정부 기관 누리집은 새 창으로 열려요</p>
+</section>
+
+<nav class="toc" aria-label="이 글의 차례">
+<p class="toc-k">이 글의 차례</p>
+<ol>
+<li><a href="#s1">부가세 10% 계산하는 법</a></li>
+<li><a href="#s2">일반과세자가 낼 부가세</a></li>
+<li><a href="#s3">간이과세자가 낼 부가세</a></li>
+<li><a href="#s4">카드 매출 공제와 전자신고 공제</a></li>
+<li><a href="#s5">신고·납부 날짜</a></li>
+<li><a href="#s6">자주 하는 실수와 주의할 점</a></li>
+<li><a href="#s7">함께 쓰면 좋은 계산기와 글</a></li>
+<li><a href="#check">한 번 더 확인하세요</a></li>
+<li><a href="#faq">자주 묻는 질문</a></li>
+<li><a href="#refs">참고한 공식 자료</a></li>
+</ol>
+</nav>
+
+<h2 id="s1">부가세 10% 계산하는 법</h2>
+<p>부가가치세(부가세)는 물건이나 서비스를 팔 때 값에 붙는 세금이에요. 일반과세자의 세율은 업종과 관계없이 10%예요. 계산서에 나오는 말 두 가지만 알면 쉬워요.</p>
+<ul>
+<li><b>공급가액</b>: 부가세를 뺀 물건값·서비스값이에요. 일반과세자는 이 금액에 10%를 곱해 부가세를 매겨요.</li>
+<li><b>공급대가(합계)</b>: 공급가액에 부가세를 더한, 손님이 실제로 내는 돈이에요. 간이과세자는 이 금액으로 세금을 계산해요.</li>
+</ul>
+<ol>
+<li><b>공급가액을 알 때</b>: 부가세 = 공급가액 × 10%, 합계 = 공급가액 × 1.1</li>
+<li><b>합계를 알 때</b>: 공급가액 = 합계 ÷ 1.1, 부가세 = 합계 − 공급가액 (합계 ÷ 11과 거의 같아요)</li>
+</ol>
+<table>
+<tr><th>넣은 금액</th><th>공급가액</th><th>부가세</th><th>합계</th></tr>
+<tr><td>공급가액 10,000원</td><td>10,000원</td><td>1,000원</td><td><b>11,000원</b></td></tr>
+<tr><td>공급가액 123,456원</td><td>123,456원</td><td>12,345원</td><td><b>135,801원</b></td></tr>
+<tr><td>공급가액 3,000만 원</td><td>30,000,000원</td><td>3,000,000원</td><td><b>33,000,000원</b></td></tr>
+<tr><td>합계 33,000원</td><td><b>30,000원</b></td><td>3,000원</td><td>33,000원</td></tr>
+<tr><td>합계 50,000원</td><td><b>45,455원</b></td><td>4,545원</td><td>50,000원</td></tr>
+<tr><td>합계 100,000원</td><td><b>90,909원</b></td><td>9,091원</td><td>100,000원</td></tr>
+<tr><td>합계 1,000,000원</td><td><b>909,091원</b></td><td>90,909원</td><td>1,000,000원</td></tr>
+</table>
+<p>합계 5만 원처럼 1.1로 딱 나누어떨어지지 않는 금액은 원 미만을 어떻게 처리하느냐에 따라 공급가액과 부가세가 1원씩 달라질 수 있어요. 세금계산서를 끊을 때는 쓰는 프로그램이 보여 주는 금액을 따르세요.</p>
+
+<h2 id="s2">일반과세자가 낼 부가세</h2>
+<p>일반과세자는 손님에게 받은 부가세(매출세액)에서 물건을 사며 낸 부가세(매입세액)를 빼고 차이만 내요. 매입세액이 더 많으면 돌려받아요(환급).</p>
+<div class="card">
+<p><b>낼 부가세 = 매출세액(매출 공급가액 × 10%) − 매입세액 − 세액공제 − 미리 낸 세금</b></p>
+</div>
+<p>예를 들어 7~12월 매출이 부가세 포함 5,500만 원, 세금계산서와 카드영수증을 받은 매입이 2,200만 원인 개인 가게라면 이렇게 계산해요.</p>
+<ol>
+<li>매출세액: 5,500만 원 ÷ 11 = <b>5,000,000원</b></li>
+<li>매입세액: 2,200만 원 ÷ 11 = <b>2,000,000원</b>, 빼고 나면 3,000,000원</li>
+<li>카드·현금영수증 매출 4,400만 원 × 1.3% = <b>572,000원</b> 공제</li>
+<li>홈택스로 직접 신고하면 전자신고 세액공제 <b>5,000원</b></li>
+<li>10월에 예정고지로 120만 원을 냈다면 빼고, 1월에 낼 돈은 <b>1,223,000원</b></li>
+</ol>
+<p>개업하면서 인테리어에 부가세 포함 5,500만 원을 쓰고 매출은 3,300만 원이었다면 매입세액 5,000,000원이 매출세액 3,000,000원보다 많아요. 이때는 2,000,000원에 전자신고 공제 5,000원을 더한 <b>2,005,000원</b>을 돌려받아요. 카드 매출 공제는 낼 세금이 있을 때 그 금액까지만 빼 주기 때문에 이 경우에는 쓰이지 않아요.</p>
+<p>국세청은 아래 매입은 부가세를 내고 샀어도 매입세액에서 빼 주지 않는다고 안내해요.</p>
+<ul>
+<li>세금계산서를 받지 않았거나, 꼭 적어야 할 내용이 빠졌거나 사실과 다르게 적힌 세금계산서</li>
+<li>매입처별 세금계산서합계표를 내지 않았거나 틀리게 적은 경우</li>
+<li>사업과 직접 관계없는 매입, 접대비로 쓴 매입</li>
+<li>개별소비세가 붙는 승용차를 사거나 빌리고 유지하는 데 든 매입 (운수업처럼 차를 영업에 직접 쓰는 경우는 빼고)</li>
+<li>면세사업과 토지 관련 매입, 사업자등록 전 매입 (과세기간이 끝나고 20일 안에 등록을 신청하면 예외가 있어요)</li>
+</ul>
+
+<h2 id="s3">간이과세자가 낼 부가세</h2>
+<p>간이과세자는 직전 연도(1~12월) 공급대가가 <b>1억 400만 원 미만</b>인 개인사업자예요. 부동산임대업과 과세유흥장소는 4,800만 원 미만일 때만 간이과세자가 될 수 있고, 매출이 적어도 간이과세를 받지 못하는 업종이 따로 있어요. 1년 매출이 기준을 넘으면 다음 해 7월 1일부터 일반과세자로 바뀌어요.</p>
+<div class="card">
+<p><b>낼 부가세 = 공급대가 × 업종별 부가가치율 × 10% − 공제세액(매입 공급대가 × 0.5% 등)</b></p>
+</div>
+<table>
+<tr><th>업종 (부가가치세법 시행령 제111조)</th><th>부가가치율</th><th>1년 매출 8,000만 원일 때 공제 전 세금</th></tr>
+<tr><td>소매업, 재생용 재료수집·판매업, 음식점업</td><td>15%</td><td>1,200,000원</td></tr>
+<tr><td>제조업, 농업·임업·어업, 소화물 전문 운송업</td><td>20%</td><td>1,600,000원</td></tr>
+<tr><td>숙박업</td><td>25%</td><td>2,000,000원</td></tr>
+<tr><td>건설업, 운수·창고업(소화물 전문 운송업 제외), 정보통신업</td><td>30%</td><td>2,400,000원</td></tr>
+<tr><td>금융·보험 관련 서비스업, 전문·과학·기술서비스업(인물사진·행사용 영상 촬영업 제외), 사업시설관리·사업지원·임대서비스업, 부동산 관련 서비스업, 부동산임대업</td><td>40%</td><td>3,200,000원</td></tr>
+<tr><td>그 밖의 서비스업</td><td>30%</td><td>2,400,000원</td></tr>
+</table>
+<p>같은 8,000만 원을 일반과세자가 팔았다면 매출세액은 8,000만 원 ÷ 11 = 7,272,727원이에요. 간이과세자는 매출 일부만 부가가치로 보기 때문에 세금이 훨씬 적어요. 그 대신 매입 공제가 매입액의 0.5%뿐이고, 공제가 세금보다 많아도 돌려받지 못해요.</p>
+<ul>
+<li><b>납부 면제</b>: 1년(1~12월) 공급대가가 <b>4,800만 원 미만</b>이면 부가세를 내지 않아도 돼요. 신고는 해야 해요. 올해 새로 시작했거나 중간에 폐업·휴업한 경우에는 사업한 기간의 매출을 12개월로 늘려서 4,800만 원과 비교해요(1개월이 안 되는 끝은 1개월로 쳐요).</li>
+<li><b>세금계산서</b>: 직전 연도 공급대가가 4,800만 원 이상인 간이과세자는 세금계산서를 발급할 수 있어요. 그보다 적으면 영수증을 줘요.</li>
+<li><b>예시</b>: 음식점 간이과세자, 1년 매출 8,000만 원, 세금계산서를 받은 매입 3,000만 원, 카드 매출 6,000만 원, 홈택스 직접 신고라면 1,200,000원 − 150,000원(매입 0.5%) − 780,000원(카드 1.3%) − 5,000원 = <b>265,000원</b>이에요.</li>
+<li><b>새로 연 가게</b>: 7월에 문을 열어 6달 동안 3,000만 원을 판 음식점은 12개월로 늘리면 6,000만 원이라 면제가 아니에요. 450,000원에서 매입 1,000만 원의 0.5%(50,000원)와 전자신고 5,000원을 빼면 <b>395,000원</b>이에요(카드 공제 없이 계산).</li>
+</ul>
+
+<h2 id="s4">카드 매출 공제와 전자신고 공제</h2>
+<p>손님에게 카드 결제를 받거나 현금영수증을 끊어 준 금액이 있으면 그 일부를 부가세에서 빼 줘요(부가가치세법 제46조).</p>
+<table>
+<tr><th>공급한 때</th><th>공제율</th><th>1년 한도</th><th>상태</th></tr>
+<tr><td>2026년 12월 31일까지</td><td><b>1.3%</b></td><td><b>1,000만 원</b></td><td>지금 법</td></tr>
+<tr><td>2027년 1월 1일부터 (법이 그대로일 때)</td><td>1%</td><td>500만 원</td><td>지금 법</td></tr>
+<tr><td>2027년 1월 1일부터 (정부안)</td><td>1.2%</td><td>500만 원</td><td>2026년 세제개편안, 국회 심의 중</td></tr>
+</table>
+<ul>
+<li>받을 수 있는 사람: 소매업·음식점업처럼 주로 소비자를 상대하는 개인사업자와 간이과세자예요. 법인과 직전 연도 공급가액이 10억 원을 넘는 개인사업자는 받지 못해요.</li>
+<li>카드 매출 1억 원이면 130만 원, 약 7억 6,923만 원부터는 한도 1,000만 원에서 더 늘지 않아요. 한도는 1년 단위라 일반과세자는 1기와 2기를 합쳐 1,000만 원이에요.</li>
+<li>공제는 낼 세금을 0원까지 줄여 줄 뿐, 공제가 남는다고 돌려주지는 않아요.</li>
+<li>국회에는 1.3%와 1,000만 원을 2029년 말까지 그대로 늘리자는 의원 법안도 올라와 있어요. 2027년 공급분 공제율은 법이 정해지면 고칠게요.</li>
+<li><b>전자신고 세액공제</b>: 홈택스·손택스로 직접 확정신고하면 부가세 5,000원을 빼 줘요. 2026년 2월 27일 시행령이 바뀌기 전에는 1만 원이었어요.</li>
+</ul>
+
+<h2 id="s5">신고·납부 날짜</h2>
+<table>
+<tr><th>누가</th><th>어느 기간 실적</th><th>신고·납부 기간</th></tr>
+<tr><td>개인 일반과세자 1기</td><td>1월 1일 ~ 6월 30일</td><td>7월 1일 ~ 7월 25일</td></tr>
+<tr><td>개인 일반과세자 2기</td><td>7월 1일 ~ 12월 31일</td><td><b>다음 해 1월 1일 ~ 1월 25일</b></td></tr>
+<tr><td>간이과세자</td><td>1월 1일 ~ 12월 31일</td><td><b>다음 해 1월 1일 ~ 1월 25일</b></td></tr>
+<tr><td>법인사업자 예정신고</td><td>1~3월, 7~9월</td><td>4월 25일, 10월 25일까지</td></tr>
+<tr><td>폐업한 사업자</td><td>과세기간 시작일 ~ 폐업일</td><td>폐업한 달의 다음 달 25일까지</td></tr>
+</table>
+<ul>
+<li>개인 일반과세자는 4월과 10월에 신고하지 않고, 세무서가 보낸 예정고지서대로 직전 6개월 납부세액의 50%를 미리 내요. 걷을 금액이 50만 원 미만이면 고지하지 않아요. 미리 낸 돈은 확정신고 때 빼요.</li>
+<li>간이과세자는 세무서가 직전 연도 납부세액의 50%를 7월에 예정부과로 미리 걷어요(50만 원 미만이면 걷지 않아요). 직전 연도 공급대가 4,800만 원 이상인 간이과세자가 1~6월에 세금계산서를 발급했다면 7월 25일까지 상반기분을 직접 신고해야 해요.</li>
+<li>2026년 2기와 2026년 간이과세자 신고 마감은 <b>2027년 1월 25일(월)</b>이에요. 기한을 넘기면 신고불성실가산세와 납부지연가산세가 붙을 수 있어요.</li>
+</ul>
+
+<h2 id="s6">자주 하는 실수와 주의할 점</h2>
+<ul>
+<li><b>합계에 10%를 곱해 부가세로 착각</b>: 11만 원의 10%는 11,000원이지만 실제 부가세는 10,000원이에요. 부가세가 들어 있는 금액은 11로 나눠야 해요.</li>
+<li><b>간이과세자 계산에 공급가액을 넣기</b>: 간이과세자는 부가세가 들어 있는 매출(공급대가)로 계산해요. 카드 단말기 매출 합계를 그대로 넣으면 돼요.</li>
+<li><b>4,800만 원 면제를 '신고도 안 해도 된다'로 오해</b>: 내는 돈만 면제되고 신고는 해야 해요. 1월 25일까지 홈택스에서 1년 매출을 신고하세요.</li>
+<li><b>카드 공제를 매출에서 빼기</b>: 1.3%는 세금에서 빼는 금액이고, 매출은 그대로예요. 1억 원을 카드로 받으면 세금이 130만 원 줄어요.</li>
+<li><b>사업용 카드 영수증을 버리기</b>: 매입세액을 빼 받으려면 세금계산서, 사업자 지출증빙용 현금영수증, 카드 매출전표가 있어야 해요. 영수증은 신고가 끝날 때까지 모아 두세요.</li>
+</ul>
+<div class="note">이 계산기는 신고 전에 대략 얼마가 나올지 보는 도구예요. 업종이 둘 이상이거나 면세 매출, 영세율, 재고납부세액, 가산세가 있으면 결과가 달라져요. 실제 금액은 홈택스 신고 화면이나 국세상담센터(국번 없이 126)로 확인하세요.</div>
+
+<h2 id="s7">함께 쓰면 좋은 계산기와 글</h2>
+<ul>
+<li><a href="/percent/">할인·퍼센트 계산기</a>: 할인 가격과 몇 % 싸졌는지 계산해요. 할인한 판매가에서 부가세를 나눌 때 같이 쓰면 편해요.</li>
+<li><a href="/weekly-holiday-pay/">주휴수당 계산기</a>: 아르바이트생 시급으로 주휴수당과 주급, 월급을 계산해요.</li>
+<li><a href="/salary/">연봉 실수령액 계산기</a>: 직원 월급에서 4대보험과 소득세가 얼마나 빠지는지 봐요.</li>
+<li><a href="/loan/">대출 이자 계산기</a>: 가게 시설 자금 대출을 갚는 방식별로 매달 갚을 돈과 총이자를 비교해요.</li>
+<li><a href="/guide/year-end-preview/">2026 연말정산 미리보기 하는 법</a>: 직장에 다니는 가족의 연말정산을 미리 챙겨요.</li>
+</ul>
+
+<script>
+function gv(id){return document.getElementById(id);}
+function won(n){return Math.round(n).toLocaleString('ko-KR')+'원';}
+function vAdd(s){var v=Math.floor(s/10);return {s:s,v:v,t:s+v};}
+function vSplit(t){var s=Math.round(t*10/11);return {s:s,v:t-s,t:t};}
+function c1(){var m=gv('vm').value,a=parseFloat(gv('va').value),el=gv('r1'),s;
+if(!(a>0)){el.innerHTML='<p>금액을 원 단위로 넣으면 바로 계산해요. 11만 원이면 110000이에요.</p>';return;}
+if(a>1e12){el.innerHTML='<p>1조 원보다 적은 금액만 계산해요.</p>';return;}
+a=Math.floor(a);var r=(m==='s')?vAdd(a):vSplit(a);
+s='<div>'+(m==='s'?'부가세를 더한 합계':'부가세를 뺀 공급가액')+'</div><div class="big">'+won(m==='s'?r.t:r.s)+'</div>';
+s+='<table><tr><th>항목</th><th>금액</th></tr><tr><td>공급가액 (물건값·서비스값)</td><td>'+won(r.s)+'</td></tr><tr><td>부가세 (공급가액의 10%)</td><td>'+won(r.v)+'</td></tr><tr><td><b>합계 (손님이 내는 돈)</b></td><td><b>'+won(r.t)+'</b></td></tr></table>';
+s+='<p class="src">'+(m==='s'?'공급가액 × 10%를 부가세로, 원 미만은 버렸어요.':'합계 ÷ 1.1을 공급가액으로(원 미만 반올림), 합계 − 공급가액을 부가세로 계산했어요.')+' 세금계산서 프로그램마다 원 미만 처리 방식이 달라 1원 차이가 날 수 있어요.</p>';
+el.innerHTML=s;}
+var IND=[[15,'소매업·음식점업'],[20,'제조업·농림어업'],[25,'숙박업'],[30,'건설·운수·정보통신업'],[40,'부동산임대업·전문서비스업 등'],[30,'그 밖의 서비스업']];
+function nv(id){var v=parseFloat(gv(id).value);return v>0?Math.floor(v):0;}
+function readIn(){return {k:gv('ty').value==='k',sa:nv('sa'),bu:nv('bu'),cd:nv('cd'),pre:nv('pre'),cok:gv('cok').value==='y',el:gv('el').value==='y',ind:+gv('kind').value,mon:+gv('kmon').value};}
+function cardC(o){return o.cok?Math.min(Math.floor(o.cd*13/1000),10000000):0;}
+function gCalc(o){var outV=vSplit(o.sa).v,inV=vSplit(o.bu).v,d=outV-inV,cf=cardC(o),cu=d>0?Math.min(cf,d):0,ef=o.el?5000:0;return {outV:outV,inV:inV,d:d,cf:cf,cu:cu,ef:ef,pre:o.pre,f:d-cu-ef-o.pre};}
+function kCalc(o){var rate=IND[o.ind][0],ann=o.mon<12?Math.floor(o.sa*12/o.mon):o.sa,ex=ann<48000000,t0=Math.floor(o.sa*rate/1000),db=Math.floor(o.bu*5/1000),cf=cardC(o),ef=o.el?5000:0,ded=db+cf+ef,used=ex?0:Math.min(ded,t0),pay=ex?0:t0-used;return {rate:rate,ann:ann,ex:ex,t0:t0,db:db,cf:cf,ef:ef,ded:ded,used:used,lost:ex?0:ded-used,pay:pay,pre:o.pre,f:pay-o.pre};}
+function setTy(){var k=gv('ty').value==='k';gv('kmonW').style.display=k?'':'none';gv('kindW').style.display=k?'':'none';gv('lsa').textContent=k?'1년 매출 (1~12월, 부가세 포함 합계, 원)':'이번 6개월 매출 (부가세 포함 합계, 원)';gv('lpre').textContent=k?'7월 예정부과로 미리 낸 세금 (원)':'예정고지로 미리 낸 세금 (4월·10월, 원)';gv('sa').placeholder=k?'예: 80000000 (8,000만 원)':'예: 55000000 (5,500만 원)';gv('bu').placeholder=k?'예: 30000000':'예: 22000000';gv('cd').placeholder=k?'예: 60000000':'예: 44000000';}
+function vLine(o,r){var t;if(!o.k){if(r.d>=0){t='매출에 붙은 부가세 '+won(r.outV)+'에서 매입 부가세 '+won(r.inV)+'을 빼면 '+won(r.d)+'이에요.';if(r.cu+r.ef>0)t+=' 카드·전자신고 공제 '+won(r.cu+r.ef)+'을 빼고';if(r.pre>0)t+=' 미리 낸 '+won(r.pre)+'을 빼면';t+=(r.f>=0)?' 이번에 '+won(r.f)+'을 내요.':' '+won(-r.f)+'을 돌려받아요.';}else{t='매입 부가세 '+won(r.inV)+'이 매출 부가세 '+won(r.outV)+'보다 '+won(-r.d)+' 많아서';t+=(r.f>=0)?' 이번에 '+won(r.f)+'을 내요.':' '+won(-r.f)+'을 돌려받아요.';if(r.cf>0)t+=' 카드 공제는 낼 세금이 없어 쓰이지 않아요.';}return t;}
+var nm=IND[o.ind][1];if(r.ex){t='1년 매출 '+won(r.ann)+(o.mon<12?'(12개월로 늘려 본 금액)':'')+'이 4,800만 원보다 적어서 부가세를 내지 않아도 돼요. 신고는 꼭 해야 해요.';if(r.pre>0)t+=' 미리 낸 '+won(r.pre)+'은 돌려받아요.';return t;}
+t=nm+'은 매출의 '+r.rate+'%를 부가가치로 봐서 세금이 매출의 '+(r.rate/10)+'%인 '+won(r.t0)+'에서 시작해요. 공제 '+won(r.used)+'을 빼면 '+won(r.pay)+'이에요.';if(r.lost>0)t+=' 공제가 세금보다 많은 '+won(r.lost)+'은 돌려받지 못해요.';if(r.pre>0)t+=(r.f>=0)?' 미리 낸 '+won(r.pre)+'을 빼면 1월에 '+won(r.f)+'을 더 내요.':' 미리 낸 '+won(r.pre)+'이 더 많아 '+won(-r.f)+'을 돌려받아요.';if(r.ann>=104000000)t+=' 1년 매출이 1억 400만 원 이상이라 다음 해 7월 1일부터 일반과세자로 바뀌어요.';return t;}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function vDraw(o,r){var svg=gv('vfig'),h='',y=0,rows,mx=1;
+if(!o.k){rows=[['매출에 붙은 부가세',r.outV,'#5b7fa6'],['매입 부가세 (빼 줘요)',r.inV,'#9b9286'],['카드·전자신고 공제',r.cu+r.ef,'#d99a1e'],['미리 낸 세금',r.pre,'#b8a98f'],[r.f>=0?'이번에 낼 세금':'돌려받을 돈',Math.abs(r.f),r.f>=0?'#0b6e4f':'#8a3510']];}
+else{var top=Math.max(130000000,Math.ceil(r.ann*1.1));var sx=function(v){return Math.min(v,top)/top*300+10;};
+h+='<text x="0" y="13" font-size="12" fill="#3b352d">1년 매출 '+esc(won(r.ann))+(o.mon<12?' (12개월 환산)':'')+'</text>';
+h+='<rect x="10" y="24" width="300" height="8" rx="4" fill="#e4ded3"></rect><rect x="10" y="24" width="'+(sx(r.ann)-10).toFixed(1)+'" height="8" rx="4" fill="'+(r.ex?'#0b6e4f':'#5b7fa6')+'"></rect>';
+[[48000000,'4,800만'],[104000000,'1억 400만']].forEach(function(m){var x=sx(m[0]).toFixed(1);h+='<line x1="'+x+'" y1="20" x2="'+x+'" y2="36" stroke="#8a3510" stroke-width="2"></line><text x="'+x+'" y="50" font-size="11" fill="#8a3510" text-anchor="middle">'+m[1]+'</text>';});
+y=58;rows=[['매출 × '+r.rate+'% × 10%',r.t0,'#5b7fa6'],['빼 주는 공제',r.used,'#d99a1e'],['미리 낸 세금',r.pre,'#b8a98f'],[r.f>=0?(r.ex?'낼 세금 (면제)':'이번에 낼 세금'):'돌려받을 돈',Math.abs(r.f),r.f>=0?'#0b6e4f':'#8a3510']];}
+rows.forEach(function(w){if(w[1]>mx)mx=w[1];});
+rows.forEach(function(w){h+='<text x="0" y="'+(y+14)+'" font-size="13" fill="#3b352d">'+esc(w[0])+'</text><text x="320" y="'+(y+14)+'" font-size="13" fill="#3b352d" text-anchor="end">'+esc(won(w[1]))+'</text>';var bw=w[1]>0?Math.max(2,w[1]/mx*320):0;h+='<rect x="0" y="'+(y+20)+'" width="320" height="12" rx="3" fill="#f3efe7"></rect>';if(bw>0)h+='<rect x="0" y="'+(y+20)+'" width="'+bw.toFixed(1)+'" height="12" rx="3" fill="'+w[2]+'"></rect>';y+=40;});
+svg.setAttribute('viewBox','0 0 320 '+(y+2));svg.innerHTML=h;
+svg.setAttribute('aria-label',rows.map(function(w){return w[0]+' '+won(w[1]);}).join(', '));gv('vcap').textContent=vLine(o,r);}
+function calc(){var o=readIn(),el=gv('res'),fw=gv('vfigw'),s='',ok=false,r;
+if(!(o.sa>0)&&!(o.bu>0)){s='매출이나 매입 금액을 원 단위로 넣어 주세요. 5,500만 원이면 55000000이에요.';}
+else if(o.cd>o.sa){s='카드·현금영수증으로 받은 돈은 전체 매출보다 클 수 없어요. 매출 칸에 카드 매출까지 모두 더한 금액을 넣어 주세요.';}
+else if(!o.k){ok=true;r=gCalc(o);
+s='<div>'+(r.f>=0?'이번 신고 때 낼 부가세 (일반과세자)':'돌려받을 부가세 (일반과세자)')+'</div><div class="big">'+won(Math.abs(r.f))+'</div>';
+s+='<table><tr><th>항목</th><th>금액</th></tr>';
+s+='<tr><td>매출세액 (매출 '+won(o.sa)+' ÷ 11)</td><td>'+won(r.outV)+'</td></tr>';
+s+='<tr><td>매입세액 (매입 '+won(o.bu)+' ÷ 11)</td><td>−&nbsp;'+won(r.inV)+'</td></tr>';
+s+='<tr><td>매출세액 − 매입세액</td><td>'+(r.d<0?'−&nbsp;'+won(-r.d):won(r.d))+'</td></tr>';
+s+='<tr><td>카드·현금영수증 공제 ('+(o.cok?'1.3%, 연 1,000만 원 한도':'받지 않음')+')</td><td>−&nbsp;'+won(r.cu)+'</td></tr>';
+s+='<tr><td>전자신고 세액공제</td><td>−&nbsp;'+won(r.ef)+'</td></tr>';
+s+='<tr><td>예정고지로 미리 낸 세금</td><td>−&nbsp;'+won(r.pre)+'</td></tr>';
+s+='<tr><td><b>'+(r.f>=0?'낼 세금':'돌려받을 돈')+'</b></td><td><b>'+won(Math.abs(r.f))+'</b></td></tr></table>';
+if(r.cf>r.cu)s+='<p class="src">카드 공제 '+won(r.cf)+' 가운데 '+won(r.cf-r.cu)+'은 낼 세금보다 많아서 빼지 못해요.</p>';
+s+='<p class="src">2026년 2기(7~12월)분은 2027년 1월 25일(월)까지 신고·납부해요. 카드 공제 한도 1,000만 원은 1기와 2기를 합친 1년 한도예요.</p>';}
+else{ok=true;r=kCalc(o);
+s='<div>'+(r.f>=0?'이번 신고 때 낼 부가세 (간이과세자)':'돌려받을 부가세 (간이과세자)')+'</div><div class="big">'+won(Math.abs(r.f))+'</div>';
+if(r.ex)s+='<p><b>1년 매출이 4,800만 원보다 적어 납부가 면제돼요.</b> 신고는 2027년 1월 25일까지 해야 해요.</p>';
+s+='<table><tr><th>항목</th><th>금액</th></tr>';
+if(o.mon<12)s+='<tr><td>12개월로 늘린 1년 매출 (면제 판단용)</td><td>'+won(r.ann)+'</td></tr>';
+s+='<tr><td>매출 '+won(o.sa)+' × '+r.rate+'% × 10%</td><td>'+won(r.t0)+'</td></tr>';
+s+='<tr><td>매입 공제 (매입 '+won(o.bu)+' × 0.5%)</td><td>'+won(r.db)+'</td></tr>';
+s+='<tr><td>카드·현금영수증 공제 ('+(o.cok?'1.3%':'받지 않음')+')</td><td>'+won(r.cf)+'</td></tr>';
+s+='<tr><td>전자신고 세액공제</td><td>'+won(r.ef)+'</td></tr>';
+s+='<tr><td>실제로 빼는 공제 (세금 한도)</td><td>−&nbsp;'+won(r.used)+'</td></tr>';
+s+='<tr><td>7월 예정부과로 미리 낸 세금</td><td>−&nbsp;'+won(r.pre)+'</td></tr>';
+s+='<tr><td><b>'+(r.f>=0?'낼 세금':'돌려받을 돈')+'</b></td><td><b>'+won(Math.abs(r.f))+'</b></td></tr></table>';
+s+='<p class="src">간이과세자는 공제가 세금보다 많아도 남는 공제를 돌려주지 않아요. 2026년 1년분은 2027년 1월 25일(월)까지 신고·납부해요.</p>';}
+if(ok){vDraw(o,r);}
+el.innerHTML=s;el.classList.add('show');fw.hidden=!ok;}
+gv('va').addEventListener('input',c1);gv('vm').addEventListener('change',c1);c1();
+gv('ty').addEventListener('change',function(){setTy();if(gv('res').classList.contains('show'))calc();});
+['sa','bu','cd','pre'].forEach(function(id){gv(id).addEventListener('input',function(){if(gv('res').classList.contains('show'))calc();});});
+['cok','el','kind','kmon'].forEach(function(id){gv(id).addEventListener('change',function(){if(gv('res').classList.contains('show'))calc();});});
+setTy();
+</script>
+<h2 id="check">한 번 더 확인하세요</h2>
+<div class="checklist" data-check>
+<p class="check-help">눌러서 하나씩 체크해 보세요. 체크한 내용은 어디에도 저장되지 않고, 화면을 닫으면 지워져요.</p>
+<label class="ck"><input type="checkbox"><span>내가 일반과세자인지 간이과세자인지 사업자등록증이나 홈택스에서 확인했나요?</span></label>
+<label class="ck"><input type="checkbox"><span>매출에 카드, 현금영수증, 배달앱, 증빙 없이 받은 현금까지 모두 넣었나요?</span></label>
+<label class="ck"><input type="checkbox"><span>매입은 세금계산서·카드 영수증·지출증빙용 현금영수증이 있는 것만 넣었나요?</span></label>
+<label class="ck"><input type="checkbox"><span>예정고지·예정부과로 미리 낸 세금이 있는지 홈택스 납부 내역에서 봤나요?</span></label>
+<label class="ck"><input type="checkbox"><span>신고 마감 2027년 1월 25일(월)을 달력에 적어 두었나요?</span></label>
+<p class="check-count" aria-live="polite"></p>
+</div>
+
+<h2 id="faq">자주 묻는 질문</h2>
+<dl class="faq">
+<dt>부가세 포함 금액에서 부가세는 어떻게 계산하나요?</dt><dd>합계를 1.1로 나누면 공급가액이고, 합계에서 공급가액을 빼면 부가세예요. 부가세는 합계를 11로 나눈 값과 거의 같아요. 예를 들어 55만 원이면 공급가액 50만 원, 부가세 5만 원이에요.</dd>
+<dt>공급가액과 공급대가는 무엇이 다른가요?</dt><dd>공급가액은 부가세를 뺀 물건값이고, 공급대가는 부가세까지 더한 금액이에요. 일반과세자는 공급가액에 10%를 곱해 부가세를 매기고, 간이과세자는 공급대가에 업종별 부가가치율과 10%를 곱해 계산해요.</dd>
+<dt>2026년 2기 부가세 확정신고 기간은 언제인가요?</dt><dd>2026년 7월 1일부터 12월 31일까지의 실적을 2027년 1월 1일부터 1월 25일(월)까지 신고하고 내요. 간이과세자의 2026년 1년분도 같은 기간에 신고해요.</dd>
+<dt>간이과세자 기준 금액은 얼마인가요?</dt><dd>직전 연도 1월부터 12월까지 부가세를 포함한 매출(공급대가)이 1억 400만 원 미만인 개인사업자예요. 부동산임대업과 과세유흥장소는 4,800만 원 미만이어야 하고, 금액과 관계없이 간이과세를 받지 못하는 업종도 있어요.</dd>
+<dt>간이과세자는 매출이 얼마보다 적으면 부가세를 안 내나요?</dt><dd>1년(1~12월) 공급대가가 4,800만 원 미만이면 부가세 납부가 면제돼요. 신고는 해야 해요. 올해 새로 시작했다면 사업한 기간의 매출을 12개월로 늘려서 4,800만 원과 비교해요.</dd>
+<dt>음식점 간이과세자가 1년 매출 8,000만 원이면 부가세는 얼마인가요?</dt><dd>8,000만 원 × 15% × 10% = 120만 원에서 시작해요. 세금계산서를 받은 매입이 3,000만 원이면 0.5%인 15만 원을 빼서 105만 원이고, 카드 매출 공제와 전자신고 공제가 있으면 더 줄어요.</dd>
+<dt>카드 매출 세액공제는 얼마나 받나요?</dt><dd>2026년 12월 31일까지 공급한 분은 카드·현금영수증 매출의 1.3%를 1년에 1,000만 원까지 빼 줘요. 법인과 직전 연도 공급가액이 10억 원을 넘는 개인사업자는 받지 못해요. 2027년 공급분은 1.2%·500만 원으로 바꾸는 정부안이 국회에서 심의 중이에요.</dd>
+</dl>
+<h2 id="refs">참고한 공식 자료</h2>
+<ol class="refs">
+<li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7693&amp;mi=2273" target="_blank" rel="noopener">국세청 「부가가치세 신고납부기한」 (과세기간, 간이과세자 기준 1억 400만 원, 업종별 부가가치율)</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7694&amp;mi=2272" target="_blank" rel="noopener">국세청 「부가가치세 개요」 (예정고지 50%·50만 원 미만 제외, 간이과세자 7월 신고, 폐업자 신고 기한)</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7696&amp;mi=2275" target="_blank" rel="noopener">국세청 「세율」 (일반과세자 10%, 간이과세자 업종별 부가가치율)</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7695&amp;mi=2273" target="_blank" rel="noopener">국세청 「부가가치세 세액 계산」 (일반·간이과세자 신고서 계산 순서)</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7802" target="_blank" rel="noopener">국세청 「사업자 등록 안내」 (일반·간이과세자 비교, 매입세액 공제 안 되는 경우, 4,800만 원 납부면제와 12개월 환산)</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&amp;lsId=001571&amp;lsJoLnkSeq=900315855&amp;print=print" target="_blank" rel="noopener">「부가가치세법」 제46조 (신용카드 등 사용에 따른 세액공제, 2026년 12월 31일까지 1.3%·연 1,000만 원), 국가법령정보센터</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1031738947" target="_blank" rel="noopener">「부가가치세법」 제63조 (간이과세자의 과세표준과 세액, 매입 공급대가 0.5% 공제), 국가법령정보센터</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1026485223" target="_blank" rel="noopener">「부가가치세법」 제66조 (간이과세자 예정부과 50%, 50만 원 미만 징수 안 함), 국가법령정보센터</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW//lsSideInfoP.do?docCls=jo&amp;joBrNo=00&amp;joNo=0111&amp;lsiSeq=283641&amp;urlMode=lsScJoRltInfoR" target="_blank" rel="noopener">「부가가치세법 시행령」 제111조 제2항 (업종별 부가가치율, 대통령령 제36133호 2026-02-27 시행), 국가법령정보센터</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1031204069" target="_blank" rel="noopener">「조세특례제한법 시행령」 전자신고 세액공제 조문 (부가가치세 5천 원, 2026-02-27 개정), 국가법령정보센터</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://mofe.go.kr/com/cmm/fms/FileDown.do?atchFileId=ATCH_000000000032335&amp;fileSn=6" target="_blank" rel="noopener">재정경제부 「2026년 세제개편안 상세본」 (신용카드 매출 세액공제 1.2%·연 500만 원, 2029년 말까지 연장안)</a> <small>(2026-11-19 확인)</small></li>
+<li><a href="https://pal.assembly.go.kr/napal/search/lgsltpaSearch/view.do?lgsltPaId=PRC_D7418E07C5EC4F2982D80BF7517461" target="_blank" rel="noopener">국회입법예고 「부가가치세법 일부개정법률안」 (1.3%·1,000만 원 우대공제 2029년 말까지 연장안)</a> <small>(2026-11-19 확인)</small></li>
+</ol>
+
+<div class="edit-info">
+<p class="edit-k">작성·수정 안내</p>
+<ul>
+<li>처음 쓴 날 2026-11-19 · 마지막 수정 2026-11-19 (처음 작성)</li>
+<li>자료 확인 2026-11-19: 위 공식 자료로 세율, 업종별 부가가치율, 공제율과 신고 날짜를 확인했어요. 위 예시는 손으로 계산한 값과 계산기 결과를 맞춰 봤어요.</li>
+<li>공식 자료를 참고해 쉬운 말로 직접 다시 정리했어요. 글을 쓰고 다듬을 때 AI 작성 보조 도구를 사용했고, 숫자와 기준은 공식 자료와 하나씩 대조했어요.</li>
+<li>내 상황(겸업, 면세 매출, 영세율, 가산세, 예정고지 금액 등)에 따라 실제 세금은 다를 수 있어요. 정확한 금액은 홈택스 신고 화면이나 국세상담센터 126으로 확인하세요.</li>
+<li>든든 생활계산기는 정부 기관과 관계없는 독립 사이트예요. <a href="/editorial/">편집 원칙 보기</a></li>
+</ul>
+</div>
+<div class="report"><b>내용이 바뀌었거나 오류가 있나요?</b>
+<p>세율이나 공제율, 신고 날짜가 바뀌었거나 틀린 곳을 보셨다면 알려 주세요. 확인한 뒤 고치고 수정한 날짜를 적어 둘게요.</p>
+<a class="btn-out" href="/contact/">오류·변경 알리기</a></div>
+</div></main>
+<footer><div class="wrap">
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a><a href="/editorial/">편집 원칙</a></div>
+<p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
+<p>© 2026 든든 생활계산기</p>
+</div></footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
