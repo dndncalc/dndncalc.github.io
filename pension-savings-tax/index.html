@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>연금저축·IRP 세액공제 계산기 (2026년) - 공제율과 남은 한도 | 든든 생활계산기</title>
+<meta name="description" content="2026년 총급여나 종합소득금액과 연금저축·IRP 납입액을 넣으면 예상 세액공제액, 지방소득세를 포함해 줄어드는 세금, 연말까지 남은 한도를 바로 계산해요.">
+<link rel="canonical" href="https://dndncalc.com/pension-savings-tax/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="연금저축·IRP 세액공제 계산기 (2026년) - 공제율과 남은 한도 | 든든 생활계산기">
+<meta property="og:description" content="2026년 총급여나 종합소득금액과 연금저축·IRP 납입액을 넣으면 예상 세액공제액, 지방소득세를 포함해 줄어드는 세금, 연말까지 남은 한도를 바로 계산해요.">
+<meta property="og:url" content="https://dndncalc.com/pension-savings-tax/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="든든 생활계산기">
+<meta property="og:image" content="https://dndncalc.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="든든 생활계산기 - 큰 글씨로 쉽게 계산하세요">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<!-- 애드센스 승인 후 여기에 광고 코드 넣기 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"총급여 5,500만 원이면 공제율이 몇 퍼센트인가요?","acceptedAnswer":{"@type":"Answer","text":"근로소득만 있고 총급여가 정확히 5,500만 원이면 공제 대상 납입액에 15%를 곱해요. 그 금액을 넘으면 12%예요. 다른 종합과세 소득을 합산한다면 총급여 대신 종합소득금액 4,500만 원 이하인지 보세요."}},{"@type":"Question","name":"연금저축에만 900만 원을 넣으면 얼마나 공제돼요?","acceptedAnswer":{"@type":"Answer","text":"일반 납입분은 600만 원까지만 공제 대상이에요. 소득세에서 최대 90만 원 또는 72만 원이 줄어요. 개인지방소득세 감소분까지 더하면 각각 약 99만 원, 79만 2천 원이에요."}},{"@type":"Question","name":"IRP에만 900만 원을 넣어도 되나요?","acceptedAnswer":{"@type":"Answer","text":"본인이 낸 퇴직연금계좌 납입액만으로도 일반 공제 한도 900만 원을 채울 수 있어요. 회사가 넣은 부담금이나 퇴직금을 옮긴 금액은 빼세요."}},{"@type":"Question","name":"연금저축 600만 원과 IRP 300만 원을 넣으면 148만 5천 원을 환급받나요?","acceptedAnswer":{"@type":"Answer","text":"15% 구간에서 뺄 세금이 충분하면 소득세 135만 원과 개인지방소득세 약 13만 5천 원이 줄어요. 실제 환급금은 미리 낸 세금과 다른 공제까지 정산한 뒤 정해져요."}},{"@type":"Question","name":"2026년 연말정산에 넣으려면 언제까지 납입해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"2026년 12월 31일까지 연금계좌에 올해 납입분으로 처리돼야 해요. 금융회사마다 처리 마감 시각이 다를 수 있으니 이체 전에 확인하세요."}},{"@type":"Question","name":"ISA를 옮기면 300만 원을 돌려받나요?","acceptedAnswer":{"@type":"Answer","text":"최대 300만 원은 세액공제 대상 납입액에 더할 수 있는 한도예요. 공제율 15%라면 추가 소득세 공제는 최대 45만 원, 12%라면 최대 36만 원이에요. 이 계산기에는 ISA 전환액을 넣지 않아요."}},{"@type":"Question","name":"연금저축 세액공제로 뺄 소득세가 없으면 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"다른 공제를 반영하고 남은 소득세가 0원이면, 올해 납입으로 추가로 줄일 소득세도 0원이에요. 공제받지 않은 납입금을 다음 해로 돌리는 절차는 금융회사에 확인하세요."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">든든 <span>생활계산기</span></a>
+<nav class="menu"><a href="/">전체 도구</a><a href="/guide/">생활 안내</a><a href="/about/">소개</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="/">홈</a> › <a href="/#cat-tax">세금·연말정산</a></div>
+<h1>연금저축·IRP 세액공제 계산기</h1>
+<p class="lead">2026년에 연금저축과 개인형 퇴직연금(IRP)에 넣은 돈을 적어 보세요. 소득세가 얼마나 줄고, 공제받을 수 있는 납입 한도가 얼마나 남았는지 바로 보여 드려요.</p>
+<section class="card tool" aria-label="연금계좌 세액공제 계산">
+<div class="row"><div><label for="psKind">소득 기준</label><select id="psKind"><option value="salary">근로소득만 있어요</option><option value="total">종합소득금액으로 계산</option></select></div>
+<div><label for="psIncome" id="psIncomeLabel">2026년 총급여 (원)</label><input id="psIncome" data-won type="number" min="0" max="999999999999" step="1" required inputmode="numeric" value="55000000" aria-describedby="psHint"></div></div>
+<p class="src" id="psHint">연봉에서 비과세 급여를 뺀 금액이에요. 세후 실수령액은 넣지 않아요.</p>
+<div class="row"><div><label for="psP">연금저축에 넣은 돈 (원)</label><input id="psP" data-won type="number" min="0" max="999999999999" step="1" inputmode="numeric" value="4000000" aria-describedby="psScope"></div>
+<div><label for="psR">IRP·DC에 내가 넣은 돈 (원)</label><input id="psR" data-won type="number" min="0" max="999999999999" step="1" inputmode="numeric" value="2000000" aria-describedby="psScope"></div></div>
+<p class="src" id="psScope">회사 부담금·퇴직금·계좌를 바꾸며 옮긴 돈은 빼세요. <a href="#s6">ISA 만기 전환</a>도 이 계산에는 넣지 않아요.</p>
+<details class="src" style="margin:16px 0"><summary>공제받을 소득세가 충분한지 확인 (선택)</summary><label for="psRoom">연금계좌 공제 직전에 남은 소득세 (원)</label><input id="psRoom" data-won type="number" min="0" max="999999999999" step="1" inputmode="numeric" aria-describedby="psRoomHint"><p id="psRoomHint">이 공제를 빼기 전에 남은 국세를 알고 있을 때만 적으세요. 급여에서 이미 뗀 세금과는 달라요. 모르시면 비워 두세요.</p></details>
+<p class="src" id="psErr" role="status" hidden></p>
+<div class="result show" id="psResult" data-autoscroll="live" aria-label="계산 결과">
+<div role="status"><b>줄어드는 세금 (지방소득세 포함 추정)</b><p class="big" id="psBig"></p></div>
+<figure style="margin:18px 0"><figcaption><b>올해 세액공제 한도를 얼마나 채웠나요?</b></figcaption>
+<svg id="psFig" viewBox="0 0 320 160" width="100%" style="display:block;max-width:460px;margin:8px auto 0" role="img" aria-label=""></svg>
+<p id="psLine"></p></figure>
+<table style="display:table"><thead><tr><th scope="col">계산 내역</th><th scope="col">금액·비율</th></tr></thead><tbody id="psRows" style="display:table-row-group"></tbody></table>
+<p class="src" id="psStatus"></p>
+</div>
+<noscript><p class="note">계산을 하려면 브라우저에서 자바스크립트를 켜 주세요. 아래 예시 표로 확인해도 돼요.</p></noscript>
+</section>
+<p class="note">위 금액은 이 납입으로 줄어들 수 있는 세금이에요. 실제로 돌려받을 돈은 미리 낸 세금과 다른 공제까지 정산해야 알 수 있어요.</p>
+<section class="answer" aria-label="먼저 보는 답"><p class="answer-k">먼저 보는 답</p><ul><li>큰 숫자는 2026년 일반 납입으로 줄어드는 세금의 추정액이에요. 실제 환급액과는 달라요.</li><li>그림과 표에는 연금저축 600만 원, 퇴직연금 포함 900만 원 중 채운 금액과 남은 한도를 나눠 표시해요.</li><li>근로소득만 있으면 총급여 5,500만 원 이하, 종합소득 기준이면 종합소득금액 4,500만 원 이하에서 15%예요. 기준을 넘으면 12%예요.</li></ul><div class="btns"><a class="btn-out" href="https://www.hometax.go.kr/" target="_blank" rel="noopener">홈택스에서 연말정산 자료 보기 ↗</a></div><p class="answer-date">자료 확인 2026-11-27 · 정부 기관 누리집은 새 창으로 열려요</p></section>
+<nav class="toc" aria-label="이 글의 차례"><p class="toc-k">이 글의 차례</p><ol><li><a href="#s1">먼저 사용하는 소득 기준을 골라요</a></li><li><a href="#s2">600만 원과 900만 원을 따로 봐요</a></li><li><a href="#s3">납입 사례별로 줄어드는 세금</a></li><li><a href="#s4">공제액과 실제 환급금은 어떻게 다른가요?</a></li><li><a href="#s5">12월 31일 전에 확인할 순서</a></li><li><a href="#s6">ISA 만기자금을 옮긴 경우</a></li><li><a href="#s7">자주 하는 실수와 주의할 점</a></li><li><a href="#s8">함께 쓰면 좋은 계산기와 글</a></li><li><a href="#check">한 번 더 확인하세요</a></li><li><a href="#faq">자주 묻는 질문</a></li><li><a href="#refs">참고한 공식 자료</a></li></ol></nav>
+<h2 id="s1">먼저 사용하는 소득 기준을 골라요</h2>
+<p>2026년 한 해의 소득을 기준으로 계산해요. 회사에서 받은 근로소득만 있다면 근로소득 원천징수영수증의 <b>총급여</b>를 보세요. 연봉 계약서에 적힌 금액에 비과세 식대가 들어 있다면 그 숫자를 그대로 넣지 않아요. 회사를 옮겼거나 두 곳에서 일했다면, 한 회사 급여만 보고 판단하지 말고 합산해 정산할 총급여를 확인하세요.</p>
+<p>근로소득 외에 합산 신고할 사업소득 등이 있다면 <b>종합소득금액</b>을 봐요. 가게 매출에서 사업에 든 비용을 빼기 전 금액이나, 인적공제 등을 뺀 뒤의 과세표준을 넣는 칸이 아니에요. 종합소득세 신고서의 종합소득금액을 확인하세요. 별도로 과세되는 소득까지 무조건 합치는 것도 피하세요. 합산 대상이 헷갈리면 국세청에 확인하면 돼요.</p><p>근로소득만 있고 총급여가 정확히 5,500만 원, 또는 종합소득금액 기준으로 정확히 4,500만 원이면 15%에 들어가요. 경계선에 가까우면 만 원 단위로 반올림하지 말고 원 단위 그대로 넣어 보세요. 일반 합산 한도 900만 원을 다 쓴 경우, 두 공제율에서 줄어드는 소득세 차이는 27만 원이에요.</p>
+<h2 id="s2">600만 원과 900만 원을 따로 봐요</h2>
+<p>연금저축을 여러 금융회사에 나눠 갖고 있어도 일반 세액공제 대상은 모두 합해 600만 원까지예요. 여기에 개인형 퇴직연금(IRP)이나 확정기여형 퇴직연금(DC)에 <b>내가 추가로 넣은 돈</b>을 더해 900만 원까지 인정해요. 900만 원은 IRP 칸에만 따로 붙는 한도가 아니에요.</p><p>예를 들어 연금저축에 700만 원, IRP에 200만 원을 넣었다면 실제로 낸 돈은 900만 원이지만 공제 대상은 600만 원과 200만 원을 더한 800만 원이에요. 연금저축에 더 넣어도 올해 일반 공제 대상은 늘지 않아요. 위 그림의 초록색은 연금저축 인정액, 파란색은 퇴직연금 인정액이에요. 합산 막대 끝의 빈 곳이 100만 원이라면, 이 사례에선 퇴직연금 쪽 납입으로만 채울 수 있어요.</p><p>거꾸로 IRP에 850만 원을 넣고 연금저축에 아직 넣지 않았다면, 연금저축 자체 한도는 600만 원이 그대로 남지만 두 계좌를 합친 빈자리는 50만 원뿐이에요. 이때 위 표의 ‘추가 연금저축으로 채울 수 있는 금액’은 50만 원으로 나와요. 한도 자체와 지금 더 공제받을 수 있는 돈을 구분한 이유예요.</p><p>세액공제에 쓰는 한도가 계좌에 넣을 수 있는 한도와 같지는 않아요. 보통 연금계좌에 개인이 납입할 수 있는 기본 한도는 여러 계좌를 합해 연 1,800만 원이에요. 금융회사에 설정한 납입 한도와 이미 낸 금액까지 확인해야 실제로 더 넣을 수 있는 돈을 알 수 있어요.</p>
+<h2 id="s3">납입 사례별로 줄어드는 세금</h2>
+<p>표는 연금계좌 공제를 뺄 소득세가 충분한 경우예요. 공제율 15%와 12%는 <b>공제 대상 납입액</b>을 기준으로 해요. 마지막 칸은 개인지방소득세 감소분까지 합친 추정액이고, 통장으로 들어올 환급액을 뜻하지는 않아요.</p><table style="display:table;table-layout:fixed;overflow-wrap:anywhere"><thead><tr><th scope="col" style="padding:8px 5px;width:42%">납입 사례</th><th scope="col" style="padding:8px 5px;width:20%">인정액</th><th scope="col" style="padding:8px 5px">줄어드는 세금</th></tr></thead><tbody style="display:table-row-group"><tr><th scope="row" style="padding:8px 5px;text-align:left;font-weight:500">연금저축 600만 원 + IRP 300만 원</th><td style="padding:8px 5px;white-space:nowrap">900만</td><td style="padding:8px 5px"><span style="white-space:nowrap">15%: 148.5만</span><br><span style="white-space:nowrap">12%: 118.8만</span></td></tr><tr><th scope="row" style="padding:8px 5px;text-align:left;font-weight:500">연금저축 900만 원만</th><td style="padding:8px 5px;white-space:nowrap">600만</td><td style="padding:8px 5px"><span style="white-space:nowrap">15%: 99만</span><br><span style="white-space:nowrap">12%: 79.2만</span></td></tr><tr><th scope="row" style="padding:8px 5px;text-align:left;font-weight:500">IRP 900만 원만</th><td style="padding:8px 5px;white-space:nowrap">900만</td><td style="padding:8px 5px"><span style="white-space:nowrap">15%: 148.5만</span><br><span style="white-space:nowrap">12%: 118.8만</span></td></tr><tr><th scope="row" style="padding:8px 5px;text-align:left;font-weight:500">연금저축 700만 원 + IRP 200만 원</th><td style="padding:8px 5px;white-space:nowrap">800만</td><td style="padding:8px 5px"><span style="white-space:nowrap">15%: 132만</span><br><span style="white-space:nowrap">12%: 105.6만</span></td></tr><tr><th scope="row" style="padding:8px 5px;text-align:left;font-weight:500">연금저축 400만 원 + IRP 200만 원</th><td style="padding:8px 5px;white-space:nowrap">600만</td><td style="padding:8px 5px"><span style="white-space:nowrap">15%: 99만</span><br><span style="white-space:nowrap">12%: 79.2만</span></td></tr></tbody></table><p class="src">표의 단위는 원이에요. 예를 들어 148.5만은 148만 5천 원을 뜻해요.</p><p>첫 줄에서 손으로 계산해 볼게요. 연금저축 600만 원과 IRP 300만 원을 더하면 인정액은 900만 원이에요. 15% 구간에서는 900만 원에 15%를 곱해 소득세 135만 원이 나와요. 여기에 그 소득세 공제액의 10%인 13만 5천 원을 더하면 약 148만 5천 원이에요. 12% 구간이라면 소득세 108만 원과 개인지방소득세 약 10만 8천 원을 합해 약 118만 8천 원이에요.</p>
+<h2 id="s4">공제액과 실제 환급금은 어떻게 다른가요?</h2>
+<p>세액공제는 계산된 세금에서 일정 금액을 빼는 방식이에요. 납입액을 소득에서 먼저 빼는 소득공제와 계산 순서가 달라요. 월급에서 미리 낸 세금은 공제액을 정할 때 쓰는 돈이 아니고, 마지막에 돌려받거나 더 낼 돈을 맞출 때 비교해요.</p><p>연금계좌 공제율을 곱해 135만 원이 나왔어도, 다른 공제를 반영한 뒤 남은 소득세가 20만 원이라면 이번 공제로 줄일 수 있는 소득세는 그 20만 원까지예요. 개인지방소득세 감소분을 더하면 약 22만 원이에요. 남은 소득세가 이미 0원이면 더 줄일 세금이 없어요. 작년 원천징수영수증에 나온 결정세액은 작년 결과라 올해 남은 세금과 같다고 볼 수 없어요.</p><p>예를 들어 올해 정산에서 소득세 60만 원을 더 내야 하는 상태였는데 연금계좌 공제로 20만 원이 줄었다면, 소득세만 놓고 보면 여전히 40만 원을 더 내요. 공제로 세금이 줄었어도 환급을 받지 않는 경우예요. 반대로 미리 낸 소득세가 최종 소득세보다 많았다면 그 차이만큼 돌려받을 수 있어요. 위 계산기에 선택해서 넣는 돈은 월급에서 이미 뗀 세금이나 최종 환급액이 아닌 ‘이 공제를 빼기 전에 남은 국세’예요.</p>
+<h2 id="s5">12월 31일 전에 확인할 순서</h2>
+<ol><li><b>올해 납입 내역을 합쳐 보세요.</b> 금융회사 앱의 계좌 잔액은 작년에 넣은 돈이나 운용 수익을 함께 보여 줄 수 있어요. 2026년 납입 내역에서 개인 부담으로 낸 금액만 모으세요. 연결 계좌끼리 옮긴 돈을 두 번 적지 않도록 납입 구분을 확인해요.</li><li><b>올해 공제를 받을 여지가 있는지 보세요.</b> 예를 들어 연금저축 400만 원과 IRP 200만 원을 낸 사람은 합산으로 300만 원이 남아요. 이 중 연금저축으로 채울 수 있는 건 최대 200만 원이에요. 두 계좌의 한도가 보인다고 해서 무리하게 다 채울 필요는 없어요. 세금이 남는지와 당장 쓸 생활비가 충분한지부터 보세요.</li><li><b>금융회사에서 올해 처리되는 마지막 시각을 확인하세요.</b> 2026년 12월 31일까지 올해 납입으로 처리된 돈을 넣어요. 이체를 시작했지만 연금계좌에 반영되지 않았거나, 계좌별 납입 한도에 걸려 되돌아간 돈은 올해 납입 내역으로 확인되지 않아요. 연말에는 금융회사나 상품마다 처리가 일찍 끝날 수 있으니 마지막 날까지 기다리지 말고, 넣은 뒤 거래 내역에 찍힌 날도 확인하세요.</li><li><b>정산할 때 홈택스와 납입 확인서를 대조하세요.</b> 연말정산 간소화 자료에 올해 납입분이 나오는지 보고, 빠진 납입 내역이 있다면 금융회사에서 연금납입확인서를 받아 회사 정산 담당자에게 제출할 수 있는지 확인하세요. 종합소득세 신고 대상이라면 신고할 때 연금계좌 세액공제 항목을 확인해요.</li></ol>
+<h2 id="s6">ISA 만기자금을 옮긴 경우</h2>
+<p>이 계산기는 <b>일반 납입분만</b> 계산해요. 개인종합자산관리계좌(ISA)가 만료된 날부터 60일 안에 잔액을 연금계좌로 옮겼다면, 이 금액은 옮겨 넣은 해의 연금계좌 납입액에 포함돼요. 공제 대상 납입 한도는 전환액의 10%와 300만 원 중 적은 만큼 늘어요. 만기인 날과 실제로 넣은 날의 해가 다를 수 있으니 거래 내역의 날짜를 보세요.</p><p>이미 일반 납입으로 900만 원을 채운 사람이 같은 해에 ISA 만기자금 1,000만 원을 요건에 맞춰 옮겼다면 공제 대상 납입액이 100만 원 늘 수 있어요. 15% 구간에서 뺄 세금이 충분하면 추가로 줄어드는 소득세는 15만 원이고, 개인지방소득세까지 합치면 약 16만 5천 원이에요. 전환액이 3,000만 원이면 늘어나는 한도는 300만 원이고 같은 구간의 추가 소득세 공제액은 최대 45만 원이에요.</p><p>일반 한도가 아직 비어 있거나, 연도를 걸쳐 나눠 옮겼다면 위 예시 금액을 그대로 더하지 마세요. 전환금이 어느 연금계좌에 들어갔는지와 직전 해에 적용된 추가 한도까지 확인해야 해요. 해당 금융회사에 전환 납입으로 처리된 금액과 반영 연도를 먼저 물어보세요.</p>
+<h2 id="s7">자주 하는 실수와 주의할 점</h2>
+<ul><li><b>회사 돈과 내 돈을 섞는 경우:</b> 개인형 퇴직연금에 퇴직금을 옮겨 보관할 수도 있어요. 그 돈이나 회사가 넣어 준 DC 부담금은 이 계산의 개인 납입액에 넣지 않아요.</li><li><b>상품 이름만 보고 고르는 경우:</b> 연금저축보험은 연금저축계좌에 해당할 수 있지만, 단순히 ‘연금보험’이라고 적힌 상품은 같은 제도로 보면 안 돼요. 내 상품이 세액공제 대상 연금저축계좌로 등록됐는지 확인하세요.</li><li><b>남은 한도만 보고 돈을 묶는 경우:</b> 넣은 뒤 급히 돈이 필요하면 상품에 따라 중도 인출에 제약이 있어요. 세액공제받은 납입금과 운용 수익을 연금 외 방식으로 찾을 때 세금이 붙을 수 있으니 인출 가능 여부와 예상 세금을 금융회사에 확인하세요.</li><li><b>지난해 공제받지 못한 돈을 그냥 더하는 경우:</b> 이전에 넣고 공제받지 않은 납입금을 올해 납입으로 돌리는 제도가 있어요. 자동 반영된다고 생각하지 말고, 신청 방법과 적용 가능 금액을 금융회사에 확인한 뒤 올해 납입으로 처리된 경우에만 계산에 넣으세요.</li></ul>
+<h2 id="s8">함께 쓰면 좋은 계산기와 글</h2>
+<ul><li><a href="/guide/year-end-preview/">연말정산 미리보기 하는 법</a>: 공제 내역을 어디서 보고 연말 지출 계획을 어떻게 점검하는지 알려 드려요.</li><li><a href="/salary/">연봉 실수령액 계산기</a>: 월급에서 빠지는 보험료와 세금을 어림해 볼 수 있어요. 여기서 나온 월 실수령액을 총급여 칸에 넣지는 마세요.</li><li><a href="/pension-age/">국민연금 수령 나이 계산기</a>: 사적 연금과 별도로 내 출생연도에 받을 수 있는 공적연금 시기를 확인해요.</li></ul>
+<h2 id="check">한 번 더 확인하세요</h2><div class="checklist" data-check><p class="check-help">눌러서 하나씩 체크해 보세요. 체크한 내용은 어디에도 저장되지 않고, 화면을 닫으면 지워져요.</p><label class="ck"><input type="checkbox"><span>올해 총급여 또는 종합소득금액을 확인했나요?</span></label><label class="ck"><input type="checkbox"><span>회사가 낸 돈과 퇴직금, ISA 만기 전환액을 계산에서 뺐나요?</span></label><label class="ck"><input type="checkbox"><span>세액공제받을 소득세가 남아 있는지 살펴봤나요?</span></label><label class="ck"><input type="checkbox"><span>금융회사의 올해 납입 처리 시각을 확인했나요?</span></label><p class="check-count" aria-live="polite"></p></div>
+<h2 id="faq">자주 묻는 질문</h2><dl class="faq"><dt>총급여 5,500만 원이면 공제율이 몇 퍼센트인가요?</dt><dd>근로소득만 있고 총급여가 정확히 5,500만 원이면 공제 대상 납입액에 15%를 곱해요. 그 금액을 넘으면 12%예요. 다른 종합과세 소득을 합산한다면 총급여 대신 종합소득금액 4,500만 원 이하인지 보세요.</dd>
+<dt>연금저축에만 900만 원을 넣으면 얼마나 공제돼요?</dt><dd>일반 납입분은 600만 원까지만 공제 대상이에요. 소득세에서 최대 90만 원 또는 72만 원이 줄어요. 개인지방소득세 감소분까지 더하면 각각 약 99만 원, 79만 2천 원이에요.</dd>
+<dt>IRP에만 900만 원을 넣어도 되나요?</dt><dd>본인이 낸 퇴직연금계좌 납입액만으로도 일반 공제 한도 900만 원을 채울 수 있어요. 회사가 넣은 부담금이나 퇴직금을 옮긴 금액은 빼세요.</dd>
+<dt>연금저축 600만 원과 IRP 300만 원을 넣으면 148만 5천 원을 환급받나요?</dt><dd>15% 구간에서 뺄 세금이 충분하면 소득세 135만 원과 개인지방소득세 약 13만 5천 원이 줄어요. 실제 환급금은 미리 낸 세금과 다른 공제까지 정산한 뒤 정해져요.</dd>
+<dt>2026년 연말정산에 넣으려면 언제까지 납입해야 하나요?</dt><dd>2026년 12월 31일까지 연금계좌에 올해 납입분으로 처리돼야 해요. 금융회사마다 처리 마감 시각이 다를 수 있으니 이체 전에 확인하세요.</dd>
+<dt>ISA를 옮기면 300만 원을 돌려받나요?</dt><dd>최대 300만 원은 세액공제 대상 납입액에 더할 수 있는 한도예요. 공제율 15%라면 추가 소득세 공제는 최대 45만 원, 12%라면 최대 36만 원이에요. 이 계산기에는 ISA 전환액을 넣지 않아요.</dd>
+<dt>연금저축 세액공제로 뺄 소득세가 없으면 어떻게 되나요?</dt><dd>다른 공제를 반영하고 남은 소득세가 0원이면, 올해 납입으로 추가로 줄일 소득세도 0원이에요. 공제받지 않은 납입금을 다음 해로 돌리는 절차는 금융회사에 확인하세요.</dd></dl>
+<h2 id="refs">참고한 공식 자료</h2><ol class="refs"><li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7875&amp;mi=6596" target="_blank" rel="noopener">국세청 「근로소득: 연금계좌 세액공제」</a> <small>(2026-11-27 확인)</small></li>
+<li><a href="https://law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1029623653" target="_blank" rel="noopener">국가법령정보센터 「소득세법」 제59조의3</a> <small>(2026-11-27 확인)</small></li>
+<li><a href="https://law.go.kr/lumLsLinkPop.do?chrClsCd=010202&amp;lspttninfSeq=126655" target="_blank" rel="noopener">국가법령정보센터 「소득세법 시행령」 제118조의2·제118조의3</a> <small>(2026-11-27 확인)</small></li>
+<li><a href="https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1023690305" target="_blank" rel="noopener">국가법령정보센터 「소득세법 시행령」 제40조의2</a> <small>(2026-11-27 확인)</small></li>
+<li><a href="https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1031542607" target="_blank" rel="noopener">국가법령정보센터 「지방세법」 제103조의15</a> <small>(2026-11-27 확인)</small></li>
+<li><a href="https://law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1021964939" target="_blank" rel="noopener">국가법령정보센터 「지방세특례제한법」 제167조의2</a> <small>(2026-11-27 확인)</small></li></ol>
+<div class="edit-info"><p class="edit-k">작성·수정 안내</p><ul><li>처음 쓴 날·마지막 수정: 2026-11-27 (2026년 기준 계산기와 납입 사례를 처음 올렸어요.)</li><li>자료 확인: 2026-11-27</li><li>공식 자료를 참고해 쉬운 말로 직접 다시 정리했어요. 글을 쓰고 다듬을 때 AI 작성 보조 도구를 사용했고, 숫자와 기준은 공식 자료와 하나씩 대조했어요.</li><li>내 상황에 따라 실제 결과는 다를 수 있어요. 신고와 납입 전 국세청이나 금융회사에 확인해 주세요.</li><li>정부 기관과 관계없는 독립 사이트예요. <a href="/editorial/">편집 원칙 보기</a></li></ul></div>
+<div class="report"><b>내용이 바뀌었거나 오류가 있나요?</b><p>달라진 기준이나 계산이 맞지 않는 예를 알려 주세요.</p><a class="btn-out" href="/contact/">오류·변경 알리기</a></div>
+<script>
+function psCalc(kind,income,p,r,room){
+  const rate=income<=(kind==='salary'?55000000:45000000)?15:12;
+  const pUsed=Math.min(6000000,p),rUsed=Math.min(9000000-pUsed,r),base=pUsed+rUsed;
+  const pSpace=6000000-pUsed,space=9000000-base,pMore=Math.min(pSpace,space),over=p+r-base;
+  const theoretical=Math.floor(base*rate/100),tax=room===null?theoretical:Math.min(theoretical,room),local=Math.floor(tax/10);
+  return {rate,pUsed,rUsed,base,pSpace,space,pMore,over,theoretical,tax,local,total:tax+local};
+}
+const psGet=id=>document.getElementById(id), psWon=n=>n.toLocaleString('ko-KR')+'원';
+function psDraw(d){
+  const svg=psGet('psFig'), x=3,w=314,portion=n=>w*n/9000000;
+  const bars=(y,left,right)=>'<rect x="3" y="'+y+'" width="314" height="18" rx="4" fill="#dbe6df"/>'+
+    (left?'<rect x="3" y="'+y+'" width="'+portion(left)+'" height="18" fill="#14634d"/>':'')+
+    (right?'<rect x="'+(x+portion(left))+'" y="'+y+'" width="'+portion(right)+'" height="18" fill="#285785"/>':'');
+  const text=(y,s,xx=3,end='start',color='#25231f')=>'<text x="'+xx+'" y="'+y+'" text-anchor="'+end+'" fill="'+color+'">'+s+'</text>';
+  svg.innerHTML='<g font-family="system-ui,sans-serif" font-size="14">'+
+    text(17,'합산 한도')+text(17,'900만 원',317,'end')+bars(25,d.pUsed,d.rUsed)+
+    text(65,'연금저축 자체 한도')+text(65,'600만 원',317,'end')+bars(73,d.pUsed,0)+
+    '<path d="M'+(x+portion(6000000))+' 70v25" stroke="#573b27" stroke-width="2"/>'+
+    '<path d="M'+(x+portion(6000000))+' 73H317v18H'+(x+portion(6000000))+'" fill="#eef5ef"/>'+
+    text(113,'두 줄은 같은 눈금으로 그렸어요',3,'start','#43534b')+
+    '<rect x="3" y="131" width="12" height="12" fill="#14634d"/>'+text(142,'연금저축',21)+
+    '<rect x="99" y="131" width="12" height="12" fill="#285785"/>'+text(142,'IRP·DC',117)+
+    '<rect x="207" y="131" width="12" height="12" fill="#dbe6df" stroke="#82938a"/>'+text(142,'빈 한도',225)+'</g>';
+  svg.setAttribute('aria-label','합산 한도 900만 원 중 연금저축 '+psWon(d.pUsed)+', IRP·DC '+psWon(d.rUsed)+', 빈 한도 '+psWon(d.space)+'. 연금저축 자체 한도 600만 원 중 빈 한도 '+psWon(d.pSpace)+'.');
+}
+function psUpdate(){
+  const kind=psGet('psKind').value, income=psGet('psIncome'), p=psGet('psP'), r=psGet('psR'), room=psGet('psRoom');
+  psGet('psIncomeLabel').textContent=kind==='salary'?'2026년 총급여 (원)':'2026년 종합소득금액 (원)';
+  psGet('psHint').textContent=kind==='salary'?'연봉에서 비과세 급여를 뺀 금액이에요. 세후 실수령액은 넣지 않아요.':'사업 매출이나 총급여 그대로가 아니에요. 신고서에서 종합소득금액을 확인하세요.';
+  const bad=[income,p,r,room].find(e=>!e.validity.valid), err=psGet('psErr');
+  psGet('psResult').hidden=!!bad; psGet('psResult').style.display=bad?'none':''; err.hidden=!bad;
+  if(bad){err.textContent=bad===income&&income.value===''&&!income.validity.badInput?'소득 금액을 넣으면 계산해요.':'금액은 0원 이상, 소수점 없는 숫자로 적어 주세요.';return;}
+  const d=psCalc(kind,income.valueAsNumber,p.valueAsNumber||0,r.valueAsNumber||0,room.value===''?null:room.valueAsNumber);
+  psGet('psBig').textContent=(d.total?'약 ':'')+psWon(d.total); psDraw(d);
+  psGet('psLine').textContent=d.space===0?'공제 대상 납입액 '+psWon(d.base)+'으로 올해 합산 한도를 다 채웠어요.':d.pMore>0?'합산 한도가 '+psWon(d.space)+' 남았고, 그중 연금저축으로는 최대 '+psWon(d.pMore)+'을 더 채울 수 있어요.':'합산 한도가 '+psWon(d.space)+' 남았어요. 연금저축 한도는 다 채워서 IRP·DC 납입으로만 남은 한도를 채울 수 있어요.';
+  const rows=[['연금저축 인정액 (한도 600만 원)',psWon(d.pUsed)],['IRP·DC 인정액',psWon(d.rUsed)],['합산 인정액 (한도 900만 원)',psWon(d.base)],['합산 한도에서 남은 금액',psWon(d.space)],['연금저축 자체 한도의 빈 금액',psWon(d.pSpace)],['추가 연금저축으로 채울 수 있는 금액',psWon(d.pMore)],['이번 계산에서 빠진 납입액',psWon(d.over)],['소득세 공제율',d.rate+'%'],['공제율만 곱한 소득세 공제액',psWon(d.theoretical)],['실제 적용 예상 소득세 공제액',psWon(d.tax)],['개인지방소득세 감소 추정',psWon(d.local)]];
+  psGet('psRows').innerHTML=rows.map(([k,v])=>'<tr><th scope="row" style="padding:9px 6px;text-align:left;font-size:.88rem;font-weight:500">'+k+'</th><td style="padding:9px 6px;white-space:nowrap;font-size:.88rem">'+v+'</td></tr>').join('');
+  psGet('psStatus').textContent=room.value===''?'공제받을 소득세가 충분하다고 가정했어요.':d.tax<d.theoretical?'입력한 남은 소득세만큼만 공제돼요.':'입력하신 남은 소득세 안에서 공제액을 계산했어요.';
+}
+for(const id of ['psKind','psIncome','psP','psR','psRoom'])psGet(id).addEventListener('input',psUpdate);
+psUpdate();
+</script>
+</div></main>
+<footer><div class="wrap">
+<div><a href="/about/">소개</a><a href="/privacy/">개인정보처리방침</a><a href="/contact/">문의하기</a><a href="/editorial/">편집 원칙</a></div>
+<p>든든 생활계산기의 계산 결과는 참고용이에요. 연금·세금 등 중요한 결정은 해당 기관에 꼭 다시 확인해 주세요.</p>
+<p>© 2026 든든 생활계산기</p>
+</div></footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
